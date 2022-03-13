@@ -74,24 +74,24 @@ const Layout = ({ children }) => {
 			dataLayer.push(arguments);
 		}
 		gtag("js", new Date());
-		gtag("config", "G-4B4KE7FYG7");
+		gtag("config", "G-LQNKJMXG1S");
 	};
 	return (
 		<>
 			<Head>
 				{/* <!-- PRIMARY META TAGS --> */}
-				<title>Lemon8</title>
+				<title>Nudge Parenting</title>
 				<meta
 					name="viewport"
 					content="initial-scale=1.0, width=device-width"
 				/>
 				<meta
 					name="title"
-					content="Lemon8 - Digital Products (Apps, Websites and More)"
+					content="Nudge Parenting - Raise happier, healthier, smarter humans of tomorrow"
 				/>
 				<meta
 					name="description"
-					content="Have an idea? Design, build and launch it with us. Create high quality websites and mobile apps customised to your brand’s needs to help launch or grow your business."
+					content="Raise happier, healthier, smarter humans of tomorrow through the power of nudge parenting"
 				/>
 				<meta
 					name="keywords"
@@ -101,38 +101,44 @@ const Layout = ({ children }) => {
 
 				{/* <!-- og tags --> */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://www.lemon8.in/" />
+				<meta
+					property="og:url"
+					content="https://www.nudgeparenting.com/"
+				/>
 				<meta
 					property="og:title"
-					content="Lemon8 - Digital Products (Apps, Websites and More)"
+					content="Nudge Parenting - Raise happier, healthier, smarter humans of tomorrow"
 				/>
 				<meta
 					property="og:description"
-					content="Have an idea? Design, build and launch it with us. Create high quality websites and mobile apps customised to your brand’s needs to help launch or grow your business."
+					content="Raise happier, healthier, smarter humans of tomorrow through the power of nudge parenting"
 				/>
 				<meta
 					property="og:image"
-					content="https://www.lemon8.in/meta-image.png"
+					content="https://www.nudgeparenting.com/meta-image.png"
 				/>
 				{/* <!-- TWITTER --> */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://lemon8.in" />
+				<meta
+					property="twitter:url"
+					content="https://nudgeparenting.com"
+				/>
 				<meta
 					property="twitter:title"
-					content="Lemon8 - Digital Products (Apps, Websites and More)"
+					content="Nudge Parenting - Raise happier, healthier, smarter humans of tomorrow"
 				/>
 				<meta
 					property="twitter:description"
-					content="Have an idea? Design, build and launch it with us. Create high quality websites and mobile apps customised to your brand’s needs to help launch or grow your business."
+					content="Raise happier, healthier, smarter humans of tomorrow through the power of nudge parenting"
 				/>
 				<meta
 					property="twitter:image"
-					content="https://www.lemon8.in/meta-image.png"
+					content="https://www.nudgeparenting.com/meta-image.png"
 				/>
 
 				<script
 					async
-					src="https://www.googletagmanager.com/gtag/js?id=G-4B4KE7FYG7"
+					src="https://www.googletagmanager.com/gtag/js?id=G-LQNKJMXG1S"
 				/>
 				<script>{injectGA()}</script>
 			</Head>
