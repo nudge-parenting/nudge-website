@@ -800,13 +800,28 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 									>
 										Contact
 									</Text>
-									<Text
-										fontSize="2xl"
-										fontWeight="medium"
-										color="nudgeblack.500"
+									<Link
+										passHref
+										href={
+											"mailto:abhimanyu@nudgeparenting.com"
+										}
 									>
-										hi@nudgeparenting.com
-									</Text>
+										<Text
+											fontSize="2xl"
+											fontWeight="medium"
+											color="nudgeblack.500"
+											style={{
+												transition: "all 0.5s",
+											}}
+											_hover={{
+												color: "nudgeblack.500",
+												cursor: "pointer",
+											}}
+										>
+											{" "}
+											hi@nudgeparenting.com
+										</Text>
+									</Link>
 								</Box>
 							</VStack>
 						</Box>
