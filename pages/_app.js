@@ -1,39 +1,41 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Layout from "../components/Layout";
-import "@fontsource/inter/100.css";
-import "@fontsource/inter/200.css";
-import "@fontsource/inter/300.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/inter/900.css";
+import "@fontsource/outfit/100.css";
+import "@fontsource/outfit/200.css";
+import "@fontsource/outfit/300.css";
+import "@fontsource/outfit/400.css";
+import "@fontsource/outfit/500.css";
+import "@fontsource/outfit/600.css";
+import "@fontsource/outfit/700.css";
+import "@fontsource/outfit/800.css";
+import "@fontsource/outfit/900.css";
 
 const indTheme = {
-	fonts: { body: "Inter", heading: "Inter" },
+	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {
-		nudgeyellow: {
-			500: "#FFFA54",
-			200: "#6B6F25",
+		nudgeorange: {
+			50: "#FCE5D6",
+			100: "#FCE5D6",
+			200: "#F9CBAE",
+			300: "#F6B285",
+			400: "#F3985D",
+			500: "#F07E34",
+			600: "#C0652A",
+			700: "#904C1F",
+			800: "#603215",
+			900: "#30190A",
 		},
 		nudgeblack: {
-			500: "#323913",
-		},
-		lemongreen: {
-			500: "#98DB7C",
-		},
-		lemongrey: {
-			50: "#F2F2F2",
-			100: "#DBDBDB",
-			200: "#C4C4C4",
-			300: "#ADADAD",
-			400: "#969696",
-			500: "#808080",
-			600: "#666666",
-			700: "#4D4D4D",
-			800: "#333333",
-			900: "#1A1A1A",
+			50: "#D6D6D6",
+			100: "#D6D6D6",
+			200: "#ADADAD",
+			300: "#858585",
+			400: "#5C5C5C",
+			500: "#333333",
+			600: "#292929",
+			700: "#1F1F1F",
+			800: "#141414",
+			900: "#0A0A0A",
 		},
 	},
 	fontSizes: {

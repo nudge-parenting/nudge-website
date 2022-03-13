@@ -33,14 +33,15 @@ const Hero = ({ onContactModalOpen }) => {
 							xl: "5xl",
 							"2xl": "7xl",
 						}}
-						fontWeight="black"
+						fontWeight="semibold"
 						color="nudgeblack.500"
 						w="100%"
 						textAlign="center"
 						lineHeight="1.05"
 					>
-						raising smart humans of tomorrow through the power of
-						<Text as="span" color="nudgeyellow.200">
+						raise happier, healthier and smarter humans of tomorrow
+						through the power of
+						<Text color="nudgeorange.500" as="span">
 							{" "}
 							nudge parenting
 						</Text>
@@ -53,11 +54,11 @@ const Hero = ({ onContactModalOpen }) => {
 							xl: "lg",
 							"2xl": "2xl",
 						}}
-						fontWeight="normal"
-						color="nudgeblack.500"
+						fontWeight="medium"
+						color="nudgeblack.400"
 						w="100%"
 						textAlign="center"
-						mt="4"
+						mt="12"
 					>
 						building a global 100M+ community of coach parents
 						enabled by personalized, actionable and science-backed
@@ -77,8 +78,8 @@ const Hero = ({ onContactModalOpen }) => {
 						<WrapItem w={["100%", "auto"]}>
 							<Button
 								w={["100%", "auto"]}
-								colorScheme="blackAlpha"
-								fontWeight="bold"
+								colorScheme="nudgeorange"
+								fontWeight="semibold"
 								borderRadius="3xl"
 								size="lg"
 								onClick={onContactModalOpen}
@@ -88,7 +89,7 @@ const Hero = ({ onContactModalOpen }) => {
 						</WrapItem>
 						{/* <WrapItem w={["100%", "auto"]} bg="white">
 							<Button
-								colorScheme="nudgeyellow"
+								colorScheme="nudgeorange"
 								fontWeight="bold"
 								borderRadius="3xl"
 								variant="outline"

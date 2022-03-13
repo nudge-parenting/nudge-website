@@ -46,7 +46,7 @@ const ColorBreak = ({ onContactModalOpen }) => {
 				xl: "200",
 				"2xl": "360",
 			}}
-			bg="nudgeyellow.500"
+			bg="nudgeorange.500"
 			maxW="100%"
 			borderRadius="xl"
 			p={["10", "20"]}
@@ -123,7 +123,7 @@ const Service = ({
 					lineHeight="1.05"
 				>
 					{heading}{" "}
-					<Text as="span" color="nudgeyellow.500">
+					<Text as="span" color="nudgeorange.500">
 						{lastWord}
 					</Text>
 				</Text>

@@ -137,7 +137,7 @@ const Layout = ({ children }) => {
 				<script>{injectGA()}</script>
 			</Head>
 
-			<Box mt={["12", "0"]} bg={"nudgeyellow.500"}>
+			<Box mt={["12", "0"]}>
 				{/* <GoToTopButton /> */}
 				<Navbar
 					toggleOpen={toggleOpen}
@@ -460,7 +460,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 									<FormControl>
 										<FormLabel>Category</FormLabel>
 										<CheckboxGroup
-											colorScheme="nudgeyellow"
+											colorScheme="nudgeorange"
 											defaultValue={["Mobile App"]}
 										>
 											<Box>
@@ -596,7 +596,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 										</Button>
 										<Button
 											type="submit"
-											colorScheme="nudgeyellow"
+											colorScheme="nudgeorange"
 											mr={3}
 											onClick={() => null}
 										>
@@ -633,7 +633,6 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 					lg: "90px",
 				}}
 				py={"3"}
-				bg={"nudgeyellow.500"}
 				w="100vw"
 				zIndex="10"
 			>
@@ -654,7 +653,7 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 				{/* <NavLink text="Past Projects" path={path} target="/work" /> */}
 				<Spacer />
 				<Button
-					colorScheme="nudgeyellow"
+					colorScheme="nudgeorange"
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
@@ -665,7 +664,7 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 					we&apos;re hiring!
 				</Button>
 				<Button
-					colorScheme="nudgeyellow"
+					colorScheme="nudgeorange"
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
@@ -737,7 +736,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 							// variants={sidebar}
 							right={isOpen ? "0" : "-100vw"}
 							bottom="0"
-							// bg="nudgeyellow.500"
+							// bg="nudgeorange.500"
 							bg="white"
 							w={["100vw"]}
 							h="100vh"
@@ -790,7 +789,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										fontWeight="normal"
 										mt="4"
 										mb="2"
-										color="lemongrey.500"
+										color="nudgeblack.300"
 									>
 										Contact
 									</Text>
@@ -799,7 +798,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										fontWeight="medium"
 										color="nudgeblack.500"
 									>
-										hi@lemon8.in
+										hi@nudgeparenting.com
 									</Text>
 								</Box>
 							</VStack>
@@ -854,8 +853,8 @@ const NavLink = ({
 					color={
 						isSelected
 							? [
-									"nudgeyellow.500",
-									"nudgeyellow.500",
+									"nudgeorange.500",
+									"nudgeorange.500",
 									"nudgeblack.500",
 							  ]
 							: [
@@ -871,8 +870,8 @@ const NavLink = ({
 			</Link>
 			<Box
 				minW="2"
-				minH="3px"
-				bg="nudgeyellow.200"
+				minH="4px"
+				bg="nudgeorange.500"
 				w="15%"
 				mt="2"
 				// borderRadius="500px"

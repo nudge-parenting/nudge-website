@@ -68,7 +68,7 @@ const Work = () => {
 						lineHeight="1.05"
 					>
 						Your{" "}
-						<Text as="span" color="nudgeyellow.500">
+						<Text as="span" color="nudgeorange.500">
 							Idea{" "}
 						</Text>
 						Could be here!
