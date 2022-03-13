@@ -333,7 +333,8 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 									};
 
 									let baseUrl =
-										"https://docs.google.com/forms/d/e/1FAIpQLSfbjgddaCo0EMHwBv7YdqVsDX1MPZ9xnUMiv2yKqI0WkRwU9A/formResponse?usp=pp_url&submit=Submit";
+										// "https://docs.google.com/forms/d/e/1FAIpQLSfbjgddaCo0EMHwBv7YdqVsDX1MPZ9xnUMiv2yKqI0WkRwU9A/formResponse?usp=pp_url&submit=Submit";
+										"https://docs.google.com/forms/";
 
 									// Iterate over dictMapping and check if key exists in values
 									Object.keys(dictMapping).forEach((key) => {

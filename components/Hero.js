@@ -93,7 +93,7 @@ const Hero = ({ onContactModalOpen }) => {
 						color="nudgeblack.400"
 						w="100%"
 						textAlign="center"
-						mt="12"
+						mt={["8", "12"]}
 					>
 						building a global 100M+ community of coach parents
 						enabled by personalized, actionable and science-backed
@@ -112,6 +112,7 @@ const Hero = ({ onContactModalOpen }) => {
 					>
 						<WrapItem w={["100%", "auto"]}>
 							<Button
+								mt={["8", "0"]}
 								w={["100%", "auto"]}
 								colorScheme="nudgeorange"
 								fontWeight="semibold"

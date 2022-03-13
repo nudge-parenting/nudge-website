@@ -5,7 +5,7 @@ const LemonVStack = ({ children }) => {
 		<VStack
 			// height="90vh"
 			width="100%"
-			mt={{ base: "10", md: "110", lg: "110", xl: "16", "2xl": "38" }}
+			mt={{ base: "-12", md: "110", lg: "110", xl: "16", "2xl": "38" }}
 			mx={{
 				base: "8",
 				md: "86",
