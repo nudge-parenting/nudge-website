@@ -15,6 +15,8 @@ import {
 import router, { useRouter } from "next/router";
 import LemonVStack from "./LemonVStack";
 // import Particles from "react-particles-js";
+import Typewriter from "typewriter-effect";
+
 const Hero = ({ onContactModalOpen }) => {
 	const router = useRouter();
 	const particleDensityArea = useBreakpointValue({
@@ -25,6 +27,40 @@ const Hero = ({ onContactModalOpen }) => {
 		<Center pb={{ base: "20", xl: "12", "2xl": "20" }} minH="100vh">
 			<LemonVStack>
 				<Box>
+					<HStack
+						fontSize={{
+							base: "4xl",
+							md: "5xl",
+							lg: "6xl",
+							xl: "5xl",
+							"2xl": "7xl",
+						}}
+						fontWeight="semibold"
+						color="nudgeblack.500"
+						w="100%"
+						textAlign="center"
+						lineHeight="1.05"
+						justifyContent="center"
+					>
+						<Text>raise</Text>
+
+						<Typewriter
+							style={{
+								display: "inline",
+								width: "50%",
+							}}
+							options={{
+								strings: [
+									"happier",
+									"healthier",
+									"smarter",
+									"wiser",
+								],
+								autoStart: true,
+								loop: true,
+							}}
+						/>
+					</HStack>
 					<Text
 						fontSize={{
 							base: "4xl",
@@ -39,8 +75,7 @@ const Hero = ({ onContactModalOpen }) => {
 						textAlign="center"
 						lineHeight="1.05"
 					>
-						raise happier, healthier and smarter humans of tomorrow
-						through the power of
+						humans of tomorrow through the power of
 						<Text color="nudgeorange.500" as="span">
 							{" "}
 							nudge parenting
