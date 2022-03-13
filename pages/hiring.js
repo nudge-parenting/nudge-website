@@ -1,6 +1,6 @@
 import { Text, Box, Square } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
-const Team = () => (
+const Hiring = () => (
 	<ScaleFade in>
 		<Square
 			minW="50"
@@ -16,8 +16,8 @@ const Team = () => (
 			}}
 			borderRadius="xl"
 		>
-			<Text color={"white"}>The Team, coming soon.</Text>
+			<Text color={"white"}>Hiring, coming soon.</Text>
 		</Square>
 	</ScaleFade>
 );
-export default Team;
+export default Hiring;

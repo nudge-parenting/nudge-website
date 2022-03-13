@@ -12,6 +12,8 @@ import {
 	VStack,
 	Stack,
 	useToast,
+	RadioGroup,
+	Radio,
 } from "@chakra-ui/react";
 import { Fade } from "@chakra-ui/transition";
 import Head from "next/head";
@@ -218,7 +220,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 
 	const validationSchema = yup.object().shape({
 		name: yup.string().required("Name is a required field"),
-		email: yup.string().email().required("Email is a required field"),
+		email: yup.string().email(),
 		phone: yup
 			.string()
 			.matches(phoneRegExp, "Phone number is not valid")
@@ -264,22 +266,21 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 									lineHeight="1.1"
 									mb="6"
 								>
-									Schedule a consultation call for free!
+									Schedule an interview call for free!
 								</Text>
 								<Text fontSize="md" fontWeight="normal">
-									Schedule a quick 30 min call with us to get
-									started with your project. Web conferencing
-									details will be provided to you upon
-									confirmation.
+									We&apos;ll have a quick chat with you to get
+									to know your family and your child.
 								</Text>
 								<Text
 									fontSize="md"
 									fontWeight="normal"
 									pt={["2", "2", "4"]}
 								>
-									In this call, we will: Understand your idea,
-									suggest a plan, and quote a price range for
-									your project.
+									In this call, we will: Understand your
+									family culture, learn about your
+									child&apos;s needs, and discuss how our
+									product can help you!
 								</Text>
 							</Box>
 						</VStack>
@@ -464,8 +465,8 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 									/>
 
 									<FormControl>
-										<FormLabel>Category</FormLabel>
-										<CheckboxGroup
+										<FormLabel>Age Group</FormLabel>
+										<RadioGroup
 											colorScheme="nudgeorange"
 											defaultValue={["Mobile App"]}
 										>
@@ -477,7 +478,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 														field,
 													}) => {
 														return (
-															<Checkbox
+															<Radio
 																size="md"
 																mr="4"
 																isChecked={
@@ -493,8 +494,8 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 																	field.name
 																}
 															>
-																Mobile App
-															</Checkbox>
+																0-2 yrs
+															</Radio>
 														);
 													}}
 												/>
@@ -505,7 +506,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 														field,
 													}) => {
 														return (
-															<Checkbox
+															<Radio
 																size="md"
 																mr="4"
 																isChecked={
@@ -521,8 +522,8 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 																	field.name
 																}
 															>
-																Website
-															</Checkbox>
+																3-5yrs
+															</Radio>
 														);
 													}}
 												/>
@@ -533,7 +534,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 														field,
 													}) => {
 														return (
-															<Checkbox
+															<Radio
 																size="md"
 																mr="4"
 																isChecked={
@@ -549,8 +550,8 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 																	field.name
 																}
 															>
-																Content Writing
-															</Checkbox>
+																6-10 yrs
+															</Radio>
 														);
 													}}
 												/>
@@ -561,7 +562,7 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 														field,
 													}) => {
 														return (
-															<Checkbox
+															<Radio
 																size="md"
 																mr="4"
 																isChecked={
@@ -577,15 +578,15 @@ const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
 																	field.name
 																}
 															>
-																Consultation
-															</Checkbox>
+																11-15 yrs
+															</Radio>
 														);
 													}}
 												/>
 											</Box>
-										</CheckboxGroup>
+										</RadioGroup>
 										<FormHelperText>
-											What do you need help with?
+											How old is your child?
 										</FormHelperText>
 									</FormControl>
 
@@ -663,7 +664,7 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
-						router.push("/work");
+						router.push("/hiring");
 					}}
 					variant="ghost"
 				>
@@ -765,22 +766,22 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 									<Text
 										fontSize="md"
 										fontWeight="normal"
-										color="lemongrey.200"
+										color="nudgeblack.300"
 										mb="2"
 									>
 										Menu
 									</Text>
 									<NavLink
-										text="How we work"
+										text="Our Vision"
 										path={path}
-										target="/method"
+										target="/vision"
 										toggleOpen={toggleOpen}
 									/>
 								</Box>
 								<NavLink
-									text="Past Projects"
+									text="We're Hiring!"
 									path={path}
-									target="/work"
+									target="/hiring"
 									toggleOpen={toggleOpen}
 								/>
 								<NavLink
@@ -838,15 +839,6 @@ const NavLink = ({
 					}}
 					style={{
 						transition: "all 0.5s",
-						// zIndex: 50,
-						// position: "fixed",
-						// WebkitTapHighlightColor: "transparent",
-						// WebkitTouchCallout: "none",
-						// WebkitUserSelect: "none",
-						// KhtmlUserSelect: "none",
-						// MozUserSelect: "none",
-						// msUserSelect: "none",
-						// userSelect: "none",
 					}}
 					textAlign={["left", "left", "center"]}
 					_hover={{

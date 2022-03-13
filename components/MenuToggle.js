@@ -16,6 +16,7 @@ export const MenuToggle = ({ toggle }) => (
 		onClick={toggle}
 		style={{
 			zIndex: 50,
+			marginTop: 10,
 			position: "fixed",
 			WebkitTapHighlightColor: "transparent",
 			WebkitTouchCallout: "none",

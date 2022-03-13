@@ -1,12 +1,12 @@
 import { Text, Box, Square } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
-const Method = () => (
+const Vision = () => (
 	<ScaleFade in>
 		<Square
 			minW="50"
 			minH="90vh"
 			mt={{ base: "10", md: "110", lg: "110", xl: "140" }}
-			bg="nudgeorange.200"
+			bg="nudgeorange.500"
 			mx={{
 				base: "8",
 				md: "90",
@@ -16,8 +16,8 @@ const Method = () => (
 			}}
 			borderRadius="xl"
 		>
-			How We Work, coming soon.
+			<Text color={"white"}>Our Vision, coming soon.</Text>
 		</Square>
 	</ScaleFade>
 );
-export default Method;
+export default Vision;

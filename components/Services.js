@@ -11,8 +11,6 @@ import {
 	Wrap,
 	WrapItem,
 } from "@chakra-ui/react";
-import Project from "./Project";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
