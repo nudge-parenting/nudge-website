@@ -656,16 +656,43 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 					</Box>
 				</Link>
 				<Spacer />
-				{/* <NavLink text="How we work" path={path} target="/method" /> */}
-				{/* <NavLink text="The Team" path={path} target="/team" /> */}
-				{/* <NavLink text="Past Projects" path={path} target="/work" /> */}
+				<NavLink
+					text="Our Vision"
+					path={path}
+					toggleOpen={() => {
+						window.open(
+							"https://nudge-parenting.notion.site/Nudge-masterplan-5c43ec42eb934b6c994882320351c066"
+						);
+					}}
+				/>
+				<NavLink
+					text="The Team"
+					path={path}
+					toggleOpen={() => {
+						window.open(
+							"https://nudge-parenting.notion.site/Nudge-team-c1f5f89531c14cf7b4e1f700677862ec"
+						);
+					}}
+				/>
+				<NavLink
+					text="Notion Page"
+					path={path}
+					toggleOpen={() => {
+						window.open(
+							"https://nudge-parenting.notion.site/nudge-parenting/Nudge-11f4a15032d845ca9502a1adb395cead"
+						);
+					}}
+				/>
 				<Spacer />
 				<Button
 					colorScheme="nudgeorange"
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
-						router.push("/hiring");
+						// router.push("/hiring");
+						window.open(
+							"https://nudge-parenting.notion.site/Nudge-is-hiring-81d4db29705a4420828f8a34441cb9d5"
+						);
 					}}
 					variant="ghost"
 				>
