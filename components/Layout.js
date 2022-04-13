@@ -802,21 +802,37 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 									<NavLink
 										text="Our Vision"
 										path={path}
-										target="/vision"
-										toggleOpen={toggleOpen}
+										// target="/vision"
+										toggleOpen={() => {
+											toggleOpen();
+											window.open(
+												"https://nudge-parenting.notion.site/Nudge-masterplan-5c43ec42eb934b6c994882320351c066"
+											);
+										}}
 									/>
 								</Box>
 								<NavLink
 									text="We're Hiring!"
 									path={path}
-									target="/hiring"
-									toggleOpen={toggleOpen}
+									// target="/hiring"
+									toggleOpen={() => {
+										// router.push("/hiring");
+										toggleOpen();
+										window.open(
+											"https://nudge-parenting.notion.site/Nudge-is-hiring-81d4db29705a4420828f8a34441cb9d5"
+										);
+									}}
 								/>
 								<NavLink
 									text="The Team"
 									path={path}
-									target="/team"
-									toggleOpen={toggleOpen}
+									// target="/team"
+									toggleOpen={() => {
+										toggleOpen();
+										window.open(
+											"https://nudge-parenting.notion.site/Nudge-team-c1f5f89531c14cf7b4e1f700677862ec"
+										);
+									}}
 								/>
 								<Box>
 									<Text
