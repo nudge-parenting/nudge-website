@@ -901,14 +901,14 @@ const NavLink = ({
 					}}
 					textAlign={["left", "left", "center"]}
 					_hover={{
-						color: "nudgeblack.500",
+						color: "nudgeorange.500",
 						cursor: "pointer",
 					}}
 					px={["0", "0", "2"]}
 					fontSize={["5xl", "5xl", "sm"]}
 					fontWeight="medium"
 					color={
-						isSelected
+						!isSelected
 							? [
 									"nudgeorange.500",
 									"nudgeorange.500",
