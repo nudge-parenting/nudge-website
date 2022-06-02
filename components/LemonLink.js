@@ -22,7 +22,7 @@ const LemonLink = ({
 				px={["2"]}
 				fontSize={["sm", "sm"]}
 				fontWeight="medium"
-				color={isSelected ? "nudgeblack.100" : "lemongrey.200"}
+				color={isSelected ? "black.100" : "lemongrey.200"}
 			>
 				{children}
 			</Text>

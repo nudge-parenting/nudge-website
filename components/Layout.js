@@ -146,7 +146,7 @@ const Layout = ({ children }) => {
 			</Head>
 
 			<Box mt={["12", "0"]}>
-				{/* <GoToTopButton /> */}
+				<GoToTopButton />
 				<Navbar
 					toggleOpen={toggleOpen}
 					isOpen={isOpen}
@@ -156,7 +156,7 @@ const Layout = ({ children }) => {
 				/>
 				<Box
 					minH="50vh"
-					color="nudgeblack.100"
+					color="black.100"
 					opacity={isOpen ? "0.1" : "1"}
 					transition="0.5s"
 					overflowX="hidden"
@@ -173,455 +173,27 @@ const Layout = ({ children }) => {
 						console.log("SCROLL", scrolled);
 					}}
 				>
-					{React.cloneElement(children, {
-						isContactModalOpen: isContactModalOpen,
-						onContactModalOpen: onContactModalOpen,
-						onContactModalClose: onContactModalClose,
-					})}
+					{React.cloneElement(children)}
 				</Box>
-				<Footer onContactModalOpen={onContactModalOpen} />
+				<Footer />
 			</Box>
 		</>
 	);
 };
 
-const Navbar = ({
-	isOpen,
-	toggleOpen,
-	isContactModalOpen,
-	onContactModalOpen,
-	onContactModalClose,
-}) => {
+const Navbar = ({ isOpen, toggleOpen }) => {
 	const router = useRouter();
 	const path = router.asPath;
-	// const { isContactModalOpen, onContactModalOpen, onContactModalClose } =
-	// 	useDisclosure();
 
 	return (
 		<>
-			<ContactModal
-				isContactModalOpen={isContactModalOpen}
-				onContactModalClose={onContactModalClose}
-			/>
-			<DesktopNav
-				isOpen={isOpen}
-				toggleOpen={toggleOpen}
-				path={path}
-				onContactModalOpen={onContactModalOpen}
-			/>
+			<DesktopNav isOpen={isOpen} toggleOpen={toggleOpen} path={path} />
 			<MobileNav isOpen={isOpen} toggleOpen={toggleOpen} path={path} />
 		</>
 	);
 };
-const ContactModal = ({ isContactModalOpen, onContactModalClose }) => {
-	const toast = useToast();
-	const phoneRegExp =
-		/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-	const validationSchema = yup.object().shape({
-		name: yup.string().required("Name is a required field"),
-		email: yup.string().email(),
-		phone: yup
-			.string()
-			.matches(phoneRegExp, "Phone number is not valid")
-			.required("Phone is a required field"),
-	});
-	return (
-		<Modal
-			isOpen={isContactModalOpen}
-			onClose={onContactModalClose}
-			size="4xl"
-			isCentered
-			scrollBehavior="inside"
-		>
-			<ModalOverlay />
-			<ModalContent>
-				{/* <ModalHeader>Modal Title</ModalHeader> */}
-				<ModalCloseButton />
-				<ModalBody>
-					{/* <Text>HELLO WORLD</Text> */}
-					<Stack direction={["column", "row"]}>
-						<VStack
-							w={["100%", "100%", "50%"]}
-							// bg="green.100"
-							pt={{ base: "8", xl: "8", "2xl": "16" }}
-							px={["2", "2", "10"]}
-						>
-							<Box
-								w="52"
-								mb={{ base: "5", xl: "5", "2xl": "10" }}
-							>
-								<Image
-									src="./lemon-typo-logo.png"
-									_hover={{
-										cursor: "pointer",
-									}}
-									alt=""
-								/>
-							</Box>
-							<Box>
-								<Text
-									fontSize="2xl"
-									fontWeight="bold"
-									lineHeight="1.1"
-									mb="6"
-								>
-									Schedule an interview call for free!
-								</Text>
-								<Text fontSize="md" fontWeight="normal">
-									We&apos;ll have a quick chat with you to get
-									to know your family and your child.
-								</Text>
-								<Text
-									fontSize="md"
-									fontWeight="normal"
-									pt={["2", "2", "4"]}
-								>
-									In this call, we will: Understand your
-									family culture, learn about your
-									child&apos;s needs, and discuss how our
-									product can help you!
-								</Text>
-							</Box>
-						</VStack>
-						<VStack
-							w={["100%", "100%", "50%"]}
-							// bg="blue.100"
-							h="100%"
-							py={["4", "4", "4", "5"]}
-							px={["2", "2", "10"]}
-							spacing="4"
-							borderLeft={["0px", "0px", "2px"]}
-							borderColor={[
-								"transparent",
-								"transparent",
-								"gray.100",
-							]}
-							// overflowY={{ xl: "scroll", "2xl": "initial" }}
-							// maxH="md"
-						>
-							<Formik
-								onSubmit={(values) => {
-									onContactModalClose();
-
-									toast({
-										title: "Request Submitted.",
-										description:
-											"We'll get in touch with you soon!",
-										status: "success",
-										duration: 9000,
-										isClosable: true,
-									});
-									console.log(values);
-
-									const checkBoxValues = values.mobile
-										? "Mobile|"
-										: "" + values.website
-										? "Website|"
-										: "" + values.content
-										? "Content|"
-										: "" + values.consultation
-										? "Business Consultation"
-										: "";
-
-									// Update the form values
-									const dictMapping = {
-										name: "entry.212771160",
-										email: "entry.557613743",
-										phone: "entry.2124275952",
-										category: "entry.333729521",
-									};
-
-									let baseUrl =
-										// "https://docs.google.com/forms/d/e/1FAIpQLSfbjgddaCo0EMHwBv7YdqVsDX1MPZ9xnUMiv2yKqI0WkRwU9A/formResponse?usp=pp_url&submit=Submit";
-										"https://docs.google.com/forms/";
-
-									// Iterate over dictMapping and check if key exists in values
-									Object.keys(dictMapping).forEach((key) => {
-										baseUrl += "&" + dictMapping[key] + "=";
-										if (values[key]) {
-											// If key exists, add to the form values
-											baseUrl += values[key]
-												.replace("+", "%2B")
-												.replace(" ", "+");
-										}
-									});
-
-									baseUrl += checkBoxValues
-										.replace("+", "%2B")
-										.replace(" ", "+");
-
-									console.log(baseUrl);
-									fetch(baseUrl)
-										.then((response) =>
-											console.log(response)
-										)
-										.catch((e) =>
-											console.log("Form Error", e)
-										);
-								}}
-								initialValues={{
-									name: "",
-									email: "",
-									phone: "",
-									mobile: false,
-									website: false,
-									content: false,
-									consultation: false,
-								}}
-								validationSchema={validationSchema}
-							>
-								<Form>
-									<Field
-										name="name"
-										component={({ form, field }) => {
-											const errorText =
-												getIn(
-													form.touched,
-													field.name
-												) &&
-												getIn(form.errors, field.name);
-											return (
-												<FormControl
-													mb="3"
-													isInvalid={!!errorText}
-												>
-													<FormLabel>Name</FormLabel>
-													<Input
-														size="md"
-														type="text"
-														{...field}
-														placeholder="John Doe"
-													/>
-													<FormErrorMessage>
-														{errorText}
-													</FormErrorMessage>
-												</FormControl>
-											);
-										}}
-									/>
-									<Field
-										name="email"
-										component={({ form, field }) => {
-											const errorText =
-												getIn(
-													form.touched,
-													field.name
-												) &&
-												getIn(form.errors, field.name);
-											return (
-												<FormControl
-													mb="3"
-													isInvalid={!!errorText}
-												>
-													<FormLabel>Email</FormLabel>
-													<Input
-														type="email"
-														placeholder="johndoe@email.com"
-														{...field}
-													/>
-													{/* <FormHelperText>
-														We&apos;ll use this to
-														schedule a meeting with
-														you.
-													</FormHelperText> */}
-													<FormErrorMessage>
-														{errorText}
-													</FormErrorMessage>
-												</FormControl>
-											);
-										}}
-									/>
-									<Field
-										name="phone"
-										component={({ form, field }) => {
-											const errorText =
-												getIn(
-													form.touched,
-													field.name
-												) &&
-												getIn(form.errors, field.name);
-											return (
-												<FormControl
-													mb="3"
-													isInvalid={!!errorText}
-												>
-													<FormLabel>Phone</FormLabel>
-													<Input
-														type="phone"
-														placeholder="99999 99999"
-														{...field}
-													/>
-													<FormHelperText>
-														We&apos;ll use this to
-														schedule a meeting with
-														you.
-													</FormHelperText>
-													<FormErrorMessage>
-														{errorText}
-													</FormErrorMessage>
-												</FormControl>
-											);
-										}}
-									/>
-
-									<FormControl>
-										<FormLabel>Age Group</FormLabel>
-										<RadioGroup
-											colorScheme="nudgeorange"
-											defaultValue={["Mobile App"]}
-										>
-											<Box>
-												<Field
-													name="mobile"
-													component={({
-														form,
-														field,
-													}) => {
-														return (
-															<Radio
-																size="md"
-																mr="4"
-																isChecked={
-																	field.value
-																}
-																onChange={
-																	field.onChange
-																}
-																onBlur={
-																	field.onBlur
-																}
-																name={
-																	field.name
-																}
-															>
-																0-2 yrs
-															</Radio>
-														);
-													}}
-												/>
-												<Field
-													name="website"
-													component={({
-														form,
-														field,
-													}) => {
-														return (
-															<Radio
-																size="md"
-																mr="4"
-																isChecked={
-																	field.value
-																}
-																onChange={
-																	field.onChange
-																}
-																onBlur={
-																	field.onBlur
-																}
-																name={
-																	field.name
-																}
-															>
-																3-5yrs
-															</Radio>
-														);
-													}}
-												/>
-												<Field
-													name="content"
-													component={({
-														form,
-														field,
-													}) => {
-														return (
-															<Radio
-																size="md"
-																mr="4"
-																isChecked={
-																	field.value
-																}
-																onChange={
-																	field.onChange
-																}
-																onBlur={
-																	field.onBlur
-																}
-																name={
-																	field.name
-																}
-															>
-																6-10 yrs
-															</Radio>
-														);
-													}}
-												/>
-												<Field
-													name="consultation"
-													component={({
-														form,
-														field,
-													}) => {
-														return (
-															<Radio
-																size="md"
-																mr="4"
-																isChecked={
-																	field.value
-																}
-																onChange={
-																	field.onChange
-																}
-																onBlur={
-																	field.onBlur
-																}
-																name={
-																	field.name
-																}
-															>
-																11-15 yrs
-															</Radio>
-														);
-													}}
-												/>
-											</Box>
-										</RadioGroup>
-										<FormHelperText>
-											How old is your child?
-										</FormHelperText>
-									</FormControl>
-
-									<HStack
-										justifyContent="right"
-										w="100%"
-										pt="6"
-									>
-										<Button
-											variant="ghost"
-											onClick={onContactModalClose}
-										>
-											Close
-										</Button>
-										<Button
-											type="submit"
-											colorScheme="nudgeorange"
-											mr={3}
-											onClick={() => null}
-										>
-											Submit
-										</Button>
-									</HStack>
-								</Form>
-							</Formik>
-						</VStack>
-					</Stack>
-				</ModalBody>
-			</ModalContent>
-		</Modal>
-	);
-};
-
-const DesktopNav = ({ path, onContactModalOpen }) => {
+const DesktopNav = ({ path }) => {
 	const router = useRouter();
 	return (
 		<Box
@@ -647,7 +219,7 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 				<Link href="/" passHref>
 					<Box w={["24", "32", "32", "28"]}>
 						<Image
-							src="./lemon-typo-logo.png"
+							src="./nudge-typo-logo.png"
 							_hover={{
 								cursor: "pointer",
 							}}
@@ -655,59 +227,28 @@ const DesktopNav = ({ path, onContactModalOpen }) => {
 						/>
 					</Box>
 				</Link>
-				<Spacer />
-				<NavLink
-					text="Our Vision"
-					path={path}
-					toggleOpen={() => {
-						window.open(
-							"https://nudge-parenting.notion.site/Nudge-masterplan-5c43ec42eb934b6c994882320351c066"
-						);
-					}}
-				/>
-				<NavLink
-					text="The Team"
-					path={path}
-					toggleOpen={() => {
-						window.open(
-							"https://nudge-parenting.notion.site/Nudge-team-c1f5f89531c14cf7b4e1f700677862ec"
-						);
-					}}
-				/>
-				<NavLink
-					text="Notion Page"
-					path={path}
-					toggleOpen={() => {
-						window.open(
-							"https://nudge-parenting.notion.site/nudge-parenting/Nudge-11f4a15032d845ca9502a1adb395cead"
-						);
-					}}
-				/>
+
 				<Spacer />
 				<Button
 					colorScheme="nudgeorange"
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
-						// router.push("/hiring");
-						window.open(
-							"https://nudge-parenting.notion.site/Nudge-is-hiring-81d4db29705a4420828f8a34441cb9d5"
-						);
+						router.push("/about");
 					}}
-					variant="ghost"
+					variant="outline"
 				>
-					we&apos;re hiring!
+					become a coach
 				</Button>
 				<Button
 					colorScheme="nudgeorange"
 					fontWeight="bold"
 					borderRadius="md"
 					onClick={() => {
-						onContactModalOpen();
-						// alert("contact");
+						router.push("/about");
 					}}
 				>
-					early access
+					join waitlist
 				</Button>
 			</HStack>
 		</Box>
@@ -794,7 +335,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 									<Text
 										fontSize="md"
 										fontWeight="normal"
-										color="nudgeblack.300"
+										color="black.300"
 										mb="2"
 									>
 										Menu
@@ -840,7 +381,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										fontWeight="normal"
 										mt="4"
 										mb="2"
-										color="nudgeblack.300"
+										color="black.300"
 									>
 										Contact
 									</Text>
@@ -853,12 +394,12 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										<Text
 											fontSize="2xl"
 											fontWeight="medium"
-											color="nudgeblack.500"
+											color="black.500"
 											style={{
 												transition: "all 0.5s",
 											}}
 											_hover={{
-												color: "nudgeblack.500",
+												color: "black.500",
 												cursor: "pointer",
 											}}
 										>
@@ -912,13 +453,9 @@ const NavLink = ({
 							? [
 									"nudgeorange.500",
 									"nudgeorange.500",
-									"nudgeblack.500",
+									"black.500",
 							  ]
-							: [
-									"nudgeblack.500",
-									"nudgeblack.500",
-									"lemongrey.200",
-							  ]
+							: ["black.500", "black.500", "lemongrey.200"]
 					}
 					lineHeight="1.0"
 				>
@@ -963,7 +500,7 @@ const GoToTopButton = () => {
 		</Square>
 	);
 };
-const Footer = ({ onContactModalOpen }) => {
+const Footer = () => {
 	return (
 		<HStack
 			px={{
@@ -984,7 +521,7 @@ const Footer = ({ onContactModalOpen }) => {
 			<Link href="/" passHref>
 				<Box w={["32"]}>
 					<Image
-						src="./lemon-typo-logo.png"
+						src="./nudge-typo-logo.png"
 						// boxSize={["10", "12"]}
 						_hover={{
 							cursor: "pointer",
@@ -996,7 +533,7 @@ const Footer = ({ onContactModalOpen }) => {
 			<Spacer />
 			<LemonLink>Terms</LemonLink>
 			<LemonLink>Privacy</LemonLink>
-			<LemonLink onClick={onContactModalOpen}>Contact</LemonLink>
+			<LemonLink>Contact</LemonLink>
 		</HStack>
 	);
 };

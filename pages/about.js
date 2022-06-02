@@ -1,6 +1,6 @@
-import { Text, Box, Square } from "@chakra-ui/react";
+import { Text, Square } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
-const Vision = () => (
+const About = () => (
 	<ScaleFade in>
 		<Square
 			minW="50"
@@ -16,8 +16,8 @@ const Vision = () => (
 			}}
 			borderRadius="xl"
 		>
-			<Text color={"white"}>Our Vision, coming soon.</Text>
+			<Text color={"white"}>About Nudge, coming soon.</Text>
 		</Square>
 	</ScaleFade>
 );
-export default Vision;
+export default About;
