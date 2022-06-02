@@ -13,7 +13,7 @@ import "@fontsource/outfit/900.css";
 const indTheme = {
 	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {
-		nudgeorange: {
+		orange: {
 			50: "#FCE5D6",
 			100: "#FCE5D6",
 			200: "#F9CBAE",

@@ -6,7 +6,7 @@ const About = () => (
 			minW="50"
 			minH="90vh"
 			mt={{ base: "10", md: "110", lg: "110", xl: "140" }}
-			bg="nudgeorange.500"
+			bg="orange.500"
 			mx={{
 				base: "8",
 				md: "90",
