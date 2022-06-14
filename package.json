@@ -25,6 +25,7 @@
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.6.3",
     "smooth-scrollbar-react": "^2.3.0",
+    "swiper": "^8.2.4",
     "tsparticles": "^1.34.1",
     "typewriter-effect": "^2.18.2",
     "yarn": "^1.22.11",

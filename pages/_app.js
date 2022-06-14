@@ -10,7 +10,7 @@ import "@fontsource/outfit/700.css";
 import "@fontsource/outfit/800.css";
 import "@fontsource/outfit/900.css";
 
-const indTheme = {
+const nudgeTheme = {
 	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {
 		orange: {
@@ -25,6 +25,7 @@ const indTheme = {
 			800: "#603215",
 			900: "#30190A",
 		},
+		black: "#222222",
 	},
 	fontSizes: {
 		xs: "0.75rem",
@@ -41,9 +42,37 @@ const indTheme = {
 		"8xl": "6rem",
 		"9xl": "8rem",
 	},
+	//components
+	components: {
+		Text: {
+			baseStyle: {
+				color: "gray.700",
+			},
+			sizes: {
+				lg: {
+					fontSize: "18",
+					lineHeight: "24px",
+				},
+			},
+		},
+		Heading: {
+			baseStyle: {
+				color: "black",
+			},
+			sizes: {
+				lg: {
+					fontSize: "60",
+					fontWeight: "semibold",
+					lineHeight: "64px",
+				},
+			},
+		},
+	},
+
+	//components
 };
 
-const theme = extendTheme(indTheme);
+const theme = extendTheme(nudgeTheme);
 
 function MyApp({ Component, pageProps }) {
 	return (

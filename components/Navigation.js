@@ -25,15 +25,17 @@ const DesktopNav = ({ path }) => {
 	const router = useRouter();
 	return (
 		<Box
-			position="fixed"
+			position="sticky"
 			top="0"
 			left="0"
 			zIndex="10"
 			display={{ base: "none", lg: "block" }}
 			// borderBottom="1px"
 			// borderColor="gray.100"
+			bg="purple.100"
+			height="16"
 		>
-			<HStack
+			{/* <HStack
 				px={{
 					base: "30px",
 					sm: "50px",
@@ -78,7 +80,7 @@ const DesktopNav = ({ path }) => {
 				>
 					join waitlist
 				</Button>
-			</HStack>
+			</HStack> */}
 		</Box>
 	);
 };

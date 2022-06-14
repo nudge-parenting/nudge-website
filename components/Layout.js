@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<Box mt={["12", "0"]}>
+			<Box>
 				<GoToTopButton />
 				<Navbar toggleOpen={toggleOpen} isOpen={isOpen} />
 				<Box
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 				>
 					{children}
 				</Box>
-				<Footer />
+				{/* <Footer /> */}
 			</Box>
 		</>
 	);

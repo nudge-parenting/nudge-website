@@ -1,80 +1,81 @@
-import {
-	Box,
-	Button,
-	Center,
-	Heading,
-	ScaleFade,
-	Text,
-	VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import LandingImages from "../components/LandingImages";
+import LandingImages from "../components/Home/LandingImages";
 const MotionBox = motion(Box);
 
 export default function Home({}) {
-	return (
-		<VStack
-			pb={{ base: "20", xl: "12", "2xl": "20" }}
-			minH="100vh"
-			mt="32"
-			spacing="20"
-		>
-			<HeroText />
-			<LandingImages />
-		</VStack>
-	);
+	return <HeroSection />;
 }
 
 function HeroText() {
 	return (
 		<VStack spacing="8">
-			<MotionBox
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{
-					type: "spring",
-					delay: 0.1,
-					mass: 1,
-					damping: 40,
-					stiffness: 200,
-					// duration: 1,
-				}}
-			>
-				<Heading textAlign="center">
-					There&apos;s genius <br />
-					inside your child.
-				</Heading>
+			<VStack spacing="4">
+				<VStack>
+					<MotionBox
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							type: "spring",
+							delay: 0.1,
+							mass: 1,
+							damping: 40,
+							stiffness: 200,
+							// duration: 1,
+						}}
+					>
+						<Heading
+							textAlign="center"
+							size="lg"
+							fontWeight="semibold"
+							letterSpacing="-1px"
+						>
+							There&apos;s{" "}
+							<Heading as="span" color="orange.500" size="lg">
+								genius
+							</Heading>{" "}
+							<br />
+							inside your child.
+						</Heading>
+					</MotionBox>
+					<MotionBox
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							type: "spring",
+							delay: 0.3,
+							mass: 1,
+							damping: 40,
+							stiffness: 200,
+						}}
+					>
+						<Heading textAlign="center" size="lg">
+							<Heading as="span" color="orange.500" size="lg">
+								Nudge
+							</Heading>{" "}
+							it free.
+						</Heading>
+					</MotionBox>
+				</VStack>
 				<MotionBox
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{
 						type: "spring",
-						delay: 0.3,
+						delay: 0.5,
 						mass: 1,
 						damping: 40,
 						stiffness: 200,
 					}}
 				>
-					<Heading textAlign="center">Nudge it free.</Heading>
+					<Text textAlign="center" fontSize="18" lineHeight="24px">
+						With Nudge&apos;s high-quality classes & groups, at-home
+						activities, growth <br /> products, and parenting
+						guidance that you will find nowhere else
+					</Text>
 				</MotionBox>
-			</MotionBox>
-			<MotionBox
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{
-					type: "spring",
-					delay: 0.5,
-					mass: 1,
-					damping: 40,
-					stiffness: 200,
-				}}
-			>
-				<Text textAlign="center">
-					With Nudge&apos;s high-quality classes & groups, at-home
-					activities, growth <br /> products, and parenting guidance
-					that you will find nowhere else
-				</Text>
-			</MotionBox>
+			</VStack>
+
 			<MotionBox
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -88,6 +89,24 @@ function HeroText() {
 			>
 				<Button>join the waitlist</Button>
 			</MotionBox>
+		</VStack>
+	);
+}
+
+function HeroSection() {
+	return (
+		<VStack minH="100vh" spacing="12">
+			<VStack
+				mt="16"
+				spacing="20"
+				w="100%"
+				// bg="pink.100"
+				maxW="1160px"
+				mx="auto"
+			>
+				<HeroText />
+			</VStack>
+			<LandingImages />
 		</VStack>
 	);
 }
