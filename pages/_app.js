@@ -58,12 +58,17 @@ const nudgeTheme = {
 		Heading: {
 			baseStyle: {
 				color: "black",
+				fontWeight: "semibold",
+				letterSpacing: "-1px",
 			},
 			sizes: {
 				lg: {
 					fontSize: "60",
-					fontWeight: "semibold",
 					lineHeight: "64px",
+				},
+				md: {
+					fontSize: "48px",
+					lineHeight: "52px",
 				},
 			},
 		},

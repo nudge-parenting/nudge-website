@@ -18,12 +18,13 @@ function LandingImages() {
 	};
 
 	const extraImages = useBreakpointValue({ base: false, xl: true });
+	const spaceBetween = useBreakpointValue({ base: 16, xl: 32 });
 
 	return (
 		<Swiper
 			modules={[Autoplay, FreeMode]}
 			freeMode={true} // not working for some reason
-			spaceBetween={32}
+			spaceBetween={spaceBetween}
 			autoplay={{
 				delay: 1,
 				disableOnInteraction: false,
@@ -34,28 +35,30 @@ function LandingImages() {
 			style={{
 				width: "100%",
 			}}
-			speed={4000}
+			speed={10000}
 			grabCursor={true}
 		>
-			<SwiperSlide style={swiperSlideStyle}>
+			<SwiperSlide style={swiperSlideStyle} key={1}>
 				<ImagesCol imgNum={1} />
 			</SwiperSlide>
-			<SwiperSlide style={swiperSlideStyle}>
+			<SwiperSlide style={swiperSlideStyle} key={2}>
 				<ImagesCol imgNum={4} hasPt />
 			</SwiperSlide>
-			<SwiperSlide style={swiperSlideStyle}>
+			<SwiperSlide style={swiperSlideStyle} key={3}>
 				<ImagesCol imgNum={7} />
 			</SwiperSlide>
-			<SwiperSlide style={swiperSlideStyle}>
+			<SwiperSlide style={swiperSlideStyle} key={4}>
 				<ImagesCol imgNum={10} hasPt />
 			</SwiperSlide>
-			<SwiperSlide style={swiperSlideStyle}>
-				<ImagesCol imgNum={13} />
-			</SwiperSlide>
 			{extraImages && (
-				<SwiperSlide style={swiperSlideStyle}>
-					<ImagesCol imgNum={7} hasPt />
-				</SwiperSlide>
+				<>
+					<SwiperSlide style={swiperSlideStyle} key={5}>
+						<ImagesCol imgNum={13} />
+					</SwiperSlide>
+					<SwiperSlide style={swiperSlideStyle} key={6}>
+						<ImagesCol imgNum={7} hasPt />
+					</SwiperSlide>
+				</>
 			)}
 		</Swiper>
 	);
@@ -63,7 +66,10 @@ function LandingImages() {
 
 function ImagesCol({ imgNum, hasPt }) {
 	return (
-		<VStack spacing="8" pt={hasPt ? "14" : "0"}>
+		<VStack
+			spacing={{ base: "4", xl: "8" }}
+			pt={hasPt ? { base: "8", xl: "14" } : "0"}
+		>
 			<ImageBox
 				imgPath={`/landing images/landing-image-${
 					imgNum < 10 ? "0" + imgNum : imgNum

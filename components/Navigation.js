@@ -89,7 +89,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 		<Box
 			borderBottom="1px"
 			borderColor="gray.100"
-			position="fixed"
+			position="sticky"
 			zIndex="10"
 			top="0"
 			left="0"

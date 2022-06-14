@@ -26,12 +26,12 @@ function HeroText() {
 					>
 						<Heading
 							textAlign="center"
-							size="lg"
+							size="md"
 							fontWeight="semibold"
 							letterSpacing="-1px"
 						>
 							There&apos;s{" "}
-							<Heading as="span" color="orange.500" size="lg">
+							<Heading as="span" color="orange.500" size="md">
 								genius
 							</Heading>{" "}
 							<br />
@@ -49,8 +49,8 @@ function HeroText() {
 							stiffness: 200,
 						}}
 					>
-						<Heading textAlign="center" size="lg">
-							<Heading as="span" color="orange.500" size="lg">
+						<Heading textAlign="center" size="md">
+							<Heading as="span" color="orange.500" size="md">
 								Nudge
 							</Heading>{" "}
 							it free.
