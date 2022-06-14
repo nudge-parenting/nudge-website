@@ -1,149 +1,69 @@
-import { Box, Center, HStack, transition, VStack } from "@chakra-ui/react";
+import { Box, useBreakpointValue, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Autoplay, FreeMode } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
 function LandingImages() {
+	const swiperSlideStyle = {
+		display: "flex",
+		justifyContent: "center",
+		// backgroundColor: "green",
+		width: "auto",
+	};
+
+	const extraImages = useBreakpointValue({ base: false, xl: true });
+
 	return (
 		<Swiper
-			// spaceBetween={50}
+			modules={[Autoplay, FreeMode]}
+			freeMode={true} // not working for some reason
+			spaceBetween={32}
+			autoplay={{
+				delay: 1,
+				disableOnInteraction: false,
+			}}
 			loop={true}
-			slidesPerView={3}
-			onSlideChange={() => console.log("slide change")}
-			onSwiper={(swiper) => console.log(swiper)}
+			slidesPerView="auto"
 			direction="horizontal"
 			style={{
-				// backgroundColor: "#ff00bb",
 				width: "100%",
 			}}
+			speed={4000}
+			grabCursor={true}
 		>
-			<SwiperSlide
-				style={{
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
+			<SwiperSlide style={swiperSlideStyle}>
 				<ImagesCol imgNum={1} />
 			</SwiperSlide>
-			<SwiperSlide
-				style={{
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<ImagesCol imgNum={1} />
+			<SwiperSlide style={swiperSlideStyle}>
+				<ImagesCol imgNum={4} hasPt />
 			</SwiperSlide>
-			<SwiperSlide
-				style={{
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<ImagesCol imgNum={1} />
+			<SwiperSlide style={swiperSlideStyle}>
+				<ImagesCol imgNum={7} />
 			</SwiperSlide>
-			<SwiperSlide
-				style={{
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<ImagesCol imgNum={1} />
+			<SwiperSlide style={swiperSlideStyle}>
+				<ImagesCol imgNum={10} hasPt />
 			</SwiperSlide>
-			<SwiperSlide>
-				<ImagesCol imgNum={1} />
+			<SwiperSlide style={swiperSlideStyle}>
+				<ImagesCol imgNum={13} />
 			</SwiperSlide>
+			{extraImages && (
+				<SwiperSlide style={swiperSlideStyle}>
+					<ImagesCol imgNum={7} hasPt />
+				</SwiperSlide>
+			)}
 		</Swiper>
 	);
 }
 
-// function LandingImages() {
-// 	const delay = 1;
-// 	const delayDiff = 0.4;
-// 	const transition = {
-// 		type: "spring",
-// 		mass: 1,
-// 		damping: 8,
-// 		stiffness: 100,
-// 	};
-
-// 	return (
-// 		<VStack spacing="8" maxW="100%">
-// 			<MotionBox
-// 				initial={{ opacity: 0, y: 20 }}
-// 				animate={{ opacity: 1, y: 0 }}
-// 				transition={{
-// 					...transition,
-// 					delay: delay,
-// 				}}
-// 			>
-// 				<ImagesRow imgNum={1} />
-// 			</MotionBox>
-// 			<MotionBox
-// 				initial={{ opacity: 0, y: 20 }}
-// 				animate={{ opacity: 1, y: 0 }}
-// 				transition={{
-// 					...transition,
-// 					delay: delay + delayDiff,
-// 				}}
-// 			>
-// 				<ImagesRow imgNum={6} />
-// 			</MotionBox>
-// 			<MotionBox
-// 				initial={{ opacity: 0, y: 20 }}
-// 				animate={{ opacity: 1, y: 0 }}
-// 				transition={{
-// 					...transition,
-// 					delay: delay + delayDiff * 2,
-// 				}}
-// 			>
-// 				<ImagesRow imgNum={11} />
-// 			</MotionBox>
-// 		</VStack>
-// 	);
-// }
-
-function ImagesRow({ imgNum }) {
+function ImagesCol({ imgNum, hasPt }) {
 	return (
-		<HStack spacing="8">
-			<ImageBox
-				imgPath={`/landing images/landing-image-${
-					imgNum < 10 ? "0" + imgNum : imgNum
-				}.png`}
-			/>
-			<ImageBox
-				imgPath={`/landing images/landing-image-${
-					imgNum < 10 ? "0" + (imgNum + 1) : imgNum + 1
-				}.png`}
-				pt="14"
-			/>
-			<ImageBox
-				imgPath={`/landing images/landing-image-${
-					imgNum + 2 < 10 ? "0" + (imgNum + 2) : imgNum + 2
-				}.png`}
-			/>
-			<ImageBox
-				imgPath={`/landing images/landing-image-${
-					imgNum + 3 < 10 ? "0" + (imgNum + 3) : imgNum + 3
-				}.png`}
-				pt="14"
-			/>
-			<ImageBox
-				imgPath={`/landing images/landing-image-${
-					imgNum + 4 < 10 ? "0" + (imgNum + 4) : imgNum + 4
-				}.png`}
-			/>
-		</HStack>
-	);
-}
-
-function ImagesCol({ imgNum }) {
-	return (
-		<VStack spacing="8">
+		<VStack spacing="8" pt={hasPt ? "14" : "0"}>
 			<ImageBox
 				imgPath={`/landing images/landing-image-${
 					imgNum < 10 ? "0" + imgNum : imgNum
