@@ -64,7 +64,7 @@ const nudgeTheme = {
 			sizes: {
 				lg: {
 					// base, sm, md, lg, xl (object syntax doesnt work here)
-					fontSize: ["46px", "46px", "46px", "46px", "60px"],
+					fontSize: ["42px", "42px", "42px", "42px", "60px"],
 					lineHeight: ["50px", "50px", "50px", "50px", "64px"],
 				},
 			},
