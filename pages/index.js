@@ -1,15 +1,34 @@
-import { Box, Button, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import Button from "../components/General/Button";
 import LandingImages from "../components/Home/LandingImages";
 const MotionBox = motion(Box);
 
 export default function Home({}) {
 	return <HeroSection />;
 }
+function HeroSection() {
+	return (
+		<VStack minH="100vh" spacing="12" py="12">
+			<HStack
+				width="1160px"
+				mx="auto"
+				justifyContent="center"
+				spacing="100px"
+				alignItems="center"
+			>
+				<FloatingSVGs type="left" />
+				<HeroText />
+				<FloatingSVGs type="right" />
+			</HStack>
+			<LandingImages />
+		</VStack>
+	);
+}
 
 function HeroText() {
 	return (
-		<VStack spacing="8">
+		<VStack spacing="8" width="560px" mx="auto">
 			<VStack spacing="4">
 				<VStack>
 					<MotionBox
@@ -26,12 +45,11 @@ function HeroText() {
 					>
 						<Heading
 							textAlign="center"
-							size="md"
+							size="lg"
 							fontWeight="semibold"
-							letterSpacing="-1px"
 						>
 							There&apos;s{" "}
-							<Heading as="span" color="orange.500" size="md">
+							<Heading as="span" color="orange.500" size="lg">
 								genius
 							</Heading>{" "}
 							<br />
@@ -49,8 +67,8 @@ function HeroText() {
 							stiffness: 200,
 						}}
 					>
-						<Heading textAlign="center" size="md">
-							<Heading as="span" color="orange.500" size="md">
+						<Heading textAlign="center" size="lg" mt="-1">
+							<Heading as="span" color="orange.500" size="lg">
 								Nudge
 							</Heading>{" "}
 							it free.
@@ -93,20 +111,62 @@ function HeroText() {
 	);
 }
 
-function HeroSection() {
+function FloatingSVGs({ type = "left" }) {
 	return (
-		<VStack minH="100vh" spacing="12">
-			<VStack
-				mt="16"
-				spacing="20"
-				w="100%"
-				// bg="pink.100"
-				maxW="1160px"
-				mx="auto"
-			>
-				<HeroText />
-			</VStack>
-			<LandingImages />
+		<VStack w="180px" h="200px">
+			<FloatingBox>
+				<Image
+					src={
+						type === "left"
+							? "./svg shapes/svg-shape-06.svg"
+							: "./svg shapes/svg-shape-02.svg"
+					}
+					alt="svg-elemnent"
+					ml={type === "left" ? "90px" : "0px"}
+					mr={type === "left" ? "0px" : "130px"}
+				/>
+			</FloatingBox>
+			<FloatingBox>
+				<Image
+					src={
+						type === "left"
+							? "./svg shapes/svg-shape-05.svg"
+							: "./svg shapes/svg-shape-03.svg"
+					}
+					alt="svg-elemnent"
+					mr={type === "left" ? "90px" : "0px"}
+					ml={type === "left" ? "0px" : "120px"}
+				/>
+			</FloatingBox>
+			<FloatingBox>
+				<Image
+					src={
+						type === "left"
+							? "./svg shapes/svg-shape-01.svg"
+							: "./svg shapes/svg-shape-04.svg"
+					}
+					alt="svg-elemnent"
+					ml={type === "left" ? "70px" : "40px"}
+				/>
+			</FloatingBox>
 		</VStack>
+	);
+}
+
+function FloatingBox({ floatLength = 20, children }) {
+	return (
+		<MotionBox
+			initial={{ y: floatLength / 2 }}
+			animate={{ y: -floatLength / 2 }}
+			transition={{
+				type: "ease",
+				repeat: Infinity,
+				repeatType: "reverse",
+				//random duration
+				duration: Math.random() + 2,
+			}}
+		>
+			{children}
+		</MotionBox>
 	);
 }

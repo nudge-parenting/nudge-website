@@ -1,5 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Layout from "../components/Layout";
+import Layout from "../components/General/Layout";
 import "@fontsource/outfit/100.css";
 import "@fontsource/outfit/200.css";
 import "@fontsource/outfit/300.css";
@@ -63,18 +63,26 @@ const nudgeTheme = {
 			},
 			sizes: {
 				lg: {
-					fontSize: "60",
-					lineHeight: "64px",
-				},
-				md: {
-					fontSize: "48px",
-					lineHeight: "52px",
+					// base, sm, md, lg, xl (object syntax doesnt work here)
+					fontSize: ["48px", "48px", "48px", "48px", "60px"],
+					lineHeight: ["52px", "52px", "52px", "52px", "64px"],
 				},
 			},
 		},
+		Button: {
+			baseStyle: {
+				borderRadius: "12px",
+				fontSize: "14px",
+				px: 20,
+			},
+			defaultProps: {
+				colorScheme: "orange",
+				px: 20,
+				borderRadius: "12px",
+				fontSize: "14px",
+			},
+		},
 	},
-
-	//components
 };
 
 const theme = extendTheme(nudgeTheme);
