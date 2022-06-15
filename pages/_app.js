@@ -14,14 +14,14 @@ const nudgeTheme = {
 	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {
 		orange: {
-			50: "#FCE5D6",
+			50: "#FEF3EC",
 			100: "#FCE5D6",
 			200: "#F9CBAE",
 			300: "#F6B285",
 			400: "#F3985D",
 			500: "#F07E34",
 			600: "#C0652A",
-			700: "#904C1F",
+			700: "#C3550E",
 			800: "#603215",
 			900: "#30190A",
 		},
@@ -64,8 +64,8 @@ const nudgeTheme = {
 			sizes: {
 				lg: {
 					// base, sm, md, lg, xl (object syntax doesnt work here)
-					fontSize: ["48px", "48px", "48px", "48px", "60px"],
-					lineHeight: ["52px", "52px", "52px", "52px", "64px"],
+					fontSize: ["46px", "46px", "46px", "46px", "60px"],
+					lineHeight: ["50px", "50px", "50px", "50px", "64px"],
 				},
 			},
 		},

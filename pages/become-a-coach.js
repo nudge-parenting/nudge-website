@@ -1,6 +1,6 @@
 import { Text, Square } from "@chakra-ui/react";
 import { ScaleFade } from "@chakra-ui/react";
-const About = () => (
+const BecomeACoach = () => (
 	<ScaleFade in>
 		<Square
 			minW="50"
@@ -16,8 +16,8 @@ const About = () => (
 			}}
 			borderRadius="xl"
 		>
-			<Text color={"white"}>About Nudge, coming soon.</Text>
+			<Text color={"white"}>Become A Coach, coming soon.</Text>
 		</Square>
 	</ScaleFade>
 );
-export default About;
+export default BecomeACoach;

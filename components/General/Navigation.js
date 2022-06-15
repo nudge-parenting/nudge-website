@@ -1,10 +1,11 @@
 import { Image } from "@chakra-ui/image";
 import { Box, HStack, Spacer, Square, Text } from "@chakra-ui/layout";
-import { Button, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Button from "./Button";
 import { MenuToggle } from "./MenuToggle";
 
 const MotionSquare = motion(Square);
@@ -29,20 +30,19 @@ const DesktopNav = ({ path }) => {
 			top="0"
 			left="0"
 			zIndex="10"
-			display={{ base: "none", lg: "block" }}
-			// borderBottom="1px"
-			// borderColor="gray.100"
-			bg="purple.100"
+			display={{ base: "none", xl: "flex" }}
+			borderBottom="1px"
+			borderColor="gray.100"
+			bg="white"
 			height="16"
+			alignItems="center"
+			justifyContent="center"
 		>
-			{/* <HStack
+			<HStack
 				px={{
 					base: "30px",
-					sm: "50px",
-					md: "100px",
-					lg: "90px",
+					xl: "90px",
 				}}
-				py={"3"}
 				w="100vw"
 				zIndex="10"
 			>
@@ -60,27 +60,23 @@ const DesktopNav = ({ path }) => {
 
 				<Spacer />
 				<Button
-					colorScheme="orange"
-					fontWeight="bold"
-					borderRadius="md"
 					onClick={() => {
-						router.push("/about");
+						router.push("/become-a-coach");
 					}}
-					variant="outline"
+					variant="secondary"
+					size="md"
 				>
 					become a coach
 				</Button>
 				<Button
-					colorScheme="orange"
-					fontWeight="bold"
-					borderRadius="md"
 					onClick={() => {
-						router.push("/about");
+						router.push("/join-the-waitlist");
 					}}
+					size="md"
 				>
 					join waitlist
 				</Button>
-			</HStack> */}
+			</HStack>
 		</Box>
 	);
 };
@@ -93,16 +89,12 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 			zIndex="10"
 			top="0"
 			left="0"
-			display={{ base: "block", lg: "none" }}
+			display={{ base: "flex", xl: "none" }}
 		>
 			<HStack
 				px={{
-					base: "20px",
-					sm: "50px",
-					md: "100px",
-					lg: "90px",
-					// xl: "25vw",
-					// "2xl": "30vw",
+					base: "16px",
+					xl: "90px",
 				}}
 				py="3"
 				bg="white"
@@ -110,18 +102,21 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 				zIndex="10"
 			>
 				<Link href="/" passHref>
-					<Box w="32" zIndex="60">
-						<Image
-							src="./lemon-typo-logo.png"
-							// boxSize={["10", "12"]}
-							_hover={{
-								cursor: "pointer",
-							}}
-							alt=""
-							onClick={() => {
-								toggleOpen(0);
-							}}
-						/>
+					<Box
+						w="32"
+						zIndex="60"
+						onClick={() => {
+							toggleOpen(0);
+						}}
+					>
+						<Text
+							fontSize="24px"
+							lineHeight="28px"
+							fontWeight="semibold"
+							color="orange.500"
+						>
+							nudge
+						</Text>
 					</Box>
 				</Link>
 				<Spacer />

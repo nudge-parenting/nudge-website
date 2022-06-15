@@ -1,5 +1,7 @@
 import { Box, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { route } from "next/dist/server/router";
+import { useRouter } from "next/router";
 import Button from "../components/General/Button";
 import LandingImages from "../components/Home/LandingImages";
 const MotionBox = motion(Box);
@@ -11,10 +13,10 @@ function HeroSection() {
 	return (
 		<VStack minH="100vh" spacing="12" py="12">
 			<HStack
-				width="1160px"
-				mx="auto"
+				width={{ base: "100%-16px", xl: "1160px" }}
+				mx={{ base: "16px", xl: "auto" }}
 				justifyContent="center"
-				spacing="100px"
+				spacing={{ base: "4px", xl: "100px" }}
 				alignItems="center"
 			>
 				<FloatingSVGs type="left" />
@@ -27,8 +29,9 @@ function HeroSection() {
 }
 
 function HeroText() {
+	const router = useRouter();
 	return (
-		<VStack spacing="8" width="560px" mx="auto">
+		<VStack spacing="8" width={{ base: "100%", xl: "560px" }} mx="auto">
 			<VStack spacing="4">
 				<VStack>
 					<MotionBox
@@ -88,8 +91,8 @@ function HeroText() {
 				>
 					<Text textAlign="center" fontSize="18" lineHeight="24px">
 						With Nudge&apos;s high-quality classes & groups, at-home
-						activities, growth <br /> products, and parenting
-						guidance that you will find nowhere else
+						activities, growth products, and parenting guidance that
+						you will find nowhere else
 					</Text>
 				</MotionBox>
 			</VStack>
@@ -105,7 +108,13 @@ function HeroText() {
 					stiffness: 200,
 				}}
 			>
-				<Button>join the waitlist</Button>
+				<Button
+					onClick={() => {
+						router.push("/join-the-waitlist");
+					}}
+				>
+					join the waitlist
+				</Button>
 			</MotionBox>
 		</VStack>
 	);
@@ -113,7 +122,7 @@ function HeroText() {
 
 function FloatingSVGs({ type = "left" }) {
 	return (
-		<VStack w="180px" h="200px">
+		<VStack w="180px" h="200px" display={{ base: "none", xl: "block" }}>
 			<FloatingBox>
 				<Image
 					src={
@@ -122,7 +131,6 @@ function FloatingSVGs({ type = "left" }) {
 							: "./svg shapes/svg-shape-02.svg"
 					}
 					alt="svg-elemnent"
-					ml={type === "left" ? "90px" : "0px"}
 					mr={type === "left" ? "0px" : "130px"}
 				/>
 			</FloatingBox>
@@ -153,7 +161,7 @@ function FloatingSVGs({ type = "left" }) {
 	);
 }
 
-function FloatingBox({ floatLength = 20, children }) {
+function FloatingBox({ floatLength = 20, children, ...props }) {
 	return (
 		<MotionBox
 			initial={{ y: floatLength / 2 }}
@@ -162,9 +170,9 @@ function FloatingBox({ floatLength = 20, children }) {
 				type: "ease",
 				repeat: Infinity,
 				repeatType: "reverse",
-				//random duration
 				duration: Math.random() + 2,
 			}}
+			{...props}
 		>
 			{children}
 		</MotionBox>
