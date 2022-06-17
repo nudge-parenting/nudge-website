@@ -1,4 +1,12 @@
-import { Box, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Heading,
+	HStack,
+	Image,
+	Stack,
+	Text,
+	VStack,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { route } from "next/dist/server/router";
 import { useRouter } from "next/router";
@@ -7,13 +15,60 @@ import LandingImages from "../components/Home/LandingImages";
 const MotionBox = motion(Box);
 
 export default function Home({}) {
-	return <HeroSection />;
+	return (
+		<VStack spacing="48px" w="100%">
+			<HeroSection />
+			<MissionSection />
+		</VStack>
+	);
 }
+
+function MissionSection() {
+	return (
+		<Stack
+			direction={{ base: "column-reverse", xl: "row" }}
+			width={{ base: "calc(100% - 32px)", xl: "1160px" }}
+			mx={{ base: "0px", xl: "auto" }}
+			spacing="40px"
+			justifyContent="center"
+			py="12"
+			alignItems="center"
+		>
+			<VStack spacing={{ base: "96px", xl: "48px" }} alignItems="start">
+				<VStack spacing="16px" alignItems="start">
+					<Text>The Nudge Mission</Text>
+					<Heading size="md">
+						Empower you the parent to nudge free the genius inside
+						your child
+					</Heading>
+					<Text>
+						Parenting is the most powerful job in the world. I want
+						Nudge to become every parent’s best friend and ally in
+						this job of shaping their child’s unique genius.
+					</Text>
+				</VStack>
+				<VStack alignItems="start" spacing="4px">
+					<Text size="md" fontWeight="semibold">
+						Pooja Pande
+					</Text>
+					<Text size="md">Founder, Nudge</Text>
+				</VStack>
+			</VStack>
+			<Image
+				src="./home/message.png"
+				alt="child reading a map"
+				w={{ base: "100%", xl: "524px" }}
+				h={{ base: "auto", xl: "auto" }}
+			/>
+		</Stack>
+	);
+}
+
 function HeroSection() {
 	return (
-		<VStack minH="100vh" spacing="12" py="12">
+		<VStack minH="100vh" spacing="12" py="12" w="100%">
 			<HStack
-				width={{ base: "100%-32px", xl: "1160px" }}
+				width={{ base: "100%-64px", xl: "1160px" }}
 				mx={{ base: "32px", xl: "auto" }}
 				justifyContent="center"
 				spacing={{ base: "4px", xl: "100px" }}

@@ -13,7 +13,6 @@ function LandingImages() {
 	const swiperSlideStyle = {
 		display: "flex",
 		justifyContent: "center",
-		// backgroundColor: "green",
 		width: "auto",
 	};
 

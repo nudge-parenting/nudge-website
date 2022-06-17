@@ -47,11 +47,17 @@ const nudgeTheme = {
 		Text: {
 			baseStyle: {
 				color: "gray.700",
+				fontSize: "18",
+				lineHeight: "24px",
 			},
 			sizes: {
 				lg: {
 					fontSize: "18",
 					lineHeight: "24px",
+				},
+				md: {
+					fontSize: "16",
+					lineHeight: "20px",
 				},
 			},
 		},
@@ -66,6 +72,10 @@ const nudgeTheme = {
 					// base, sm, md, lg, xl (object syntax doesnt work here)
 					fontSize: ["42px", "42px", "42px", "42px", "60px"],
 					lineHeight: ["50px", "50px", "50px", "50px", "64px"],
+				},
+				md: {
+					fontSize: ["36px", "36px", "36px", "36px", "48px"],
+					lineHeight: ["42px", "42px", "42px", "42px", "52px"],
 				},
 			},
 		},
