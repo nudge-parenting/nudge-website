@@ -46,7 +46,7 @@ const nudgeTheme = {
 	components: {
 		Text: {
 			baseStyle: {
-				color: "gray.700",
+				color: "gray.600",
 				fontSize: "18",
 				lineHeight: "24px",
 			},

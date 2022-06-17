@@ -29,14 +29,18 @@ function MissionSection() {
 			direction={{ base: "column-reverse", xl: "row" }}
 			width={{ base: "calc(100% - 32px)", xl: "1160px" }}
 			mx={{ base: "0px", xl: "auto" }}
-			spacing="40px"
+			spacing="50px"
 			justifyContent="center"
 			py="12"
 			alignItems="center"
 		>
-			<VStack spacing={{ base: "96px", xl: "48px" }} alignItems="start">
+			<VStack
+				spacing={{ base: "96px", xl: "48px" }}
+				alignItems="start"
+				w={{ base: "100%", xl: "560px" }}
+			>
 				<VStack spacing="16px" alignItems="start">
-					<Text>The Nudge Mission</Text>
+					<Text fontWeight="medium">The Nudge Mission</Text>
 					<Heading size="md">
 						Empower you the parent to nudge free the genius inside
 						your child
@@ -54,12 +58,27 @@ function MissionSection() {
 					<Text size="md">Founder, Nudge</Text>
 				</VStack>
 			</VStack>
-			<Image
-				src="./home/message.png"
-				alt="child reading a map"
+			<Box
 				w={{ base: "100%", xl: "524px" }}
 				h={{ base: "auto", xl: "auto" }}
-			/>
+				position="relative"
+			>
+				<Image
+					src="./home/message.png"
+					alt="child reading a map"
+					w={{ base: "100%", xl: "524px" }}
+					h={{ base: "auto", xl: "auto" }}
+				/>
+				<Image
+					src="./home/message-founder.png"
+					alt="excerpt of message from the founder"
+					w="180px"
+					h="76px"
+					position="absolute"
+					bottom={{ base: "-10px", xl: "0px" }}
+					left={{ base: "20px", xl: "-20px" }}
+				/>
+			</Box>
 		</Stack>
 	);
 }
