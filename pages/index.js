@@ -5,13 +5,22 @@ import {
 	Image,
 	Stack,
 	Text,
+	useBreakpointValue,
 	VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { route } from "next/dist/server/router";
 import { useRouter } from "next/router";
 import Button from "../components/General/Button";
 import LandingImages from "../components/Home/LandingImages";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 const MotionBox = motion(Box);
 
 export default function Home({}) {
@@ -19,10 +28,153 @@ export default function Home({}) {
 		<VStack spacing="48px" w="100%">
 			<HeroSection />
 			<MissionSection />
+			<ActivitiesSection />
 		</VStack>
 	);
 }
 
+function ActivitiesSection() {
+	const router = useRouter();
+	const swiperSlideStyle = {
+		display: "flex",
+		justifyContent: "center",
+	};
+	const spaceBetween = useBreakpointValue({ base: 16, xl: 8 });
+	const slidesPerView = useBreakpointValue({ base: 1, xl: 3 });
+	return (
+		<VStack
+			spacing="12"
+			width={{ base: "calc(100% - 32px)", xl: "760px" }}
+			mx={{ base: "0px", xl: "auto" }}
+			justifyContent="center"
+			py="12"
+			alignItems="center"
+		>
+			<VStack spacing="24px">
+				<VStack spacing="16px" alignItems="center" textAlign="center">
+					<Heading size="md">
+						Want your child to be constructively engaged?
+					</Heading>
+					<Heading size="sm">
+						Tired of searching for hobby classes?
+					</Heading>
+					<Text>
+						Nudge solves it all. Paid classes, or free groups.
+						Online over Zoom, or offline in your neighbourhood. From
+						STEM to SEL & Art to Artificial Intelligence. Nudge
+						brings you the world&apos;s best ecosystem of
+						after-school classes and groups for your child.
+					</Text>
+				</VStack>
+				<Button
+					onClick={() => {
+						router.push("/join-the-waitlist");
+					}}
+				>
+					join the waitlist
+				</Button>
+			</VStack>
+			<Swiper
+				modules={[Autoplay]}
+				spaceBetween={spaceBetween}
+				autoplay={{
+					delay: useBreakpointValue({ base: 1000, xl: 1 }),
+					disableOnInteraction: false,
+				}}
+				loop={true}
+				slidesPerView={slidesPerView}
+				direction="horizontal"
+				style={{
+					width: "100%",
+				}}
+				speed={useBreakpointValue({ base: 500, xl: 3000 })}
+				grabCursor={true}
+			>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-01.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-02.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-03.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-01.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-02.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-03.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-01.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-02.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+				<SwiperSlide style={swiperSlideStyle} key={1}>
+					<Image
+						src="./home/activity-03.png"
+						alt="child reading a map"
+						w={{ base: "100%", xl: "230px" }}
+						h={{ base: "auto", xl: "230px" }}
+						borderRadius="12px"
+					/>
+				</SwiperSlide>
+			</Swiper>
+		</VStack>
+	);
+}
 function MissionSection() {
 	return (
 		<Stack
@@ -47,8 +199,8 @@ function MissionSection() {
 					</Heading>
 					<Text>
 						Parenting is the most powerful job in the world. I want
-						Nudge to become every parent’s best friend and ally in
-						this job of shaping their child’s unique genius.
+						Nudge to become every parent&apos;s best friend and ally
+						in this job of shaping their child&apos;s unique genius.
 					</Text>
 				</VStack>
 				<VStack alignItems="start" spacing="4px">

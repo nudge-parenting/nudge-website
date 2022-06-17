@@ -65,17 +65,22 @@ const nudgeTheme = {
 			baseStyle: {
 				color: "black",
 				fontWeight: "semibold",
-				letterSpacing: "-1px",
 			},
 			sizes: {
 				lg: {
 					// base, sm, md, lg, xl (object syntax doesnt work here)
 					fontSize: ["42px", "42px", "42px", "42px", "60px"],
 					lineHeight: ["50px", "50px", "50px", "50px", "64px"],
+					letterSpacing: "-1px",
 				},
 				md: {
 					fontSize: ["36px", "36px", "36px", "36px", "48px"],
 					lineHeight: ["42px", "42px", "42px", "42px", "52px"],
+				},
+				sm: {
+					fontSize: "24px",
+					lineHeight: "30px",
+					color: "orange.700",
 				},
 			},
 		},
