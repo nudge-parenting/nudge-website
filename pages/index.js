@@ -5,6 +5,7 @@ import {
 	GrowthProductsSection,
 	HeroSection,
 	MissionSection,
+	ParentingServicesSection,
 } from "../components/home";
 
 export default function Home({}) {
@@ -15,6 +16,7 @@ export default function Home({}) {
 			<ActivitiesSection />
 			<ActivitiesAtHomeSection />
 			<GrowthProductsSection />
+			<ParentingServicesSection />
 		</VStack>
 	);
 }
