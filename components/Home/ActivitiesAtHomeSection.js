@@ -1,53 +1,47 @@
-import {
-	Heading,
-	Image,
-	Text,
-	useBreakpointValue,
-	VStack,
-} from "@chakra-ui/react";
+import { Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import Image from "next/image";
 import { useRouter } from "next/router";
-import { Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Button from "../components/General/Button";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Button } from "../general";
 
 function ActivitiesAtHomeSection() {
 	const router = useRouter();
-	const swiperSlideStyle = {
-		display: "flex",
-		justifyContent: "center",
-	};
-	const spaceBetween = useBreakpointValue({ base: 16, xl: 8 });
-	const slidesPerView = useBreakpointValue({ base: 1, xl: 3 });
+
 	return (
 		<VStack
 			spacing="12"
-			width={{ base: "calc(100% - 32px)", xl: "760px" }}
+			width={{ base: "calc(100% - 32px)", xl: "1160px" }}
 			mx={{ base: "0px", xl: "auto" }}
 			justifyContent="center"
 			py="12"
 			alignItems="center"
 		>
 			<VStack spacing="24px">
-				<VStack spacing="16px" alignItems="center" textAlign="center">
-					<Text>Activities by Coaches</Text>
+				<VStack
+					spacing="16px"
+					alignItems="center"
+					textAlign="center"
+					w={{ base: "100%", xl: "760px" }}
+				>
+					<Text fontWeight="medium">Activities At-Home</Text>
 					<Heading size="md">
-						Want your child to be constructively engaged?
+						Want to bond and do <br />
+						things with your child?
 					</Heading>
 					<Heading size="sm">
-						Tired of searching for hobby classes?
+						Unsure of what will work for your context?
 					</Heading>
 					<Text>
-						Nudge solves it all. Paid classes, or free groups.
-						Online over Zoom, or offline in your neighbourhood. From
-						STEM to SEL & Art to Artificial Intelligence. Nudge
-						brings you the world&apos;s best ecosystem of
-						after-school classes and groups for your child.
+						Nudge makes it easy. From Montessori tasks to daily
+						science experiments, from art & craft projects to
+						conversational games, Nudge brings you the world&apos;s
+						best collection of at-home activities for you to bond
+						and engage with your child and beat harmful screen-time.
 					</Text>
 				</VStack>
 				<Button
@@ -58,104 +52,61 @@ function ActivitiesAtHomeSection() {
 					join the waitlist
 				</Button>
 			</VStack>
-			<Swiper
-				modules={[Autoplay]}
-				spaceBetween={spaceBetween}
-				autoplay={{
-					delay: useBreakpointValue({ base: 1000, xl: 1 }),
-					disableOnInteraction: false,
-				}}
-				loop={true}
-				slidesPerView={slidesPerView}
-				direction="horizontal"
-				style={{
-					width: "100%",
-				}}
-				speed={useBreakpointValue({ base: 500, xl: 3000 })}
-				grabCursor={true}
+
+			<SimpleGrid
+				rows={{ base: 4, xl: 2 }}
+				columns={{ base: 2, xl: 4 }}
+				spacing={{ base: "16px", xl: "40px" }}
 			>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-01.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-02.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-03.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-04.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-05.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-06.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-07.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-08.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activity-09.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-			</Swiper>
+				<Image
+					src="/home/activities at home/activity-home-01.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-02.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-03.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-04.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-05.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-06.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-07.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+				<Image
+					src="/home/activities at home/activity-home-08.png"
+					alt="Picture of Activity"
+					width={260}
+					height={260}
+				/>
+			</SimpleGrid>
 		</VStack>
 	);
 }

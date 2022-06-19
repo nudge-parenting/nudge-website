@@ -1,5 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Layout from "../components/General/Layout";
+import Layout from "../components/general/Layout";
 import "@fontsource/outfit/100.css";
 import "@fontsource/outfit/200.css";
 import "@fontsource/outfit/300.css";

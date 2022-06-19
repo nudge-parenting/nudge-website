@@ -1,7 +1,6 @@
-import { Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import Button from "../components/General/Button";
-import LandingImages from "../components/Home/LandingImages";
+import { Button } from "../general";
 
 // Import Swiper styles
 import "swiper/css";
@@ -9,6 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import FloatingSVGs from "../general/FloatingStuff";
+import LandingImages from "./LandingImages";
+import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
 
