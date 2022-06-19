@@ -17,7 +17,7 @@ function CTASection() {
 			data-aos="fade-up"
 			data-aos-easing="ease-in-out"
 			data-aos-duration={1000}
-			data-aos-delay={100}
+			data-aos-delay={0}
 		>
 			<VStack
 				spacing="32px"

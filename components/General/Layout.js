@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 	useEffect(() => {
 		document.body.style.overflowX = "hidden";
-		AOS.init();
+		AOS.init({
+			once: true,
+		});
 	}, []);
 
 	return (
