@@ -37,6 +37,10 @@ function ParentingServicesSection() {
 				alt="parenting services photo"
 				w={{ base: "100%", xl: 460 }}
 				h={{ base: "auto", xl: 527 }}
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={100}
 			/>
 
 			<VStack
@@ -44,6 +48,10 @@ function ParentingServicesSection() {
 				alignItems={{ base: "start", xl: "start" }}
 				width={{ base: "100%", xl: "560px" }}
 				textAlign={{ base: "left", xl: "left" }}
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={200}
 			>
 				<VStack
 					spacing="16px"

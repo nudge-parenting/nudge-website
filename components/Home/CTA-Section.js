@@ -14,6 +14,10 @@ function CTASection() {
 			justifyContent="center"
 			alignItems="start"
 			p="12"
+			data-aos="fade-up"
+			data-aos-easing="ease-in-out"
+			data-aos-duration={1000}
+			data-aos-delay={100}
 		>
 			<VStack
 				spacing="32px"

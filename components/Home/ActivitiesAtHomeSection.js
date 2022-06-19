@@ -21,7 +21,13 @@ function ActivitiesAtHomeSection() {
 			py="12"
 			alignItems="center"
 		>
-			<VStack spacing="24px">
+			<VStack
+				spacing="24px"
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={200}
+			>
 				<VStack
 					spacing="16px"
 					alignItems="center"
@@ -57,6 +63,10 @@ function ActivitiesAtHomeSection() {
 				rows={{ base: 4, xl: 2 }}
 				columns={{ base: 2, xl: 4 }}
 				spacing={{ base: "16px", xl: "40px" }}
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={200}
 			>
 				<Image
 					src="/home/activities at home/activity-home-01.png"

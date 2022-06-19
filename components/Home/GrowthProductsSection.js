@@ -49,6 +49,10 @@ function GrowthProductsSection() {
 						base: "10px",
 						xl: "100%",
 					}}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={200}
 				/>
 				<Image
 					position="absolute"
@@ -57,6 +61,10 @@ function GrowthProductsSection() {
 					src="/home/products/svg-02.svg"
 					alt="svg shape"
 					zIndex={-1}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={250}
 				/>
 				<Image
 					position="absolute"
@@ -65,6 +73,10 @@ function GrowthProductsSection() {
 					src="/home/products/svg-03.svg"
 					alt="svg shape"
 					zIndex={-1}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={300}
 				/>
 				<Image
 					position="absolute"
@@ -73,6 +85,10 @@ function GrowthProductsSection() {
 					src="/home/products/svg-04.svg"
 					alt="svg shape"
 					zIndex={-1}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={350}
 				/>
 				<Image
 					position="absolute"
@@ -88,6 +104,10 @@ function GrowthProductsSection() {
 						xl: 175,
 					}}
 					alt="growth products by Nudge (apparel)"
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={400}
 				/>
 				<Image
 					position="absolute"
@@ -103,6 +123,10 @@ function GrowthProductsSection() {
 						xl: 294,
 					}}
 					alt="growth products by Nudge (games)"
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={450}
 				/>
 				<Image
 					position="absolute"
@@ -118,6 +142,10 @@ function GrowthProductsSection() {
 						xl: 234,
 					}}
 					alt="growth products by Nudge (educational kits)"
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={500}
 				/>
 				<Image
 					position="absolute"
@@ -133,6 +161,10 @@ function GrowthProductsSection() {
 						xl: 166,
 					}}
 					alt="growth products by Nudge (books)"
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={600}
 				/>
 			</Box>
 
@@ -141,6 +173,10 @@ function GrowthProductsSection() {
 				alignItems={{ base: "center", xl: "start" }}
 				width={{ base: "calc(100% - 32px)", xl: "560px" }}
 				textAlign={{ base: "center", xl: "left" }}
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={100}
 			>
 				<VStack
 					spacing="16px"

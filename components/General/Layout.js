@@ -1,9 +1,11 @@
 import Icon from "@chakra-ui/icon";
 import { Image } from "@chakra-ui/image";
 import { Box, HStack, Spacer, Square } from "@chakra-ui/layout";
-import { motion, useCycle } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useCycle } from "framer-motion";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { MdExpandLess } from "react-icons/md";
 import Header from "./Header";
 import LemonLink from "./LemonLink";
@@ -13,6 +15,7 @@ const Layout = ({ children }) => {
 	const [isOpen, toggleOpen] = useCycle(false, true);
 	useEffect(() => {
 		document.body.style.overflowX = "hidden";
+		AOS.init();
 	}, []);
 
 	return (

@@ -32,6 +32,10 @@ function ActivitiesSection() {
 			justifyContent="center"
 			py="12"
 			alignItems="center"
+			data-aos="fade-up"
+			data-aos-easing="ease-in-out"
+			data-aos-duration={1000}
+			data-aos-delay={200}
 		>
 			<VStack spacing="24px">
 				<VStack spacing="16px" alignItems="center" textAlign="center">

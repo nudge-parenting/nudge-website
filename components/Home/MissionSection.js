@@ -24,6 +24,10 @@ function MissionSection() {
 				spacing={{ base: "96px", xl: "48px" }}
 				alignItems="start"
 				w={{ base: "100%", xl: "560px" }}
+				data-aos="fade-up"
+				data-aos-easing="ease-in-out"
+				data-aos-duration={1000}
+				data-aos-delay={100}
 			>
 				<VStack spacing="16px" alignItems="start">
 					<Text fontWeight="medium">The Nudge Mission</Text>
@@ -54,6 +58,10 @@ function MissionSection() {
 					alt="child reading a map"
 					w={{ base: "100%", xl: "524px" }}
 					h={{ base: "auto", xl: "auto" }}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={200}
 				/>
 				<Image
 					src="./home/message-founder.png"
@@ -63,6 +71,10 @@ function MissionSection() {
 					position="absolute"
 					bottom={{ base: "-10px", xl: "0px" }}
 					left={{ base: "20px", xl: "-20px" }}
+					data-aos="fade-up"
+					data-aos-easing="ease-in-out"
+					data-aos-duration={1000}
+					data-aos-delay={500}
 				/>
 			</Box>
 		</Stack>
