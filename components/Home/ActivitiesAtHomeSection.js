@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/router";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Button } from "../General";
+import Button from "../components/General/Button";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-function ActivitiesSection() {
+function ActivitiesAtHomeSection() {
 	const router = useRouter();
 	const swiperSlideStyle = {
 		display: "flex",
@@ -35,6 +35,7 @@ function ActivitiesSection() {
 		>
 			<VStack spacing="24px">
 				<VStack spacing="16px" alignItems="center" textAlign="center">
+					<Text>Activities by Coaches</Text>
 					<Heading size="md">
 						Want your child to be constructively engaged?
 					</Heading>
@@ -159,4 +160,4 @@ function ActivitiesSection() {
 	);
 }
 
-export default ActivitiesSection;
+export default ActivitiesAtHomeSection;
