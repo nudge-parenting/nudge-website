@@ -119,7 +119,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-01.png"
+						src="./home/activity-04.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
@@ -128,7 +128,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-02.png"
+						src="./home/activity-05.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
@@ -137,7 +137,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-03.png"
+						src="./home/activity-06.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
@@ -146,7 +146,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-01.png"
+						src="./home/activity-07.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
@@ -155,7 +155,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-02.png"
+						src="./home/activity-08.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
@@ -164,7 +164,7 @@ function ActivitiesSection() {
 				</SwiperSlide>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activity-03.png"
+						src="./home/activity-09.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
