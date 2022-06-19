@@ -1,5 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Layout from "../components/Layout";
+import Layout from "../components/general/Layout";
 import "@fontsource/outfit/100.css";
 import "@fontsource/outfit/200.css";
 import "@fontsource/outfit/300.css";
@@ -10,33 +10,22 @@ import "@fontsource/outfit/700.css";
 import "@fontsource/outfit/800.css";
 import "@fontsource/outfit/900.css";
 
-const indTheme = {
+const nudgeTheme = {
 	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {
-		nudgeorange: {
-			50: "#FCE5D6",
+		orange: {
+			50: "#FEF3EC",
 			100: "#FCE5D6",
 			200: "#F9CBAE",
 			300: "#F6B285",
 			400: "#F3985D",
 			500: "#F07E34",
 			600: "#C0652A",
-			700: "#904C1F",
+			700: "#C3550E",
 			800: "#603215",
 			900: "#30190A",
 		},
-		nudgeblack: {
-			50: "#D6D6D6",
-			100: "#D6D6D6",
-			200: "#ADADAD",
-			300: "#858585",
-			400: "#5C5C5C",
-			500: "#333333",
-			600: "#292929",
-			700: "#1F1F1F",
-			800: "#141414",
-			900: "#0A0A0A",
-		},
+		black: "#222222",
 	},
 	fontSizes: {
 		xs: "0.75rem",
@@ -53,9 +42,65 @@ const indTheme = {
 		"8xl": "6rem",
 		"9xl": "8rem",
 	},
+	//components
+	components: {
+		Text: {
+			baseStyle: {
+				color: "gray.600",
+				fontSize: "18",
+				lineHeight: "24px",
+			},
+			sizes: {
+				lg: {
+					fontSize: "18",
+					lineHeight: "24px",
+				},
+				md: {
+					fontSize: "16",
+					lineHeight: "20px",
+				},
+			},
+		},
+		Heading: {
+			baseStyle: {
+				color: "black",
+				fontWeight: "semibold",
+			},
+			sizes: {
+				lg: {
+					// base, sm, md, lg, xl (object syntax doesnt work here)
+					fontSize: ["42px", "42px", "42px", "42px", "60px"],
+					lineHeight: ["50px", "50px", "50px", "50px", "64px"],
+					letterSpacing: "-1px",
+				},
+				md: {
+					fontSize: ["36px", "36px", "36px", "36px", "48px"],
+					lineHeight: ["42px", "42px", "42px", "42px", "52px"],
+				},
+				sm: {
+					fontSize: "24px",
+					lineHeight: "30px",
+					color: "orange.700",
+				},
+			},
+		},
+		Button: {
+			baseStyle: {
+				borderRadius: "12px",
+				fontSize: "14px",
+				px: 20,
+			},
+			defaultProps: {
+				colorScheme: "orange",
+				px: 20,
+				borderRadius: "12px",
+				fontSize: "14px",
+			},
+		},
+	},
 };
 
-const theme = extendTheme(indTheme);
+const theme = extendTheme(nudgeTheme);
 
 function MyApp({ Component, pageProps }) {
 	return (

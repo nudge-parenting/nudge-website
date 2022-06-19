@@ -1,24 +1,24 @@
-import { Box, HStack, VStack } from "@chakra-ui/react";
-import { useEffect, useRef } from "react";
-import FeaturedProjects from "../components/FeaturedProjects";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import { Scrollbar } from "smooth-scrollbar-react";
-// import { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
-import { ScaleFade } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
+import {
+	ActivitiesAtHomeSection,
+	ActivitiesSection,
+	CTASection,
+	GrowthProductsSection,
+	HeroSection,
+	MissionSection,
+	ParentingServicesSection,
+} from "../components/home";
 
-export default function Home({ onContactModalOpen }) {
-	// const scrollbar = useRef(BaseScrollbar);
-	// useEffect(() => {
-	// 	// console.log(scrollbar.current);
-	// 	console.log(onContactModalOpen);
-	// }, []);
-
+export default function Home({}) {
 	return (
-		<ScaleFade in>
-			<Box overflow="hidden" mb="200">
-				<Hero onContactModalOpen={onContactModalOpen} />
-			</Box>
-		</ScaleFade>
+		<VStack spacing="48px" w="100%" pb="12">
+			<HeroSection />
+			<MissionSection />
+			<ActivitiesSection />
+			<ActivitiesAtHomeSection />
+			<GrowthProductsSection />
+			<ParentingServicesSection />
+			<CTASection />
+		</VStack>
 	);
 }
