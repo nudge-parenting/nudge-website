@@ -17,10 +17,10 @@ function CTASection() {
 		>
 			<VStack
 				spacing="32px"
-				w={{ base: "100%", xl: "1160px" }}
+				w={{ base: "100%", xl: "370px" }}
 				alignItems="start"
 			>
-				<VStack spacing="16px">
+				<VStack spacing="16px" alignItems="start">
 					<Heading size="md" color="white">
 						Become an early Nudgester
 					</Heading>
