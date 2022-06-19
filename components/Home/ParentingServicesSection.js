@@ -30,6 +30,7 @@ function ParentingServicesSection() {
 			mx={{ base: "0px", xl: "auto" }}
 			py="12"
 			alignItems={{ base: "left", xl: "center" }}
+			justifyContent="space-between"
 		>
 			<Image
 				src="./home/parenting-services.png"

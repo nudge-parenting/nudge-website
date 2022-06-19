@@ -23,6 +23,7 @@ function GrowthProductsSection() {
 			// justifyContent="space-between"
 			py="12"
 			alignItems={{ base: "center", xl: "start" }}
+			justifyContent="space-between"
 		>
 			<Box
 				h={{

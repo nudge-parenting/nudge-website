@@ -11,7 +11,7 @@ const MotionPath = (props) => (
 	/>
 );
 
-export const MenuToggle = ({ toggle }) => (
+const MenuToggle = ({ toggle }) => (
 	<button
 		onClick={toggle}
 		style={{
@@ -51,3 +51,5 @@ export const MenuToggle = ({ toggle }) => (
 		</svg>
 	</button>
 );
+
+export default MenuToggle;

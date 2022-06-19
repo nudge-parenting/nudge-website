@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Button from "./Button";
-import { MenuToggle } from "./MenuToggle";
+import MenuToggle from "./MenuToggle";
 
 const MotionSquare = motion(Square);
 
