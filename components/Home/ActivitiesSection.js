@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/router";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Button } from "../General";
+import { Button } from "../general";
 
 // Import Swiper styles
 import "swiper/css";

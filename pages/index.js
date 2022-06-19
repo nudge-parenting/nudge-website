@@ -3,7 +3,7 @@ import {
 	ActivitiesSection,
 	HeroSection,
 	MissionSection,
-} from "../components/Home";
+} from "../components/home";
 
 export default function Home({}) {
 	return (
