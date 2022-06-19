@@ -2,6 +2,7 @@ import { VStack } from "@chakra-ui/react";
 import {
 	ActivitiesAtHomeSection,
 	ActivitiesSection,
+	CTASection,
 	GrowthProductsSection,
 	HeroSection,
 	MissionSection,
@@ -10,13 +11,14 @@ import {
 
 export default function Home({}) {
 	return (
-		<VStack spacing="48px" w="100%">
+		<VStack spacing="48px" w="100%" pb="12">
 			<HeroSection />
 			<MissionSection />
 			<ActivitiesSection />
 			<ActivitiesAtHomeSection />
 			<GrowthProductsSection />
 			<ParentingServicesSection />
+			<CTASection />
 		</VStack>
 	);
 }

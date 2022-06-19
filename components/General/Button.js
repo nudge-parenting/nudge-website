@@ -1,6 +1,26 @@
 import { Box } from "@chakra-ui/react";
 
 function Button({ variant = "primary", children, ...props }) {
+	const variantProps = {
+		primary: {
+			bg: "orange.500",
+			textColor: "white",
+			hoverColor: "orange.600",
+			activeBg: "orange.700",
+		},
+		secondary: {
+			bg: "orange.50",
+			textColor: "orange.700",
+			hoverColor: "orange.100",
+			activeBg: "orange.300",
+		},
+		alpha: {
+			bg: "rgb(255,255,255,0.2)",
+			textColor: "#fff",
+			hoverColor: "rgb(255,255,255,0.4)",
+			activeBg: "rgb(255,255,255,0.1)",
+		},
+	};
 	return (
 		<Box
 			as="button"
@@ -11,11 +31,11 @@ function Button({ variant = "primary", children, ...props }) {
 			borderRadius="12px"
 			fontSize="16px"
 			fontWeight="semibold"
-			bg={variant === "primary" ? "orange.500" : "orange.50"}
-			color={variant === "primary" ? "white" : "orange.700"}
-			_hover={{ bg: variant === "primary" ? "orange.600" : "orange.100" }}
+			bg={variantProps[variant].bg}
+			color={variantProps[variant].textColor}
+			_hover={{ bg: variantProps[variant].hoverColor }}
 			_active={{
-				bg: variant === "primary" ? "orange.700" : "orange.300",
+				bg: variantProps[variant].activeBg,
 				transform: "scale(0.98)",
 			}}
 			_focus={{
