@@ -9,6 +9,25 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Button } from "../general";
 
+import activityImage1 from "../../public/home/activities at home/activity-home-01.png";
+import activityImage2 from "../../public/home/activities at home/activity-home-02.png";
+import activityImage3 from "../../public/home/activities at home/activity-home-03.png";
+import activityImage4 from "../../public/home/activities at home/activity-home-04.png";
+import activityImage5 from "../../public/home/activities at home/activity-home-05.png";
+import activityImage6 from "../../public/home/activities at home/activity-home-06.png";
+import activityImage7 from "../../public/home/activities at home/activity-home-07.png";
+import activityImage8 from "../../public/home/activities at home/activity-home-08.png";
+
+const activityImages = [
+	activityImage1,
+	activityImage2,
+	activityImage3,
+	activityImage4,
+	activityImage5,
+	activityImage6,
+	activityImage7,
+	activityImage8,
+];
 function ActivitiesAtHomeSection() {
 	const router = useRouter();
 
@@ -69,49 +88,49 @@ function ActivitiesAtHomeSection() {
 				data-aos-delay={200}
 			>
 				<Image
-					src="/home/activities at home/activity-home-01.png"
+					src={activityImages[0]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-02.png"
+					src={activityImages[1]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-03.png"
+					src={activityImages[2]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-04.png"
+					src={activityImages[3]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-05.png"
+					src={activityImages[4]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-06.png"
+					src={activityImages[5]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-07.png"
+					src={activityImages[6]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
 				/>
 				<Image
-					src="/home/activities at home/activity-home-08.png"
+					src={activityImages[7]}
 					alt="Picture of Activity"
 					width={260}
 					height={260}
