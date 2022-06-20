@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import testPic from "../../public/landing images/landing-image-01.png";
 
 function LandingImages() {
 	const swiperSlideStyle = {
@@ -94,7 +95,7 @@ function ImageBox({ imgPath, ...props }) {
 			<Image
 				width={288}
 				height={216}
-				src={imgPath}
+				src={testPic}
 				alt="landing image"
 				style={{
 					borderRadius: "12px",
