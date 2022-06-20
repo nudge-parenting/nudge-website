@@ -81,6 +81,7 @@ const DesktopNav = ({ path }) => {
 	);
 };
 const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
+	const router = useRouter();
 	return (
 		<Box
 			borderBottom="1px"
@@ -166,40 +167,25 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										Menu
 									</Text>
 									<NavLink
-										text="Our Vision"
+										text="Become A Coach"
+										target="/become-a-coach"
 										path={path}
-										// target="/vision"
 										toggleOpen={() => {
+											router.push("/become-a-coach");
 											toggleOpen();
-											window.open(
-												"https://nudge-parenting.notion.site/Nudge-masterplan-5c43ec42eb934b6c994882320351c066"
-											);
 										}}
 									/>
 								</Box>
 								<NavLink
-									text="We're Hiring!"
+									text="Join the Waitlist"
+									target="/join-the-waitlist"
 									path={path}
-									// target="/hiring"
 									toggleOpen={() => {
-										// router.push("/hiring");
+										router.push("/join-the-waitlist");
 										toggleOpen();
-										window.open(
-											"https://nudge-parenting.notion.site/Nudge-is-hiring-81d4db29705a4420828f8a34441cb9d5"
-										);
 									}}
 								/>
-								<NavLink
-									text="The Team"
-									path={path}
-									// target="/team"
-									toggleOpen={() => {
-										toggleOpen();
-										window.open(
-											"https://nudge-parenting.notion.site/Nudge-team-c1f5f89531c14cf7b4e1f700677862ec"
-										);
-									}}
-								/>
+
 								<Box>
 									<Text
 										fontSize="md"
@@ -212,9 +198,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 									</Text>
 									<Link
 										passHref
-										href={
-											"mailto:abhimanyu@nudgeparenting.com"
-										}
+										href={"mailto:hi@nudgeverse.com"}
 									>
 										<Text
 											fontSize="2xl"
@@ -229,7 +213,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 											}}
 										>
 											{" "}
-											hi@nudgeparenting.com
+											hi@nudgeverse.com
 										</Text>
 									</Link>
 								</Box>
@@ -274,9 +258,11 @@ const NavLink = ({
 					fontSize={["5xl", "5xl", "sm"]}
 					fontWeight="medium"
 					color={
-						!isSelected
-							? ["orange.500", "orange.500", "black.500"]
-							: ["black.500", "black.500", "lemongrey.200"]
+						// 	!isSelected
+						// 		? ["orange.500", "orange.500", "black.500"]
+						// 		: ["black.500", "black.500", "lemongrey.200"]
+						// }
+						"black"
 					}
 					lineHeight="1.0"
 				>

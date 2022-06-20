@@ -7,8 +7,13 @@ import { useCycle } from "framer-motion";
 import Link from "next/link";
 import { useEffect } from "react";
 import { MdExpandLess } from "react-icons/md";
+import {
+	RiTwitterFill,
+	RiInstagramFill,
+	RiLinkedinBoxFill,
+	RiMailFill,
+} from "react-icons/ri";
 import Header from "./Header";
-import LemonLink from "./LemonLink";
 import Navbar from "./Navigation.js";
 
 const Layout = ({ children }) => {
@@ -33,7 +38,7 @@ const Layout = ({ children }) => {
 				>
 					{children}
 				</Box>
-				{/* <Footer /> */}
+				<Footer />
 			</Box>
 		</>
 	);
@@ -72,14 +77,14 @@ const Footer = () => {
 				base: "8",
 				md: "90",
 				lg: "250",
-				xl: "350",
-				"2xl": "450",
+				xl: "280",
 			}}
 			py="3"
 			bg="white"
 			w="100vw"
 			zIndex="10"
 			my="5"
+			justifyContent="space-between"
 		>
 			<Link href="/" passHref>
 				<Box w={["32"]}>
@@ -93,10 +98,60 @@ const Footer = () => {
 					/>
 				</Box>
 			</Link>
-			<Spacer />
-			<LemonLink>Terms</LemonLink>
-			<LemonLink>Privacy</LemonLink>
-			<LemonLink>Contact</LemonLink>
+			<HStack spacing="16px">
+				<Icon
+					as={RiTwitterFill}
+					w={6}
+					h={6}
+					color="gray.500"
+					_hover={{
+						cursor: "pointer",
+					}}
+					onClick={() => {
+						window.open("https://twitter.com/nudgeverse");
+					}}
+				/>
+				<Icon
+					as={RiInstagramFill}
+					w={6}
+					h={6}
+					color="gray.500"
+					_hover={{
+						cursor: "pointer",
+					}}
+					onClick={() => {
+						window.open(
+							"https://www.instagram.com/nudgeparenting/?hl=en"
+						);
+					}}
+				/>
+				<Icon
+					as={RiLinkedinBoxFill}
+					w={6}
+					h={6}
+					color="gray.500"
+					_hover={{
+						cursor: "pointer",
+					}}
+					onClick={() => {
+						window.open(
+							"https://www.linkedin.com/company/nudgeparenting"
+						);
+					}}
+				/>
+				<Icon
+					as={RiMailFill}
+					w={6}
+					h={6}
+					color="gray.500"
+					_hover={{
+						cursor: "pointer",
+					}}
+					onClick={() => {
+						window.open("mailto:hi@nudgeverse.com");
+					}}
+				/>
+			</HStack>
 		</HStack>
 	);
 };
