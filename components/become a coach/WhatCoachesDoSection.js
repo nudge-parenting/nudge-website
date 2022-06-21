@@ -27,7 +27,7 @@ function WhatNudgeCoachesDoSection() {
 			mx={{ base: "0px", xl: "auto" }}
 		>
 			<VStack
-				w={{ base: "calc(100% - 32px)", xl: "560px" }}
+				w={{ base: "calc(100% - 64px)", xl: "560px" }}
 				alignItems="start"
 				spacing="4"
 			>
@@ -214,7 +214,7 @@ function ImagesAndFeatures() {
 			<VStack
 				spacing="32px"
 				alignItems={{ base: "center", xl: "start" }}
-				width={{ base: "calc(100% - 32px)", xl: "360px" }}
+				width={{ base: "calc(100% - 64px)", xl: "360px" }}
 
 				// 	data-aos="fade-up"
 				// 	data-aos-easing="ease-in-out"

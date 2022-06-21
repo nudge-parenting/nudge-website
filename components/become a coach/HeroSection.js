@@ -13,10 +13,10 @@ function HeroSection() {
 		<VStack spacing="48px" py="12" w="100%">
 			<Stack
 				direction={{ base: "column", xl: "row" }}
-				width={{ base: "100%-64px", xl: "1160px" }}
+				width={{ base: "100%", xl: "1160px" }}
 				justifyContent="center"
 				spacing={{ base: "48px", xl: "140px" }}
-				alignItems={{ base: "center", xl: "start" }}
+				alignItems={{ base: "center", xl: "center" }}
 			>
 				<HeroText />
 				<HeroImages />
@@ -74,8 +74,7 @@ function HeroText() {
 	const router = useRouter();
 	return (
 		<VStack
-			mx={{ base: "32px", xl: "auto" }}
-			w={{ base: "100%", xl: "460px" }}
+			w={{ base: "calc(100% - 64px)", xl: "460px" }}
 			spacing="32px"
 			alignItems={{ base: "center", xl: "start" }}
 			textAlign={{ base: "center", xl: "left" }}
