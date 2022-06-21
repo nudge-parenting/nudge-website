@@ -77,67 +77,71 @@ function ActivitiesAtHomeSection() {
 					join the waitlist
 				</Button>
 			</VStack>
-
-			<SimpleGrid
-				rows={{ base: 4, xl: 2 }}
-				columns={{ base: 2, xl: 4 }}
-				spacing={{ base: "16px", xl: "40px" }}
-				data-aos="fade-up"
-				data-aos-easing="ease-in-out"
-				data-aos-duration={1000}
-				data-aos-delay={200}
-			>
-				<Image
-					src={activityImages[0]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[1]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[2]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[3]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[4]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[5]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[6]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-				<Image
-					src={activityImages[7]}
-					alt="Picture of Activity"
-					width={260}
-					height={260}
-				/>
-			</SimpleGrid>
+			<ActivitiesGrid />
 		</VStack>
 	);
 }
 
+export function ActivitiesGrid() {
+	return (
+		<SimpleGrid
+			rows={{ base: 4, xl: 2 }}
+			columns={{ base: 2, xl: 4 }}
+			spacing={{ base: "16px", xl: "40px" }}
+			data-aos="fade-up"
+			data-aos-easing="ease-in-out"
+			data-aos-duration={1000}
+			data-aos-delay={200}
+		>
+			<Image
+				src={activityImages[0]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[1]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[2]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[3]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[4]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[5]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[6]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+			<Image
+				src={activityImages[7]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+		</SimpleGrid>
+	);
+}
 export default ActivitiesAtHomeSection;

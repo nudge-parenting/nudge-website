@@ -2,6 +2,7 @@ import { VStack } from "@chakra-ui/react";
 import {
 	BacCta,
 	HeroSection,
+	WhatActivitiesSection,
 	WhatNudgeCoachesDoSection,
 } from "../components/become a coach";
 
@@ -11,6 +12,7 @@ function BecomeACoach() {
 			<HeroSection />
 			<WhatNudgeCoachesDoSection />
 			<BacCta />
+			<WhatActivitiesSection />
 		</VStack>
 	);
 }
