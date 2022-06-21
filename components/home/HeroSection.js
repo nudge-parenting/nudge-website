@@ -17,15 +17,15 @@ function HeroSection() {
 	return (
 		<VStack minH="100vh" spacing="12" py="12" w="100%">
 			<HStack
-				width={{ base: "100%-64px", xl: "1160px" }}
+				width={{ base: "100%", xl: "1160px" }}
 				mx={{ base: "32px", xl: "auto" }}
 				justifyContent="center"
 				spacing={{ base: "4px", xl: "100px" }}
 				alignItems="center"
 			>
-				<FloatingSVGs type="left" />
+				<FloatingSVGs type="left" pageName="home" />
 				<HeroText />
-				<FloatingSVGs type="right" />
+				<FloatingSVGs type="right" pageName="home" />
 			</HStack>
 			<LandingImages />
 		</VStack>

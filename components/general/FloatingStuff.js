@@ -15,7 +15,7 @@ function FloatingSVGs({ type = "left", pageName = "home" }) {
 			w="180px"
 			h="200px"
 			display={{
-				base: (pageName = "home" ? "block" : "none"),
+				base: pageName !== "home" ? "block" : "none",
 				xl: "block",
 			}}
 		>
