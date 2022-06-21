@@ -17,12 +17,15 @@ function WhatNudgeCoachesDoSection() {
 		<VStack
 			spacing="56px"
 			py="12"
-			w="100%"
-			alignItems="start"
+			alignItems={{ base: "center", xl: "start" }}
 			width={{ base: "100%", xl: "1160px" }}
-			mx={{ base: "32px", xl: "auto" }}
+			mx={{ base: "0px", xl: "auto" }}
 		>
-			<VStack w="560px" alignItems="start" spacing="4">
+			<VStack
+				w={{ base: "calc(100% - 32px)", xl: "560px" }}
+				alignItems="start"
+				spacing="4"
+			>
 				<Heading size="md">
 					What does <br />a{" "}
 					<Heading size="md" as="span" color="orange.500">
@@ -54,7 +57,6 @@ function ImagesAndFeatures() {
 			width={{ base: "100%", xl: "1160px" }}
 			mx={{ base: "0px", xl: "auto" }}
 			// justifyContent="space-between"
-			py="12"
 			alignItems={{ base: "center", xl: "center" }}
 			justifyContent="space-between"
 		>
@@ -126,14 +128,14 @@ function ImagesAndFeatures() {
 				<Image
 					position="absolute"
 					right="16px"
-					bottom="0px"
+					bottom="10px"
 					src="/become a coach/coach-features-01.png"
 					width={{
-						base: 218,
+						base: 240,
 						xl: 381,
 					}}
 					height={{
-						base: 117,
+						base: 110,
 						xl: 175,
 					}}
 					alt="an adult and a child washing a vegetable"
@@ -148,11 +150,11 @@ function ImagesAndFeatures() {
 					right="16px"
 					src="/become a coach/coach-features-02.png"
 					width={{
-						base: 195,
+						base: 298,
 						xl: 473,
 					}}
 					height={{
-						base: 197,
+						base: 185,
 						xl: 294,
 					}}
 					alt="children sitting around a woman"
@@ -164,14 +166,14 @@ function ImagesAndFeatures() {
 				<Image
 					position="absolute"
 					bottom="40px"
-					left="20px"
+					left="12px"
 					src="/become a coach/coach-features-03.png"
 					width={{
-						base: 135,
+						base: 148,
 						xl: 235,
 					}}
 					height={{
-						base: 157,
+						base: 147,
 						xl: 234,
 					}}
 					alt="child wearing science safety goggles"
@@ -183,14 +185,17 @@ function ImagesAndFeatures() {
 				<Image
 					position="absolute"
 					top="0px"
-					left="40px"
+					left={{
+						base: "10px",
+						xl: "-10px",
+					}}
 					src="/become a coach/coach-features-04.png"
 					width={{
-						base: 148,
+						base: 106,
 						xl: 168,
 					}}
 					height={{
-						base: 111,
+						base: 104,
 						xl: 166,
 					}}
 					alt="man typing on laptop"
@@ -202,22 +207,31 @@ function ImagesAndFeatures() {
 			</Box>
 
 			<VStack
-				spacing="24px"
+				spacing="32px"
 				alignItems={{ base: "center", xl: "start" }}
 				width={{ base: "calc(100% - 32px)", xl: "360px" }}
-				textAlign={{ base: "center", xl: "left" }}
-				data-aos="fade-up"
-				data-aos-easing="ease-in-out"
-				data-aos-duration={1000}
-				data-aos-delay={100}
+
+				// 	data-aos="fade-up"
+				// 	data-aos-easing="ease-in-out"
+				// 	data-aos-duration={1000}
+				// 	data-aos-delay={100}
 			>
 				<VStack
 					spacing="32px"
 					alignItems={{ base: "center", xl: "start" }}
 				>
-					<FeatureCard />
-					<FeatureCard />
-					<FeatureCard />
+					<FeatureCard
+						desc="Run activities offline in your home for neighbourhood kids, or online over Zoom for kids from across the world."
+						title="Online and Offline"
+					/>
+					<FeatureCard
+						title="Amazing Activities"
+						desc="Do what you like! Choose from a vast library of 1000s of activities on life-skills, SEL, art & craft, STEM and more. "
+					/>
+					<FeatureCard
+						title="Exciting Earnings"
+						desc="Earn INR 50,000 or more per month, depending on the number of activities you run every month."
+					/>
 				</VStack>
 				<Button
 					onClick={() => {
@@ -235,7 +249,7 @@ function FeatureCard({
 	desc = "Do what you like! Choose from a vast library of 1000s of activities on life-skills, SEL, art & craft, STEM and more. ",
 }) {
 	return (
-		<VStack spacing="20px" w="100%" alignItems="start">
+		<VStack spacing="12px" w="100%" alignItems="start">
 			<Center bg="orange.50" p="12px" borderRadius="full">
 				<Icon as={RiMailFill} w={5} h={5} color="orange.500" />
 			</Center>

@@ -6,6 +6,7 @@ import landingImage1 from "../../public/become a coach/bac-image-01.png";
 import landingImage2 from "../../public/become a coach/bac-image-02.png";
 import { Button } from "../general";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 function HeroSection() {
 	return (
@@ -70,6 +71,7 @@ function HeroImages() {
 	);
 }
 function HeroText() {
+	const router = useRouter();
 	return (
 		<VStack
 			mx={{ base: "32px", xl: "auto" }}
@@ -145,7 +147,14 @@ function HeroText() {
 					stiffness: 200,
 				}}
 			>
-				<Button mt="16px">apply now</Button>
+				<Button
+					onClick={() => {
+						router.push("/apply-coach");
+					}}
+					mt="16px"
+				>
+					apply now
+				</Button>
 			</MotionBox>
 		</VStack>
 	);
