@@ -9,9 +9,16 @@ import "swiper/css/scrollbar";
 
 const MotionBox = motion(Box);
 
-function FloatingSVGs({ type = "left" }) {
+function FloatingSVGs({ type = "left", pageName = "home" }) {
 	return (
-		<VStack w="180px" h="200px" display={{ base: "none", xl: "block" }}>
+		<VStack
+			w="180px"
+			h="200px"
+			display={{
+				base: (pageName = "home" ? "block" : "none"),
+				xl: "block",
+			}}
+		>
 			<FloatingBox>
 				<Image
 					src={

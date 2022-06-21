@@ -12,10 +12,9 @@ function HeroSection() {
 			<Stack
 				direction={{ base: "column", xl: "row" }}
 				width={{ base: "100%-64px", xl: "1160px" }}
-				mx={{ base: "32px", xl: "auto" }}
 				justifyContent="center"
 				spacing={{ base: "48px", xl: "140px" }}
-				alignItems="start"
+				alignItems={{ base: "center", xl: "start" }}
 			>
 				<HeroText />
 				<HeroImages />
@@ -25,7 +24,13 @@ function HeroSection() {
 }
 function HeroImages() {
 	return (
-		<VStack w={{ base: "100%", xl: "560px" }} spacing="-25  px">
+		<VStack
+			w={{ base: "100%", xl: "560px" }}
+			spacing={{
+				base: "4px",
+				xl: "-25px",
+			}}
+		>
 			<HStack w="100%" justifyContent="space-between">
 				<Image
 					src={landingImage2}
@@ -50,12 +55,17 @@ function HeroImages() {
 function HeroText() {
 	return (
 		<VStack
+			mx={{ base: "32px", xl: "auto" }}
 			w={{ base: "100%", xl: "460px" }}
 			spacing="32px"
 			alignItems={{ base: "center", xl: "start" }}
 			textAlign={{ base: "center", xl: "left" }}
 		>
-			<VStack spacing="16px" w="100%" alignItems="start">
+			<VStack
+				spacing="16px"
+				w="100%"
+				alignItems={{ base: "center", xl: "start" }}
+			>
 				<MessagePill />
 				<Heading size="lg">
 					Shape young <br />
