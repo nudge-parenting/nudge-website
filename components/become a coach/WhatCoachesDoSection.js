@@ -9,7 +9,12 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { RiMailFill } from "react-icons/ri";
+import {
+	RiHomeWifiLine,
+	RiMailFill,
+	RiOpenArmLine,
+	RiWalletLine,
+} from "react-icons/ri";
 import { Button } from "../general";
 
 function WhatNudgeCoachesDoSection() {
@@ -223,14 +228,17 @@ function ImagesAndFeatures() {
 					<FeatureCard
 						desc="Run activities offline in your home for neighbourhood kids, or online over Zoom for kids from across the world."
 						title="Online and Offline"
+						icon={RiHomeWifiLine}
 					/>
 					<FeatureCard
 						title="Amazing Activities"
 						desc="Do what you like! Choose from a vast library of 1000s of activities on life-skills, SEL, art & craft, STEM and more. "
+						icon={RiOpenArmLine}
 					/>
 					<FeatureCard
 						title="Exciting Earnings"
 						desc="Earn INR 50,000 or more per month, depending on the number of activities you run every month."
+						icon={RiWalletLine}
 					/>
 				</VStack>
 				<Button
@@ -247,11 +255,12 @@ function ImagesAndFeatures() {
 function FeatureCard({
 	title = "Amazing Activities",
 	desc = "Do what you like! Choose from a vast library of 1000s of activities on life-skills, SEL, art & craft, STEM and more. ",
+	icon = RiMailFill,
 }) {
 	return (
 		<VStack spacing="12px" w="100%" alignItems="start">
 			<Center bg="orange.50" p="12px" borderRadius="full">
-				<Icon as={RiMailFill} w={5} h={5} color="orange.500" />
+				<Icon as={icon} w={5} h={5} color="orange.500" />
 			</Center>
 			<VStack spacing="8px" alignItems="start">
 				<Text color="black" fontWeight="semibold">
