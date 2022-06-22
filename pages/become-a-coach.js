@@ -3,6 +3,7 @@ import {
 	BacCta,
 	EarningPotentialSection,
 	HeroSection,
+	HowSection,
 	PerksSection,
 	WhatActivitiesSection,
 	WhatNudgeCoachesDoSection,
@@ -17,6 +18,7 @@ function BecomeACoach() {
 			<WhatActivitiesSection />
 			<EarningPotentialSection />
 			<PerksSection />
+			<HowSection />
 		</VStack>
 	);
 }
