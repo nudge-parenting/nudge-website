@@ -82,7 +82,7 @@ const Footer = () => {
 			}}
 			py="3"
 			bg="white"
-			w="100vw"
+			maxW="100vw"
 			zIndex="10"
 			my="5"
 			justifyContent="space-between"

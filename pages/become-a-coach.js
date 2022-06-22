@@ -3,6 +3,7 @@ import {
 	BacCta,
 	EarningPotentialSection,
 	HeroSection,
+	PerksSection,
 	WhatActivitiesSection,
 	WhatNudgeCoachesDoSection,
 } from "../components/become a coach";
@@ -15,6 +16,7 @@ function BecomeACoach() {
 			<BacCta />
 			<WhatActivitiesSection />
 			<EarningPotentialSection />
+			<PerksSection />
 		</VStack>
 	);
 }

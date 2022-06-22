@@ -24,6 +24,7 @@ const Navbar = ({ isOpen, toggleOpen }) => {
 
 const DesktopNav = ({ path }) => {
 	const router = useRouter();
+	const coachPage = path.includes("coach");
 	return (
 		<Box
 			position="sticky"
@@ -59,23 +60,36 @@ const DesktopNav = ({ path }) => {
 				</Link>
 
 				<Spacer />
-				<Button
-					onClick={() => {
-						router.push("/become-a-coach");
-					}}
-					variant="secondary"
-					size="md"
-				>
-					become a coach
-				</Button>
-				<Button
-					onClick={() => {
-						router.push("/join-the-waitlist");
-					}}
-					size="md"
-				>
-					join waitlist
-				</Button>
+				{coachPage ? (
+					<Button
+						onClick={() => {
+							router.push("/apply-coach");
+						}}
+						size="md"
+					>
+						apply now
+					</Button>
+				) : (
+					<HStack>
+						<Button
+							onClick={() => {
+								router.push("/become-a-coach");
+							}}
+							variant="secondary"
+							size="md"
+						>
+							become a coach
+						</Button>
+						<Button
+							onClick={() => {
+								router.push("/join-the-waitlist");
+							}}
+							size="md"
+						>
+							join waitlist
+						</Button>
+					</HStack>
+				)}
 			</HStack>
 		</Box>
 	);
@@ -91,6 +105,7 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 			top="0"
 			left="0"
 			display={{ base: "flex", xl: "none" }}
+			w="100vw"
 		>
 			<HStack
 				px={{

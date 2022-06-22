@@ -7,11 +7,13 @@ import {
 	Stack,
 	Text,
 	VStack,
+	Image,
+	Fade,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { RiAddFill, RiSubtractFill } from "react-icons/ri";
 
-function WhatActivitiesSection() {
+function EarningPotentialSection() {
 	const [numStudents, setNumStudents] = useState(5);
 	const [numActivities, setNumActivities] = useState(5);
 	return (
@@ -112,6 +114,10 @@ function WhatActivitiesSection() {
 					xl: "row",
 				}}
 				spacing="40px"
+				w={{
+					base: "100%",
+					xl: "auto",
+				}}
 			>
 				<BigNumberCard
 					isHighlight
@@ -130,6 +136,10 @@ function WhatActivitiesSection() {
 					suffix="activities/month"
 				/>
 			</Stack>
+			<Image
+				src="./become a coach/earning-image.png"
+				alt="adult woman walking besides a child on a bridge"
+			/>
 		</VStack>
 	);
 }
@@ -163,7 +173,10 @@ function BigNumberCard({
 }) {
 	return (
 		<VStack
-			w="360px"
+			w={{
+				base: "100%",
+				xl: "360px",
+			}}
 			alignItems="center"
 			justifyContent="center"
 			bg="#F5F5F5"
@@ -187,4 +200,4 @@ function BigNumberCard({
 		</VStack>
 	);
 }
-export default WhatActivitiesSection;
+export default EarningPotentialSection;
