@@ -17,8 +17,8 @@ function HeroSection() {
 	return (
 		<VStack minH="100vh" spacing="12" py="12" w="100%">
 			<HStack
-				width={{ base: "100%", xl: "1160px" }}
-				mx={{ base: "32px", xl: "auto" }}
+				width={{ base: "calc(100% - 64px)", xl: "1160px" }}
+				mx={{ base: "0px", xl: "auto" }}
 				justifyContent="center"
 				spacing={{ base: "4px", xl: "100px" }}
 				alignItems="center"

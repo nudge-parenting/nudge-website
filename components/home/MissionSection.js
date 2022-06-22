@@ -13,7 +13,7 @@ function MissionSection() {
 	return (
 		<Stack
 			direction={{ base: "column-reverse", xl: "row" }}
-			width={{ base: "calc(100% - 32px)", xl: "1160px" }}
+			width={{ base: "calc(100% - 64px)", xl: "1160px" }}
 			mx={{ base: "0px", xl: "auto" }}
 			spacing="50px"
 			justifyContent="center"
