@@ -171,7 +171,7 @@ function GrowthProductsSection() {
 			<VStack
 				spacing="24px"
 				alignItems={{ base: "center", xl: "start" }}
-				width={{ base: "calc(100% - 32px)", xl: "560px" }}
+				width={{ base: "calc(100% - 64px)", xl: "560px" }}
 				textAlign={{ base: "center", xl: "left" }}
 				data-aos="fade-up"
 				data-aos-easing="ease-in-out"

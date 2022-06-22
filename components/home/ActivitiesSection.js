@@ -27,7 +27,7 @@ function ActivitiesSection() {
 	return (
 		<VStack
 			spacing="12"
-			width={{ base: "calc(100% - 32px)", xl: "760px" }}
+			width={{ base: "calc(100% - 64px)", xl: "760px" }}
 			mx={{ base: "0px", xl: "auto" }}
 			justifyContent="center"
 			py="12"

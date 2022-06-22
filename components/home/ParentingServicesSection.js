@@ -26,7 +26,7 @@ function ParentingServicesSection() {
 				xl: "row-reverse",
 			}}
 			spacing="12"
-			width={{ base: "calc(100% - 32px)", xl: "1160px" }}
+			width={{ base: "calc(100% - 64px)", xl: "1160px" }}
 			mx={{ base: "0px", xl: "auto" }}
 			py="12"
 			alignItems={{ base: "left", xl: "center" }}

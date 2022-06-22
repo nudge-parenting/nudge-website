@@ -6,7 +6,7 @@ function CTASection() {
 	const router = useRouter();
 	return (
 		<VStack
-			w={{ base: "calc(100% - 32px)", xl: "1160px" }}
+			w={{ base: "calc(100% - 64px)", xl: "1160px" }}
 			bgImage="./home/CTA-background-image.png"
 			borderRadius="12px"
 			h="524px"
