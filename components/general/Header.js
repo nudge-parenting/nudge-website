@@ -31,7 +31,7 @@ function Header() {
 				/>
 				<meta
 					name="keywords"
-					content="parenting, classes, online, offline, groups, activities, growth, nudge, free, genius, nudgeverse"
+					content="parenting, classes, online, offline, groups, activities, growth, nudge, free, genius, nudgeverse, verse, nudge verse, nudge parenting"
 				/>
 				<meta name="robots" content="index, follow" />
 
