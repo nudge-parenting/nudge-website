@@ -5,7 +5,12 @@ const nextConfig = {
 		return [
 			{
 				source: "/join-the-waitlist",
-				destination: "https://nudgeverse.com",
+				destination: "https://forms.gle/LRMdsZWy2MkknUFA9",
+				permanent: true,
+			},
+			{
+				source: "/apply-coach",
+				destination: "https://forms.gle/3t3tCj6K8bcep7sSA",
 				permanent: true,
 			},
 		];
