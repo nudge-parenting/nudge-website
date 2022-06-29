@@ -69,7 +69,7 @@ function PerksGrid() {
 		>
 			<PerkCard
 				icon={Ri24HoursFill}
-				heading="Online Flexible opportunity Offline"
+				heading="Flexible opportunity"
 				description="Choose your own hours, format (online, offline or both) and activities."
 			/>
 			<PerkCard
@@ -94,7 +94,7 @@ function PerksGrid() {
 			/>
 			<PerkCard
 				icon={RiTeamFill}
-				heading="Community"
+				heading="Vibrant Community"
 				description="Become a part of a thriving intellectual community of Nudge coaches."
 			/>
 		</SimpleGrid>

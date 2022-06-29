@@ -13,10 +13,11 @@ function BecomeACoach() {
 	return (
 		<VStack spacing="48px" w="100%" pb="12">
 			<HeroSection />
+			<EarningPotentialSection />
 			<WhatNudgeCoachesDoSection />
 			<BacCta />
 			<WhatActivitiesSection />
-			<EarningPotentialSection />
+
 			<PerksSection />
 			<HowSection />
 		</VStack>

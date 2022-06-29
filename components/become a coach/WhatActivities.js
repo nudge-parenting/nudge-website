@@ -10,6 +10,25 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "../general";
 import { ActivitiesGrid } from "../home/ActivitiesAtHomeSection";
+import activityImage1 from "../../public/home/activities at home/activity-home-01.png";
+import activityImage2 from "../../public/home/activities at home/activity-home-02.png";
+import activityImage3 from "../../public/home/activities at home/activity-home-03.png";
+import activityImage4 from "../../public/home/activities at home/activity-home-04.png";
+import activityImage5 from "../../public/home/activities at home/activity-home-05.png";
+import activityImage6 from "../../public/home/activities at home/activity-home-06.png";
+import activityImage7 from "../../public/home/activities at home/activity-home-07.png";
+import activityImage8 from "../../public/home/activities at home/activity-home-08.png";
+
+const stemActivityImages = [
+	activityImage1,
+	activityImage2,
+	activityImage3,
+	activityImage4,
+	activityImage5,
+	activityImage6,
+	activityImage7,
+	activityImage8,
+];
 
 function WhatActivitiesSection() {
 	return (
@@ -70,22 +89,16 @@ function ActivityTabs() {
 			</TabList>
 			<TabPanels mt="32px" minH="20vh">
 				<TabPanel>
-					<ActivitiesGrid />
+					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<Text w="100%" textAlign="center">
-						Coming Soon! 🔜
-					</Text>
+					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<Text w="100%" textAlign="center">
-						Coming Soon! 🔜
-					</Text>
+					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<Text w="100%" textAlign="center">
-						Coming Soon! 🔜
-					</Text>
+					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 			</TabPanels>
 		</Tabs>

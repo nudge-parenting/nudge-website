@@ -83,7 +83,7 @@ function StepsAndImage() {
 				/>
 				<StepCard
 					stepNum={3}
-					heading="Video Conversation"
+					heading="Training & Certification"
 					description="If we mutually decide to go ahead, we will take you through a two-week training and certification process around running various Nudge activities."
 				/>
 				<StepCard

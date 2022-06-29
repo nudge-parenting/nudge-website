@@ -18,19 +18,18 @@ import activityImage6 from "../../public/home/activities at home/activity-home-0
 import activityImage7 from "../../public/home/activities at home/activity-home-07.png";
 import activityImage8 from "../../public/home/activities at home/activity-home-08.png";
 
-const activityImages = [
-	activityImage1,
-	activityImage2,
-	activityImage3,
-	activityImage4,
-	activityImage5,
-	activityImage6,
-	activityImage7,
-	activityImage8,
-];
 function ActivitiesAtHomeSection() {
 	const router = useRouter();
-
+	const activityImages = [
+		activityImage1,
+		activityImage2,
+		activityImage3,
+		activityImage4,
+		activityImage5,
+		activityImage6,
+		activityImage7,
+		activityImage8,
+	];
 	return (
 		<VStack
 			spacing="12"
@@ -77,12 +76,12 @@ function ActivitiesAtHomeSection() {
 					join the waitlist
 				</Button>
 			</VStack>
-			<ActivitiesGrid />
+			<ActivitiesGrid activityImages={activityImages} />
 		</VStack>
 	);
 }
 
-export function ActivitiesGrid() {
+export function ActivitiesGrid({ activityImages }) {
 	return (
 		<SimpleGrid
 			rows={{ base: 4, xl: 2 }}
