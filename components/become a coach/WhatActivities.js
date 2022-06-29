@@ -10,24 +10,45 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "../general";
 import { ActivitiesGrid } from "../home/ActivitiesAtHomeSection";
-import activityImage1 from "../../public/home/activities at home/activity-home-01.png";
-import activityImage2 from "../../public/home/activities at home/activity-home-02.png";
-import activityImage3 from "../../public/home/activities at home/activity-home-03.png";
-import activityImage4 from "../../public/home/activities at home/activity-home-04.png";
-import activityImage5 from "../../public/home/activities at home/activity-home-05.png";
-import activityImage6 from "../../public/home/activities at home/activity-home-06.png";
-import activityImage7 from "../../public/home/activities at home/activity-home-07.png";
-import activityImage8 from "../../public/home/activities at home/activity-home-08.png";
+
+import stemActivityImage1 from "../../public/home/activities at home/activity-home-01.png";
+import stemActivityImage2 from "../../public/home/activities at home/activity-home-02.png";
+import stemActivityImage3 from "../../public/home/activities at home/activity-home-03.png";
+import stemActivityImage4 from "../../public/home/activities at home/activity-home-04.png";
+import stemActivityImage5 from "../../public/home/activities at home/activity-home-05.png";
+import stemActivityImage6 from "../../public/home/activities at home/activity-home-06.png";
+import stemActivityImage7 from "../../public/home/activities at home/activity-home-07.png";
+import stemActivityImage8 from "../../public/home/activities at home/activity-home-08.png";
+
+import lifeSkillActivityImage1 from "../../public/become a coach/life skills/lifeSkillActivity01.png";
+import lifeSkillActivityImage2 from "../../public/become a coach/life skills/lifeSkillActivity02.png";
+import lifeSkillActivityImage3 from "../../public/become a coach/life skills/lifeSkillActivity03.png";
+import lifeSkillActivityImage4 from "../../public/become a coach/life skills/lifeSkillActivity04.png";
+import lifeSkillActivityImage5 from "../../public/become a coach/life skills/lifeSkillActivity05.png";
+import lifeSkillActivityImage6 from "../../public/become a coach/life skills/lifeSkillActivity06.png";
+import lifeSkillActivityImage7 from "../../public/become a coach/life skills/lifeSkillActivity07.png";
+import lifeSkillActivityImage8 from "../../public/become a coach/life skills/lifeSkillActivity08.png";
 
 const stemActivityImages = [
-	activityImage1,
-	activityImage2,
-	activityImage3,
-	activityImage4,
-	activityImage5,
-	activityImage6,
-	activityImage7,
-	activityImage8,
+	stemActivityImage1,
+	stemActivityImage2,
+	stemActivityImage3,
+	stemActivityImage4,
+	stemActivityImage5,
+	stemActivityImage6,
+	stemActivityImage7,
+	stemActivityImage8,
+];
+
+const lifeSkillActivityImages = [
+	lifeSkillActivityImage1,
+	lifeSkillActivityImage2,
+	lifeSkillActivityImage3,
+	lifeSkillActivityImage4,
+	lifeSkillActivityImage5,
+	lifeSkillActivityImage6,
+	lifeSkillActivityImage7,
+	lifeSkillActivityImage8,
 ];
 
 function WhatActivitiesSection() {
@@ -95,7 +116,7 @@ function ActivityTabs() {
 					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<ActivitiesGrid activityImages={stemActivityImages} />
+					<ActivitiesGrid activityImages={lifeSkillActivityImages} />
 				</TabPanel>
 				<TabPanel>
 					<ActivitiesGrid activityImages={stemActivityImages} />
