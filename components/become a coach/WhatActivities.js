@@ -29,6 +29,19 @@ import lifeSkillActivityImage6 from "../../public/become a coach/life skills/lif
 import lifeSkillActivityImage7 from "../../public/become a coach/life skills/lifeSkillActivity07.png";
 import lifeSkillActivityImage8 from "../../public/become a coach/life skills/lifeSkillActivity08.png";
 
+import creativeMovementActivityImage1 from "../../public/become a coach/creative skills/creativeSkillActivity01.png";
+import creativeMovementActivityImage2 from "../../public/become a coach/creative skills/creativeSkillActivity02.png";
+import creativeMovementActivityImage3 from "../../public/become a coach/creative skills/creativeSkillActivity03.png";
+import creativeMovementActivityImage4 from "../../public/become a coach/creative skills/creativeSkillActivity04.png";
+
+import artCraftActivityImage1 from "../../public/become a coach/art/artSkillActivity01.png";
+import artCraftActivityImage2 from "../../public/become a coach/art/artSkillActivity02.png";
+import artCraftActivityImage3 from "../../public/become a coach/art/artSkillActivity03.png";
+import artCraftActivityImage4 from "../../public/become a coach/art/artSkillActivity04.png";
+import artCraftActivityImage5 from "../../public/become a coach/art/artSkillActivity05.png";
+import artCraftActivityImage6 from "../../public/become a coach/art/artSkillActivity06.png";
+import artCraftActivityImage7 from "../../public/become a coach/art/artSkillActivity07.png";
+
 const stemActivityImages = [
 	stemActivityImage1,
 	stemActivityImage2,
@@ -49,6 +62,23 @@ const lifeSkillActivityImages = [
 	lifeSkillActivityImage6,
 	lifeSkillActivityImage7,
 	lifeSkillActivityImage8,
+];
+
+const creativeMovementActivityImages = [
+	creativeMovementActivityImage1,
+	creativeMovementActivityImage2,
+	creativeMovementActivityImage3,
+	creativeMovementActivityImage4,
+];
+
+const artSkillActivitiesImages = [
+	artCraftActivityImage1,
+	artCraftActivityImage2,
+	artCraftActivityImage3,
+	artCraftActivityImage4,
+	artCraftActivityImage5,
+	artCraftActivityImage6,
+	artCraftActivityImage7,
 ];
 
 function WhatActivitiesSection() {
@@ -113,13 +143,15 @@ function ActivityTabs() {
 					<ActivitiesGrid activityImages={stemActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<ActivitiesGrid activityImages={stemActivityImages} />
+					<ActivitiesGrid activityImages={artSkillActivitiesImages} />
 				</TabPanel>
 				<TabPanel>
 					<ActivitiesGrid activityImages={lifeSkillActivityImages} />
 				</TabPanel>
 				<TabPanel>
-					<ActivitiesGrid activityImages={stemActivityImages} />
+					<ActivitiesGrid
+						activityImages={creativeMovementActivityImages}
+					/>
 				</TabPanel>
 			</TabPanels>
 		</Tabs>

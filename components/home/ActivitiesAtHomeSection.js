@@ -82,6 +82,19 @@ function ActivitiesAtHomeSection() {
 }
 
 export function ActivitiesGrid({ activityImages }) {
+	const numImages = activityImages.length;
+
+	let Images = [];
+	for (let i = 0; i < numImages; i++) {
+		Images.push(
+			<Image
+				src={activityImages[i]}
+				alt="Picture of Activity"
+				width={260}
+				height={260}
+			/>
+		);
+	}
 	return (
 		<SimpleGrid
 			rows={{ base: 4, xl: 2 }}
@@ -92,54 +105,7 @@ export function ActivitiesGrid({ activityImages }) {
 			data-aos-duration={1000}
 			data-aos-delay={200}
 		>
-			<Image
-				src={activityImages[0]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[1]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[2]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[3]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[4]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[5]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[6]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
-			<Image
-				src={activityImages[7]}
-				alt="Picture of Activity"
-				width={260}
-				height={260}
-			/>
+			{Images}
 		</SimpleGrid>
 	);
 }
