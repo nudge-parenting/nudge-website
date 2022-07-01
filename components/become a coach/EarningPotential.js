@@ -14,8 +14,8 @@ import { useState } from "react";
 import { RiAddFill, RiSubtractFill } from "react-icons/ri";
 
 function EarningPotentialSection() {
-	const [numStudents, setNumStudents] = useState(5);
-	const [numActivities, setNumActivities] = useState(5);
+	const [numStudents, setNumStudents] = useState(6);
+	const [numActivities, setNumActivities] = useState(10);
 	return (
 		<VStack
 			w="100%"
@@ -60,11 +60,11 @@ function EarningPotentialSection() {
 				>
 					<HStack spacing="12px">
 						<IconButton
-							icon={RiAddFill}
+							icon={RiSubtractFill}
 							onClick={() =>
-								numStudents == 10
+								numStudents == 2
 									? null
-									: setNumStudents(numStudents + 1)
+									: setNumStudents(numStudents - 1)
 							}
 						/>
 						<Text>
@@ -74,21 +74,21 @@ function EarningPotentialSection() {
 							/activity
 						</Text>
 						<IconButton
-							icon={RiSubtractFill}
+							icon={RiAddFill}
 							onClick={() =>
-								numStudents == 2
+								numStudents == 10
 									? null
-									: setNumStudents(numStudents - 1)
+									: setNumStudents(numStudents + 1)
 							}
 						/>
 					</HStack>
 					<HStack spacing="12px">
 						<IconButton
-							icon={RiAddFill}
+							icon={RiSubtractFill}
 							onClick={() =>
-								numActivities == 10
+								numActivities == 1
 									? null
-									: setNumActivities(numActivities + 1)
+									: setNumActivities(numActivities - 1)
 							}
 						/>
 						<Text>
@@ -98,11 +98,11 @@ function EarningPotentialSection() {
 							/month
 						</Text>
 						<IconButton
-							icon={RiSubtractFill}
+							icon={RiAddFill}
 							onClick={() =>
-								numActivities == 1
+								numActivities == 15
 									? null
-									: setNumActivities(numActivities - 1)
+									: setNumActivities(numActivities + 1)
 							}
 						/>
 					</HStack>
@@ -122,12 +122,12 @@ function EarningPotentialSection() {
 				<BigNumberCard
 					isHighlight
 					description="As a Nudge Coach you earn"
-					number={"₹" + numStudents * numActivities * 1000}
+					number={"₹" + numStudents * numActivities * 600}
 					suffix="/month"
 				/>
 				<BigNumberCard
 					description={`With ${numStudents} students per activity, you earn`}
-					number={"₹" + numStudents * 1000}
+					number={"₹" + numStudents * 600}
 					suffix="/activity"
 				/>
 				<BigNumberCard
