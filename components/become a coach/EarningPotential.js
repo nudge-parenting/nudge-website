@@ -122,12 +122,12 @@ function EarningPotentialSection() {
 				<BigNumberCard
 					isHighlight
 					description="As a Nudge Coach you earn"
-					number={"₹" + numStudents * numActivities * 2000}
+					number={"₹" + numStudents * numActivities * 1000}
 					suffix="/month"
 				/>
 				<BigNumberCard
 					description={`With ${numStudents} students per activity, you earn`}
-					number={"₹" + numStudents * 2000}
+					number={"₹" + numStudents * 1000}
 					suffix="/activity"
 				/>
 				<BigNumberCard
