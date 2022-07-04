@@ -100,7 +100,7 @@ function WhatActivitiesSection() {
 					xl: "760px",
 				}}
 			>
-				<VStack textAlign="center" spacing="16px">
+				<VStack textAlign="center" spacing="16px" id="nudge-activities">
 					<Heading>
 						What kind of <br />
 						<Heading as="span" color="orange.500">
