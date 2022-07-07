@@ -122,7 +122,7 @@ const Footer = () => {
 					}}
 					onClick={() => {
 						window.open(
-							"https://www.instagram.com/nudgeparenting/?hl=en"
+							"https://www.instagram.com/nudgeverse/?hl=en"
 						);
 					}}
 				/>
