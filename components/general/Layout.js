@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 		<>
 			<Header />
 			<Box>
-				<GoToTopButton />
+				{/* <GoToTopButton /> */}
 				<Navbar toggleOpen={toggleOpen} isOpen={isOpen} />
 				<Box
 					minH="50vh"

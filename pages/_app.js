@@ -51,13 +51,17 @@ const nudgeTheme = {
 				lineHeight: "24px",
 			},
 			sizes: {
+				xl: {
+					fontSize: "20",
+					lineHeight: "26px",
+				},
 				lg: {
 					fontSize: "18",
 					lineHeight: "24px",
 				},
 				md: {
 					fontSize: "16",
-					lineHeight: "20px",
+					lineHeight: "22px",
 				},
 			},
 		},
