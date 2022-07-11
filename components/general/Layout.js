@@ -62,8 +62,8 @@ const GoToTopButton = () => {
 			onClick={() => {
 				window.scrollTo(0, 0);
 			}}
-			right={["10", "20"]}
-			bottom={["10", "20"]}
+			right={["8", "20"]}
+			bottom={["20", "20"]}
 			opacity="0.2"
 			zIndex="9"
 		>

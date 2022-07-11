@@ -18,6 +18,8 @@ const MenuToggle = ({ toggle }) => (
 			zIndex: 50,
 			marginTop: 10,
 			position: "fixed",
+			top: 16,
+			right: 16,
 			WebkitTapHighlightColor: "transparent",
 			WebkitTouchCallout: "none",
 			WebkitUserSelect: "none",
