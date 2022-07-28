@@ -40,12 +40,13 @@ function EarningPotentialSection() {
 						<Heading as="span" color="orange.500">
 							Earning Potential <br />
 						</Heading>{" "}
-						as a Nudge Coach
+						as a Nudge Host
 					</Heading>
 					<Text>
 						Your earning potential depends upon the number of
-						activities you run every month, and the attendees in
-						these activities.
+						learning experiences you run every month, and the
+						attendees in these experiences. One experience can have
+						multiple sessions.
 					</Text>
 				</VStack>
 				<Stack
@@ -71,7 +72,7 @@ function EarningPotentialSection() {
 							<Text as="span" fontWeight="medium" color="black">
 								{numStudents} students
 							</Text>
-							/activity
+							/session
 						</Text>
 						<IconButton
 							icon={RiAddFill}
@@ -93,9 +94,9 @@ function EarningPotentialSection() {
 						/>
 						<Text>
 							<Text as="span" fontWeight="medium" color="black">
-								{numActivities} activities
+								{numActivities} sessions
 							</Text>
-							/month
+							/week
 						</Text>
 						<IconButton
 							icon={RiAddFill}
@@ -120,20 +121,24 @@ function EarningPotentialSection() {
 				}}
 			>
 				<BigNumberCard
-					isHighlight
-					description="As a Nudge Coach you earn"
-					number={"₹" + numStudents * numActivities * 600}
-					suffix="/month"
-				/>
-				<BigNumberCard
-					description={`With ${numStudents} students per activity, you earn`}
-					number={"₹" + numStudents * 600}
-					suffix="/activity"
-				/>
-				<BigNumberCard
 					description="Assuming you can take"
-					number={numActivities}
-					suffix="activities/month"
+					number={numActivities * 4}
+					suffix="sessions/month"
+					description2="that's 10 sessions a week"
+				/>
+				<BigNumberCard
+					description={`With ${numStudents} students per session, you earn`}
+					number={"₹" + numStudents * 200}
+					suffix="/session"
+					description2="Payout for hosting one session"
+				/>
+
+				<BigNumberCard
+					isHighlight
+					description="As a Nudge Host you can earn"
+					number={"₹" + numStudents * numActivities * 200 * 4}
+					suffix="/month"
+					description2="that's ₹12,000 a week"
 				/>
 			</Stack>
 			<Image
@@ -170,6 +175,7 @@ function BigNumberCard({
 	suffix = "/month",
 	description = "With 5 students you earn",
 	isHighlight = false,
+	description2 = "that's 10 sessions a week",
 }) {
 	return (
 		<VStack
@@ -197,6 +203,7 @@ function BigNumberCard({
 					{suffix}
 				</Text>
 			</HStack>
+			<Text>{description2}</Text>
 		</VStack>
 	);
 }

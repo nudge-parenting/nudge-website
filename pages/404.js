@@ -1,7 +1,7 @@
 import { Center, Heading, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 
-function BecomeACoach() {
+function Error() {
 	return (
 		<Center spacing="48px" w="100%" minH="85vh">
 			<VStack spacing="4">
@@ -9,15 +9,15 @@ function BecomeACoach() {
 					Nothing to see here! 💤
 				</Heading>
 				<Text fontSize="lg">
-					You might be looking for the{" "}
+					Here&apos;s a{" "}
 					<Text as="span" textDecoration="underline">
-						<Link href="/become-a-host">become a host</Link>
+						<Link href="/">link</Link>
 					</Text>{" "}
-					page
+					to nudge you back to safety
 				</Text>
 			</VStack>
 		</Center>
 	);
 }
 
-export default BecomeACoach;
+export default Error;

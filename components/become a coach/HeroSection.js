@@ -113,7 +113,7 @@ function HeroText() {
 						Shape young <br />
 						genius. Become a <br />
 						<Heading size="lg" as="span" color="orange.500">
-							Nudge Coach
+							Nudge Host
 						</Heading>
 					</Heading>
 				</MotionBox>
@@ -129,7 +129,7 @@ function HeroText() {
 					}}
 				>
 					<Text>
-						Run super-engaging offline & online activity classes for
+						Run super-engaging offline learning experiences for
 						children, and earn a full-time income working part-time
 						from your home!
 					</Text>

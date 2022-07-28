@@ -63,7 +63,7 @@ const DesktopNav = ({ path }) => {
 				{coachPage ? (
 					<Button
 						onClick={() => {
-							router.push("/apply-coach");
+							router.push("/apply-host");
 						}}
 						size="md"
 					>
@@ -73,12 +73,12 @@ const DesktopNav = ({ path }) => {
 					<HStack>
 						<Button
 							onClick={() => {
-								router.push("/become-a-coach");
+								router.push("/become-a-host");
 							}}
 							variant="secondary"
 							size="md"
 						>
-							become a coach
+							become a host
 						</Button>
 						<Button
 							onClick={() => {
@@ -182,11 +182,11 @@ const MobileNav = ({ isOpen = false, toggleOpen, path }) => {
 										Menu
 									</Text>
 									<NavLink
-										text="Become A Coach"
-										target="/become-a-coach"
+										text="Become A Host"
+										target="/become-a-host"
 										path={path}
 										toggleOpen={() => {
-											router.push("/become-a-coach");
+											router.push("/become-a-host");
 											toggleOpen();
 										}}
 									/>

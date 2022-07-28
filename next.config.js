@@ -9,8 +9,8 @@ const nextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/apply-coach",
-				destination: "https://forms.gle/3t3tCj6K8bcep7sSA",
+				source: "/apply-host",
+				destination: "https://forms.gle/kSXAx9Ec87R9WoRUA",
 				permanent: true,
 			},
 		];
