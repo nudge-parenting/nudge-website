@@ -106,15 +106,16 @@ function WhatActivitiesSection() {
 						<Heading as="span" color="orange.500">
 							activities
 						</Heading>{" "}
-						will I host
+						will I run
 						<br /> as a Nudge Host?
 					</Heading>
 					<Text>
 						The Nudge library has 1000s of carefully-designed
 						offline and online activities on everything from
 						life-skills to SEL, art & craft, STEM and many more
-						themes. An activity&apos;s duration can range from a
-						single session to multiple sessions span several weeks.
+						themes. A experience&apos;s duration can range from a
+						single session to multiple sessions that span several
+						weeks.
 					</Text>
 				</VStack>
 				<Button>apply now</Button>

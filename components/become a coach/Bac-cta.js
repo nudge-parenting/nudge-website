@@ -29,7 +29,7 @@ function BacCTA() {
 				}}
 			>
 				<VStack spacing="16px">
-					<Heading size="md">Become a Coach Today</Heading>
+					<Heading size="md">Become a Host Today</Heading>
 					<Text>
 						Being a Nudge Host is a flexible work-from-home
 						opportunity. A Nudge Host facilitates after-school
@@ -40,7 +40,7 @@ function BacCTA() {
 				</VStack>
 				<Button
 					onClick={() => {
-						router.push("/apply-coach");
+						router.push("/apply-host");
 					}}
 				>
 					apply now
