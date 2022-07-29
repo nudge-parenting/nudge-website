@@ -129,7 +129,7 @@ function HeroText() {
 					}}
 				>
 					<Text>
-						Run super-engaging offline learning experiences for
+						Host super-engaging offline learning experiences for
 						children, and earn a full-time income working part-time
 						from your home!
 					</Text>

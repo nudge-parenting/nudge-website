@@ -31,10 +31,11 @@ function BacCTA() {
 				<VStack spacing="16px">
 					<Heading size="md">Become a Coach Today</Heading>
 					<Text>
-						Being a Nudge Coach is a flexible work-from-home
-						opportunity. A Nudge Coach runs after-school activity
-						classes for children. Nudge provides the exact structure
-						and materials necessary for every activity class
+						Being a Nudge Host is a flexible work-from-home
+						opportunity. A Nudge Host facilitates after-school
+						activity classes for children. Nudge provides the exact
+						structure and materials necessary for every activity
+						class
 					</Text>
 				</VStack>
 				<Button

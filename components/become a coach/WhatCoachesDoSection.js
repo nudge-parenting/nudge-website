@@ -34,15 +34,15 @@ function WhatNudgeCoachesDoSection() {
 				<Heading size="md">
 					What does <br />a{" "}
 					<Heading size="md" as="span" color="orange.500">
-						Nudge Coach
+						Nudge Host
 					</Heading>{" "}
 					do?
 				</Heading>
 				<Text>
-					Being a Nudge Coach is a flexible work-from-home
-					opportunity. A Nudge Coach runs after-school activity
-					classes for children. Nudge provides the exact structure and
-					materials necessary for every activity class
+					Being a Nudge Host is a flexible work-from-home opportunity.
+					A Nudge Host facilitates after-school activity classes for
+					children. Nudge provides the exact structure and materials
+					necessary for every activity class
 				</Text>
 			</VStack>
 			<ImagesAndFeatures />
@@ -226,7 +226,7 @@ function ImagesAndFeatures() {
 					alignItems={{ base: "center", xl: "start" }}
 				>
 					<FeatureCard
-						desc="Run activities offline in your home for neighbourhood kids, or online over Zoom for kids from across the world."
+						desc="Host activities offline in your home for neighbourhood kids, or online over Zoom for kids from across the world."
 						title="Online and Offline"
 						icon={RiHomeWifiLine}
 					/>
@@ -237,7 +237,7 @@ function ImagesAndFeatures() {
 					/>
 					<FeatureCard
 						title="Exciting Earnings"
-						desc="Earn INR 50,000 or more per month, depending on the number of activities you run every month."
+						desc="Earn INR 50,000 or more per month, depending on the number of activities you host every month."
 						icon={RiWalletLine}
 					/>
 				</VStack>

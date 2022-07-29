@@ -106,8 +106,8 @@ function WhatActivitiesSection() {
 						<Heading as="span" color="orange.500">
 							activities
 						</Heading>{" "}
-						will I run
-						<br /> as a Nudge Coach?
+						will I host
+						<br /> as a Nudge Host?
 					</Heading>
 					<Text>
 						The Nudge library has 1000s of carefully-designed

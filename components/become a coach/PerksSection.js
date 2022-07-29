@@ -39,10 +39,10 @@ function PerksSection() {
 			>
 				<Heading>
 					Why should I become a
-					<Heading color="orange.500">Nudge Coach?</Heading>
+					<Heading color="orange.500">Nudge Host?</Heading>
 				</Heading>
 				<Text>
-					Becoming a Nudge Coach is one of the most exciting
+					Becoming a Nudge Host is one of the most exciting
 					work-from-home opportunities in the post-pandemic world,
 					when parents are looking more than ever for high-quality
 					after-school engagement for their children.
@@ -95,7 +95,7 @@ function PerksGrid() {
 			<PerkCard
 				icon={RiTeamFill}
 				heading="Vibrant Community"
-				description="Become a part of a thriving intellectual community of Nudge coaches."
+				description="Become a part of a thriving intellectual community of Nudge Hostes."
 			/>
 		</SimpleGrid>
 	);

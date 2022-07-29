@@ -24,7 +24,7 @@ function HowSection() {
 			>
 				<Heading>
 					How can I become a
-					<Heading color="orange.500">Nudge Coach?</Heading>
+					<Heading color="orange.500">Nudge Host?</Heading>
 				</Heading>
 				<Text>
 					If you are good with children, and passionate about doing
@@ -89,7 +89,7 @@ function StepsAndImage() {
 				<StepCard
 					stepNum={4}
 					heading="Get started"
-					description="That's it. You are ready to run your first activity as a Nudge Coach!"
+					description="That's it. You are ready to run your first activity as a Nudge Host!"
 				/>
 			</VStack>
 			<Image

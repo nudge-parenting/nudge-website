@@ -44,9 +44,9 @@ function EarningPotentialSection() {
 					</Heading>
 					<Text>
 						Your earning potential depends upon the number of
-						learning experiences you run every month, and the
-						attendees in these experiences. One experience can have
-						multiple sessions.
+						learning experiences you facilitate every month, and the
+						attendees in these experiences. One such experience can
+						have multiple sessions.
 					</Text>
 				</VStack>
 				<Stack
@@ -77,7 +77,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiAddFill}
 							onClick={() =>
-								numStudents == 10
+								numStudents == 8
 									? null
 									: setNumStudents(numStudents + 1)
 							}
@@ -101,7 +101,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiAddFill}
 							onClick={() =>
-								numActivities == 15
+								numActivities == 20
 									? null
 									: setNumActivities(numActivities + 1)
 							}
@@ -124,7 +124,7 @@ function EarningPotentialSection() {
 					description="Assuming you can take"
 					number={numActivities * 4}
 					suffix="sessions/month"
-					description2="that's 10 sessions a week"
+					description2={`that's ${numActivities} sessions a week`}
 				/>
 				<BigNumberCard
 					description={`With ${numStudents} students per session, you earn`}
