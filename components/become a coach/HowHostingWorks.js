@@ -71,7 +71,7 @@ function ImagesAndFeatures() {
 				/>
 				<FeatureCard
 					title="Running an Activity"
-					desc="A Nudge Expert will lead the activity virtually (online). Children will see and speak with the expert using the project + camera + mic. You as the host will be the on-ground facilitator, managing and encouraging the group, and helping out if a child gets stuck."
+					desc="A Nudge Expert will lead the activity virtually (online). Children will see and speak with the expert using the projector + camera + mic. You as the host will be the on-ground facilitator, managing and encouraging the group, and helping out if a child gets stuck."
 					icon={FaChalkboardTeacher}
 				/>
 				<FeatureCard
