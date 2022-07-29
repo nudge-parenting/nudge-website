@@ -129,9 +129,9 @@ function HeroText() {
 					}}
 				>
 					<Text>
-						Host super-engaging offline learning experiences for
+						Host engaging offline activities for neighbourhood
 						children, and earn a full-time income working part-time
-						from your home!
+						from home!
 					</Text>
 				</MotionBox>
 			</VStack>
@@ -148,7 +148,7 @@ function HeroText() {
 			>
 				<Button
 					onClick={() => {
-						router.push("/apply-coach");
+						router.push("/apply-host");
 					}}
 					mt="16px"
 				>

@@ -43,10 +43,9 @@ function EarningPotentialSection() {
 						as a Nudge Host
 					</Heading>
 					<Text>
-						Your earning potential depends upon the number of
-						learning experiences you facilitate every month, and the
-						attendees in these experiences. One such experience can
-						have multiple sessions.
+						It depends on the number of activity sessions you host,
+						and <br />
+						the number of attendees per session.
 					</Text>
 				</VStack>
 				<Stack

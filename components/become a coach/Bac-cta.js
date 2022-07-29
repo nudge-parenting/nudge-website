@@ -31,11 +31,10 @@ function BacCTA() {
 				<VStack spacing="16px">
 					<Heading size="md">Become a Host Today</Heading>
 					<Text>
-						Being a Nudge Host is a flexible work-from-home
-						opportunity. A Nudge Host facilitates after-school
-						activity classes for children. Nudge provides the exact
-						structure and materials necessary for every activity
-						class
+						Being a Nudge Host is a flexible, easy and meaningful
+						work-from-home opportunity. And our activities are
+						awesome fun - so your hub will become the most popular
+						learning destination for children in your neighbourhood.
 					</Text>
 				</VStack>
 				<Button

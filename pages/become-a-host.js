@@ -6,15 +6,15 @@ import {
 	HowSection,
 	PerksSection,
 	WhatActivitiesSection,
-	WhatNudgeCoachesDoSection,
+	HowHostingWorks,
 } from "../components/become a coach";
 
 function BecomeACoach() {
 	return (
 		<VStack spacing="48px" w="100%" pb="12">
 			<HeroSection />
+			<HowHostingWorks />
 			<EarningPotentialSection />
-			<WhatNudgeCoachesDoSection />
 			<BacCta />
 			<WhatActivitiesSection />
 

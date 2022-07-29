@@ -106,16 +106,14 @@ function WhatActivitiesSection() {
 						<Heading as="span" color="orange.500">
 							activities
 						</Heading>{" "}
-						will I run
-						<br /> as a Nudge Host?
+						will I host?
 					</Heading>
 					<Text>
-						The Nudge library has 1000s of carefully-designed
-						offline and online activities on everything from
-						life-skills to SEL, art & craft, STEM and many more
-						themes. A experience&apos;s duration can range from a
-						single session to multiple sessions that span several
-						weeks.
+						In Nudge activities, children will explore all kinds of
+						things like building a radio, human evolution, tangrams,
+						art of gratefulness, climate change, fractal art,
+						nurturing a growth mindset, quantum computing, becoming
+						a better learner, and so much more.
 					</Text>
 				</VStack>
 				<Button>apply now</Button>
@@ -135,9 +133,9 @@ function ActivityTabs() {
 		>
 			<TabList justifyContent="center">
 				<Tab>STEM</Tab>
-				<Tab>Art & Craft</Tab>
-				<Tab>Life-Skills</Tab>
-				<Tab>Creative Movement</Tab>
+				<Tab>Life Skills</Tab>
+				<Tab>World Discovery</Tab>
+				<Tab>Creative Skills</Tab>
 			</TabList>
 			<TabPanels mt="32px" minH="20vh">
 				<TabPanel>

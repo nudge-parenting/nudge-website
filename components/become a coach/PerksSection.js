@@ -7,10 +7,12 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react";
+import { FaChalkboardTeacher } from "react-icons/fa";
 import { MdHeadsetMic } from "react-icons/md";
 import {
 	Ri24HoursFill,
 	RiFlashlightFill,
+	RiSmartphoneFill,
 	RiSurveyFill,
 	RiTeamFill,
 	RiWallet3Fill,
@@ -42,10 +44,9 @@ function PerksSection() {
 					<Heading color="orange.500">Nudge Host?</Heading>
 				</Heading>
 				<Text>
-					Becoming a Nudge Host is one of the most exciting
-					work-from-home opportunities in the post-pandemic world,
-					when parents are looking more than ever for high-quality
-					after-school engagement for their children.
+					In the post-COVID world, most parents are looking for
+					offline engagement options for their children. As a Nudge
+					Host, you will be able to tap into this immense demand.
 				</Text>
 				<Center pt="16px">
 					<Button>apply now</Button>
@@ -68,34 +69,34 @@ function PerksGrid() {
 			}}
 		>
 			<PerkCard
+				icon={FaChalkboardTeacher}
+				heading="Easy"
+				description="An expert will run each activity - your role is to facilitate it."
+			/>
+			<PerkCard
 				icon={Ri24HoursFill}
-				heading="Flexible opportunity"
-				description="Choose your own hours, format (online, offline or both) and activities."
-			/>
-			<PerkCard
-				icon={MdHeadsetMic}
-				heading="Complete support"
-				description="End-to-end guidance and materials for running your activities."
-			/>
-			<PerkCard
-				icon={RiSurveyFill}
-				heading="Easy Registrations"
-				description="Nudge gives all the tools to collect and manage your registrations end-to-end."
+				heading="Flexible"
+				description="Activities are scheduled only in your available time-slots."
 			/>
 			<PerkCard
 				icon={RiFlashlightFill}
-				heading="Engaging work"
-				description="You will have a lot of fun running Nudge's super-engaging activities."
+				heading="Engaging"
+				description="You will have a lot of fun helping children do our activities."
+			/>
+			<PerkCard
+				icon={RiSmartphoneFill}
+				heading="Seamless"
+				description="Parents will book and pay for activities using the app."
 			/>
 			<PerkCard
 				icon={RiWallet3Fill}
-				heading="Income Potential"
-				description="Just a few hours of home-based work everyday can get you a full-time income."
+				heading="Lucrative"
+				description="You can get to a full-time income in a few months."
 			/>
 			<PerkCard
 				icon={RiTeamFill}
-				heading="Vibrant Community"
-				description="Become a part of a thriving intellectual community of Nudge Hostes."
+				heading="Community"
+				description="You become a part of our tight-knit host community"
 			/>
 		</SimpleGrid>
 	);

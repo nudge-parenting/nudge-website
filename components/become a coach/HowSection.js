@@ -27,15 +27,15 @@ function HowSection() {
 					<Heading color="orange.500">Nudge Host?</Heading>
 				</Heading>
 				<Text>
-					If you are good with children, and passionate about doing
-					impactful work, you should consider applying. We will take
-					you step-by-step through a friendly selection and training
+					If you are good with children, and passionate about creating
+					an impact, you should consider applying. We will take you
+					step-by-step through a friendly selection and training
 					process.
 				</Text>
 				<Center pt="16px">
 					<Button
 						onClick={() => {
-							router.push("/apply-coach");
+							router.push("/apply-host");
 						}}
 					>
 						apply now
@@ -89,7 +89,7 @@ function StepsAndImage() {
 				<StepCard
 					stepNum={4}
 					heading="Get started"
-					description="That's it. You are ready to run your first activity as a Nudge Host!"
+					description="That's it. You are ready to host your first activity as a Nudge Host!"
 				/>
 			</VStack>
 			<Image
