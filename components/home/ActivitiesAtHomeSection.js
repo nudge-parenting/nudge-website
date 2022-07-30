@@ -92,6 +92,9 @@ export function ActivitiesGrid({ activityImages }) {
 				alt="Picture of Activity"
 				width={260}
 				height={260}
+				style={{
+					borderRadius: "8px",
+				}}
 			/>
 		);
 	}
