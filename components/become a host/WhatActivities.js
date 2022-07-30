@@ -11,25 +11,25 @@ import {
 import { Button } from "../general";
 import { ActivitiesGrid } from "../home/ActivitiesAtHomeSection";
 
-import stemActivityImage1 from "../../public/become a host/STEM/stemActivityImage01.png";
-import stemActivityImage2 from "../../public/become a host/STEM/stemActivityImage02.png";
-import stemActivityImage3 from "../../public/become a host/STEM/stemActivityImage03.png";
-import stemActivityImage4 from "../../public/become a host/STEM/stemActivityImage04.png";
+import stemActivityImage1 from "../../public/become a host/activities/STEM/stemActivityImage01.png";
+import stemActivityImage2 from "../../public/become a host/activities/STEM/stemActivityImage02.png";
+import stemActivityImage3 from "../../public/become a host/activities/STEM/stemActivityImage03.png";
+import stemActivityImage4 from "../../public/become a host/activities/STEM/stemActivityImage04.png";
 
-import lifeSkillActivityImage1 from "../../public/become a host/life skills/lifeSkillActivity01.png";
-import lifeSkillActivityImage2 from "../../public/become a host/life skills/lifeSkillActivity02.png";
-import lifeSkillActivityImage3 from "../../public/become a host/life skills/lifeSkillActivity03.png";
-import lifeSkillActivityImage4 from "../../public/become a host/life skills/lifeSkillActivity04.png";
+import lifeSkillActivityImage1 from "../../public/become a host/activities/life skills/lifeSkillActivity01.png";
+import lifeSkillActivityImage2 from "../../public/become a host/activities/life skills/lifeSkillActivity02.png";
+import lifeSkillActivityImage3 from "../../public/become a host/activities/life skills/lifeSkillActivity03.png";
+import lifeSkillActivityImage4 from "../../public/become a host/activities/life skills/lifeSkillActivity04.png";
 
-import worldDiscoveryActivityImage1 from "../../public/become a host/world discovery/worldDiscoveryActivity01.png";
-import worldDiscoveryActivityImage2 from "../../public/become a host/world discovery/worldDiscoveryActivity02.png";
-import worldDiscoveryActivityImage3 from "../../public/become a host/world discovery/worldDiscoveryActivity03.png";
-import worldDiscoveryActivityImage4 from "../../public/become a host/world discovery/worldDiscoveryActivity04.png";
+import worldDiscoveryActivityImage1 from "../../public/become a host/activities/world discovery/worldDiscoveryActivityImage01.png";
+import worldDiscoveryActivityImage2 from "../../public/become a host/activities/world discovery/worldDiscoveryActivityImage02.png";
+import worldDiscoveryActivityImage3 from "../../public/become a host/activities/world discovery/worldDiscoveryActivityImage03.png";
+import worldDiscoveryActivityImage4 from "../../public/become a host/activities/world discovery/worldDiscoveryActivityImage04.png";
 
-import creativeSkillsActivityImage1 from "../../public/become a host/creative skills/creativeSkillsActivity01.png";
-import creativeSkillsActivityImage2 from "../../public/become a host/creative skills/creativeSkillsActivity02.png";
-import creativeSkillsActivityImage3 from "../../public/become a host/creative skills/creativeSkillsActivity03.png";
-import creativeSkillsActivityImage4 from "../../public/become a host/creative skills/creativeSkillsActivity04.png";
+import creativeSkillsActivityImage1 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage01.png";
+import creativeSkillsActivityImage2 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage02.png";
+import creativeSkillsActivityImage3 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage03.png";
+import creativeSkillsActivityImage4 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage04.png";
 
 const stemActivityImages = [
 	stemActivityImage1,

@@ -73,7 +73,7 @@ function StepsAndImage() {
 			>
 				<StepCard
 					stepNum={1}
-					heading="Apply to become a coach"
+					heading="Apply to become a host"
 					description="Apply by filling out a simple form."
 				/>
 				<StepCard
@@ -93,7 +93,7 @@ function StepsAndImage() {
 				/>
 			</VStack>
 			<Image
-				src="./become a coach/steps.png"
+				src="./become a host/steps.png"
 				alt="painting of adult and child on concrete sidewalk"
 				w={{ base: "100%", xl: 506 }}
 				h={{ base: "auto", xl: 610 }}
@@ -106,7 +106,7 @@ function StepsAndImage() {
 
 function StepCard({
 	stepNum = 1,
-	heading = "Apply to become a coach",
+	heading = "Apply to become a host",
 	description = "Apply by filling out a simple form.",
 }) {
 	return (

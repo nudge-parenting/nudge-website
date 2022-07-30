@@ -168,7 +168,7 @@ function ImagesAndFeatures() {
 						position="absolute"
 						right="16px"
 						bottom="10px"
-						src="/become a coach/coach-features-01.png"
+						src="/become a host/coach-features-01.png"
 						width={{
 							base: 240,
 							xl: 381,
@@ -187,7 +187,7 @@ function ImagesAndFeatures() {
 						position="absolute"
 						top="-5px"
 						right="16px"
-						src="/become a coach/coach-features-02.png"
+						src="/become a host/coach-features-02.png"
 						width={{
 							base: 298,
 							xl: 473,
@@ -206,7 +206,7 @@ function ImagesAndFeatures() {
 						position="absolute"
 						bottom="40px"
 						left="12px"
-						src="/become a coach/coach-features-03.png"
+						src="/become a host/coach-features-03.png"
 						width={{
 							base: 148,
 							xl: 235,
@@ -228,7 +228,7 @@ function ImagesAndFeatures() {
 							base: "10px",
 							xl: "-10px",
 						}}
-						src="/become a coach/coach-features-04.png"
+						src="/become a host/coach-features-04.png"
 						width={{
 							base: 106,
 							xl: 168,

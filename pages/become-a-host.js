@@ -7,7 +7,7 @@ import {
 	PerksSection,
 	WhatActivitiesSection,
 	HowHostingWorks,
-} from "../components/become a coach";
+} from "../components/become a host";
 
 function BecomeACoach() {
 	return (

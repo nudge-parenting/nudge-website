@@ -81,80 +81,71 @@ function ActivitiesSection() {
 			>
 				<SwiperSlide style={swiperSlideStyle} key={1}>
 					<Image
-						src="./home/activities by coaches/activity-01.png"
+						src="./become a host/activities/STEM/stemActivityImage01.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={2}>
 					<Image
-						src="./home/activities by coaches/activity-02.png"
+						src="./become a host/activities/creative skills/creativeSkillsActivityImage01.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={3}>
 					<Image
-						src="./home/activities by coaches/activity-03.png"
+						src="./become a host/activities/life skills/lifeSkillActivity01.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={4}>
 					<Image
-						src="./home/activities by coaches/activity-04.png"
+						src="./become a host/activities/world discovery/worldDiscoveryActivityImage01.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={5}>
 					<Image
-						src="./home/activities by coaches/activity-05.png"
+						src="./become a host/activities/STEM/stemActivityImage02.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={6}>
 					<Image
-						src="./home/activities by coaches/activity-06.png"
+						src="./become a host/activities/creative skills/creativeSkillsActivityImage02.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={7}>
 					<Image
-						src="./home/activities by coaches/activity-07.png"
+						src="./become a host/activities/life skills/lifeSkillActivity02.png"
 						alt="child reading a map"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"
 					/>
 				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
+				<SwiperSlide style={swiperSlideStyle} key={8}>
 					<Image
-						src="./home/activities by coaches/activity-08.png"
-						alt="child reading a map"
-						w={{ base: "100%", xl: "230px" }}
-						h={{ base: "auto", xl: "230px" }}
-						borderRadius="12px"
-					/>
-				</SwiperSlide>
-				<SwiperSlide style={swiperSlideStyle} key={1}>
-					<Image
-						src="./home/activities by coaches/activity-09.png"
-						alt="child reading a map"
+						src="./become a host/activities/world discovery/worldDiscoveryActivityImage02.png"
+						alt="worldDiscoveryImage02"
 						w={{ base: "100%", xl: "230px" }}
 						h={{ base: "auto", xl: "230px" }}
 						borderRadius="12px"

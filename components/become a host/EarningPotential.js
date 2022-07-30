@@ -141,7 +141,7 @@ function EarningPotentialSection() {
 				/>
 			</Stack>
 			<Image
-				src="./become a coach/earning-image.png"
+				src="./become a host/earning-image.png"
 				alt="adult woman walking besides a child on a bridge"
 			/>
 		</VStack>

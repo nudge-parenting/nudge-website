@@ -2,8 +2,8 @@ import { Box, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import FloatingSVGs from "../general/FloatingStuff";
 
-import landingImage1 from "../../public/become a coach/bac-image-01.png";
-import landingImage2 from "../../public/become a coach/bac-image-02.png";
+import landingImage1 from "../../public/become a host/bac-image-01.png";
+import landingImage2 from "../../public/become a host/bac-image-02.png";
 import { Button } from "../general";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";

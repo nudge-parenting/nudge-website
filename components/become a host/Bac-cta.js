@@ -46,7 +46,7 @@ function BacCTA() {
 				</Button>
 			</VStack>
 			<Image
-				src="./become a coach/bac-cta.png"
+				src="./become a host/bac-cta.png"
 				w={{
 					base: "100%",
 					xl: "674px",
