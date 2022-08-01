@@ -91,7 +91,7 @@ function WhatActivitiesSection() {
 						things like building a radio, human evolution, tangrams,
 						art of gratefulness, climate change, fractal art,
 						nurturing a growth mindset, quantum computing, becoming
-						a better learner, and so much more.
+						a better reader, and so much more.
 					</Text>
 				</VStack>
 				<Button>apply now</Button>

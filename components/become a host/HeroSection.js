@@ -1,16 +1,25 @@
-import { Box, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Heading,
+	HStack,
+	Stack,
+	Text,
+	useBreakpointValue,
+	VStack,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import FloatingSVGs from "../general/FloatingStuff";
 
 import landingImage1 from "../../public/become a host/bac-image-01.png";
 import landingImage2 from "../../public/become a host/bac-image-02.png";
-import { Button } from "../general";
+import { Button, MessagePill } from "../general";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Typewriter from "typewriter-effect";
 
 function HeroSection() {
 	return (
-		<VStack spacing="48px" py="12" w="100%">
+		<VStack spacing="48px" pb="12" pt="10" w="100%">
 			<Stack
 				direction={{ base: "column", xl: "row" }}
 				width={{ base: "100%", xl: "1160px" }}
@@ -72,9 +81,13 @@ function HeroImages() {
 }
 function HeroText() {
 	const router = useRouter();
+	const isMobile = useBreakpointValue({
+		base: true,
+		xl: false,
+	});
 	return (
 		<VStack
-			w={{ base: "calc(100% - 64px)", xl: "460px" }}
+			w={{ base: "calc(100% - 64px)", xl: "660px" }}
 			spacing="32px"
 			alignItems={{ base: "center", xl: "start" }}
 			textAlign={{ base: "center", xl: "left" }}
@@ -110,11 +123,26 @@ function HeroText() {
 					}}
 				>
 					<Heading size="lg">
-						Shape young <br />
-						genius. Become a <br />
+						Become a<br />
 						<Heading size="lg" as="span" color="orange.500">
-							Nudge Host
+							Nudge Host.
 						</Heading>
+						<br /> Shape the {isMobile ? <br /> : null}
+						<Box display="inline-block">
+							<Typewriter
+								options={{
+									strings: [
+										"thinkers",
+										"builders",
+										"readers",
+									],
+									autoStart: true,
+									loop: true,
+									cursor: "|",
+								}}
+							/>
+						</Box>
+						<br /> of tomorrow.
 					</Heading>
 				</MotionBox>
 				<MotionBox
@@ -158,25 +186,5 @@ function HeroText() {
 		</VStack>
 	);
 }
-function MessagePill() {
-	return (
-		<HStack p="4px" pr="16px" bg="orange.50" borderRadius="full">
-			<Text
-				fontSize="16px"
-				lineHeight="20px"
-				color="orange.700"
-				fontWeight="medium"
-				bg="white"
-				borderRadius="full"
-				py="4px"
-				px="8px"
-			>
-				New
-			</Text>
-			<Text color="orange.700" fontSize="16px" lineHeight="20px">
-				Applications now open
-			</Text>
-		</HStack>
-	);
-}
+
 export default HeroSection;

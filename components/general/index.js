@@ -5,3 +5,4 @@ export { default as Layout } from "./Layout";
 export { default as LemonLink } from "./LemonLink";
 export { default as MenuToggle } from "./MenuToggle";
 export { default as Navigation } from "./Navigation";
+export { default as MessagePill } from "./MessagePill";

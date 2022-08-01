@@ -1,6 +1,15 @@
-import { Box, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Heading,
+	HStack,
+	Text,
+	useBreakpointValue,
+	VStack,
+	Wrap,
+	WrapItem,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { Button } from "../general";
+import { Button, MessagePill } from "../general";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,9 +19,9 @@ import "swiper/css/scrollbar";
 import FloatingSVGs from "../general/FloatingStuff";
 import LandingImages from "./LandingImages";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const MotionBox = motion(Box);
-
 function HeroSection() {
 	return (
 		<VStack minH="100vh" spacing="12" py="12" w="100%">
@@ -34,9 +43,14 @@ function HeroSection() {
 
 function HeroText() {
 	const router = useRouter();
+	const isMobile = useBreakpointValue({
+		base: true,
+		xl: false,
+	});
 	return (
-		<VStack spacing="8" width={{ base: "100%", xl: "560px" }} mx="auto">
+		<VStack spacing="8" width={{ base: "100%", xl: "660px" }} mx="auto">
 			<VStack spacing="4">
+				{/* big heading */}
 				<VStack>
 					<MotionBox
 						initial={{ opacity: 0, y: 20 }}
@@ -55,12 +69,10 @@ function HeroText() {
 							size="lg"
 							fontWeight="semibold"
 						>
-							There&apos;s{" "}
-							<Heading as="span" color="orange.500" size="lg">
+							Broaden your child&apos;s horizons and help them
+							{/* <Heading as="span" color="orange.500" size="lg">
 								genius
-							</Heading>{" "}
-							<br />
-							inside your child.
+							</Heading>{" "} */}
 						</Heading>
 					</MotionBox>
 					<MotionBox
@@ -75,13 +87,30 @@ function HeroText() {
 						}}
 					>
 						<Heading textAlign="center" size="lg" mt="-1">
-							<Heading as="span" color="orange.500" size="lg">
-								Nudge
+							become a {isMobile ? <br /> : null}
+							<Heading
+								as="span"
+								color="orange.500"
+								size="lg"
+								display="inline-block"
+							>
+								<Typewriter
+									options={{
+										strings: [
+											"thinker",
+											"builder",
+											"reader",
+										],
+										autoStart: true,
+										loop: true,
+										cursor: "|",
+									}}
+								/>
 							</Heading>{" "}
-							it free.
 						</Heading>
 					</MotionBox>
 				</VStack>
+				{/* big heading */}
 				<MotionBox
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -94,13 +123,25 @@ function HeroText() {
 					}}
 				>
 					<Text textAlign="center" fontSize="18" lineHeight="24px">
-						With Nudge&apos;s high-quality classes & groups, at-home
-						activities, growth products, and parenting guidance that
-						you will find nowhere else
+						With high-quality Nudge activities at a physical centre
+						near you
 					</Text>
 				</MotionBox>
 			</VStack>
-
+			<Wrap spacing="12px" justify="center" spacingY>
+				<WrapItem>
+					<ActivityPill text="STEM 🔬" />
+				</WrapItem>
+				<WrapItem>
+					<ActivityPill text="Life Skills 📖" />
+				</WrapItem>
+				<WrapItem>
+					<ActivityPill text="World Discovery 🌎" />
+				</WrapItem>
+				<WrapItem>
+					<ActivityPill text="Creative Skills 🎨" />
+				</WrapItem>
+			</Wrap>
 			<MotionBox
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -111,17 +152,30 @@ function HeroText() {
 					damping: 40,
 					stiffness: 200,
 				}}
+				// bg="pink.100"
+				// w="100%"
 			>
-				<Button
-					onClick={() => {
-						router.push("/join-the-waitlist");
-					}}
-				>
-					join the waitlist
-				</Button>
+				<VStack spacing="16px">
+					<MessagePill text="Launching near you soon" />
+					<Button
+						onClick={() => {
+							router.push("/join-the-waitlist");
+						}}
+					>
+						join the waitlist
+					</Button>
+				</VStack>
 			</MotionBox>
 		</VStack>
 	);
 }
-
+function ActivityPill({ text }) {
+	return (
+		<VStack px="16px" py="4px" bg="gray.100" borderRadius="full">
+			<Text fontSize="12" fontWeight="semibold" color="black">
+				{text}
+			</Text>
+		</VStack>
+	);
+}
 export default HeroSection;

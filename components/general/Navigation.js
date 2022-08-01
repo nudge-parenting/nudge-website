@@ -24,7 +24,7 @@ const Navbar = ({ isOpen, toggleOpen }) => {
 
 const DesktopNav = ({ path }) => {
 	const router = useRouter();
-	const coachPage = path.includes("coach");
+	const hostPage = path.includes("host");
 	return (
 		<Box
 			position="sticky"
@@ -60,7 +60,7 @@ const DesktopNav = ({ path }) => {
 				</Link>
 
 				<Spacer />
-				{coachPage ? (
+				{hostPage ? (
 					<Button
 						onClick={() => {
 							router.push("/apply-host");
