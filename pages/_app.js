@@ -10,6 +10,12 @@ import "@fontsource/outfit/700.css";
 import "@fontsource/outfit/800.css";
 import "@fontsource/outfit/900.css";
 
+import "@fontsource/eb-garamond/400.css";
+import "@fontsource/eb-garamond/500.css";
+import "@fontsource/eb-garamond/600.css";
+import "@fontsource/eb-garamond/700.css";
+import "@fontsource/eb-garamond/800.css";
+
 const nudgeTheme = {
 	fonts: { body: "Outfit", heading: "Outfit" },
 	colors: {

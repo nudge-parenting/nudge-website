@@ -90,12 +90,19 @@ function DictionarySection() {
 							fontSize="60"
 							lineHeight="60px"
 							color="#FAFAFA"
+							fontFamily="eb-garamond"
+							fontWeight="medium"
 						>
 							broaden one&apos;s <br />
 							horizons
 						</Heading>
 					</VStack>
-					<Text fontSize="24" lineHeight="28px" color="#FAFAFA">
+					<Text
+						fontSize="24"
+						lineHeight="28px"
+						color="#FAFAFA"
+						fontFamily="eb-garamond"
+					>
 						/ˈbrɔːdn wʌnz həˈraɪzn/
 					</Text>
 				</VStack>
@@ -116,6 +123,8 @@ function DictionarySection() {
 							fontSize="24"
 							lineHeight="24px"
 							color="#FAFAFA"
+							fontFamily="eb-garamond"
+							fontWeight="medium"
 						>
 							1. to increase the range of one&apos;s knowledge,
 							understanding, or experience
@@ -135,6 +144,7 @@ function DictionarySection() {
 						fontSize="24"
 						lineHeight="32px"
 						color="#FAFAFA"
+						fontFamily="eb-garamond"
 						fontWeight="normal"
 					>
 						In Nudge activities, children will explore all kinds of
