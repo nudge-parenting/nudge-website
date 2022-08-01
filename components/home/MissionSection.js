@@ -17,7 +17,7 @@ function MissionSection() {
 				justifyContent="center"
 				alignItems="center"
 				bg="orange.700"
-				py="96px"
+				py="112px"
 			>
 				<VStack
 					w={{ base: "100%", xl: "400px" }}
@@ -70,7 +70,7 @@ function DictionarySection() {
 				base: "32px",
 				xl: "auto",
 			}}
-			py="112px"
+			py="124px"
 			justifyContent="center"
 			spacing="106px"
 		>
