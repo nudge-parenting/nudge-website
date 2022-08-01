@@ -16,7 +16,7 @@ import { RiHomeWifiLine, RiMailFill, RiTicket2Line } from "react-icons/ri";
 
 function HowHostingWorks() {
 	return (
-		<Center bg="#F5F5F5" w="100%" zIndex="-1" py="12">
+		<Center bg="#F9F9F9" w="100%" zIndex="-1" py="12">
 			<VStack
 				spacing="56px"
 				py="12"

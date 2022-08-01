@@ -184,7 +184,7 @@ function BigNumberCard({
 			}}
 			alignItems="center"
 			justifyContent="center"
-			bg="#F5F5F5"
+			bg="#F9F9F9"
 			borderRadius="12px"
 			spacing="12px"
 			py="32px"

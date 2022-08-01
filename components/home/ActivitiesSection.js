@@ -8,7 +8,7 @@ import {
 import { useRouter } from "next/router";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Button } from "../general";
+import { Button, MessagePill } from "../general";
 
 // Import Swiper styles
 import "swiper/css";
@@ -39,29 +39,32 @@ function ActivitiesSection() {
 		>
 			<VStack spacing="24px">
 				<VStack spacing="16px" alignItems="center" textAlign="center">
-					<Text fontWeight="medium">Activities by Coaches</Text>
+					<Text fontWeight="medium">Activities by Experts</Text>
 
 					<Heading size="md">
 						Want your child to be constructively engaged?
 					</Heading>
-					<Heading size="sm">
+					{/* <Heading size="sm">
 						Tired of searching for hobby classes?
-					</Heading>
+					</Heading> */}
 					<Text>
-						Nudge solves it all. Paid classes, or free groups.
-						Online over Zoom, or offline in your neighbourhood. From
-						STEM to SEL & Art to Artificial Intelligence. Nudge
+						Lookout for Nudge&apos;s offline activities in your
+						neighbourhood. From radio-building to gratitude
+						journaling to human evolution to even 3D printing! Nudge
 						brings you the world&apos;s best ecosystem of
-						after-school classes and groups for your child.
+						after-school activities for your child.
 					</Text>
 				</VStack>
-				<Button
-					onClick={() => {
-						router.push("/join-the-waitlist");
-					}}
-				>
-					join the waitlist
-				</Button>
+				<VStack spacing="16px">
+					<MessagePill text="Launching near you soon" />
+					<Button
+						onClick={() => {
+							router.push("/join-the-waitlist");
+						}}
+					>
+						join the waitlist
+					</Button>
+				</VStack>
 			</VStack>
 			<Swiper
 				modules={[Autoplay]}

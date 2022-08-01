@@ -29,7 +29,7 @@ function PerksSection() {
 			}}
 			py="12"
 			spacing="48px"
-			bg="#F5F5F5"
+			bg="#F9F9F9"
 		>
 			<VStack
 				textAlign="center"

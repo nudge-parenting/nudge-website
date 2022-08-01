@@ -5,3 +5,4 @@ export { default as MissionSection } from "./MissionSection";
 export { default as GrowthProductsSection } from "./GrowthProductsSection";
 export { default as ParentingServicesSection } from "./ParentingServicesSection";
 export { default as CTASection } from "./CTA-Section";
+export { default as HowItWorksSection } from "./HowItWorksSection";

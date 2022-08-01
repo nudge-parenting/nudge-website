@@ -1,5 +1,4 @@
-import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Heading, Text, VStack } from "@chakra-ui/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -7,77 +6,51 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const MotionBox = motion(Box);
-
 function MissionSection() {
 	return (
-		<Stack
-			direction={{ base: "column-reverse", xl: "row" }}
-			width={{ base: "calc(100% - 64px)", xl: "1160px" }}
-			mx={{ base: "0px", xl: "auto" }}
+		<VStack
+			// width={{ base: "calc(100% - 64px)", xl: "400px" }}
+			w="100%"
+			px={{ base: "32px", xl: "auto" }}
 			spacing="50px"
 			justifyContent="center"
-			py="12"
 			alignItems="center"
+			bg="orange.700"
+			py="96px"
 		>
 			<VStack
-				spacing={{ base: "96px", xl: "48px" }}
-				alignItems="start"
-				w={{ base: "100%", xl: "560px" }}
-				data-aos="fade-up"
-				data-aos-easing="ease-in-out"
-				data-aos-duration={1000}
-				data-aos-delay={100}
+				w={{ base: "100%", xl: "400px" }}
+				justifyContent="center"
+				alignItems="center"
+				textAlign="center"
+				spacing="68px"
 			>
-				<VStack spacing="16px" alignItems="start">
-					<Text fontWeight="medium">The Nudge Mission</Text>
-					<Heading size="md">
-						Empower you the parent to nudge free the genius inside
-						your child
+				<VStack spacing="16px">
+					<Text fontWeight="medium" color="#D89062">
+						The Nudge Mission
+					</Text>
+					<Heading size="md" color="#F7F7F7">
+						Broaden every child&apos;s horizons
 					</Heading>
-					<Text>
-						Parenting is the most powerful job in the world. I want
-						Nudge to become every parent&apos;s best friend and ally
-						in this job of shaping their child&apos;s unique genius.
-					</Text>
 				</VStack>
-				<VStack alignItems="start" spacing="4px">
-					<Text size="md" fontWeight="semibold">
-						Pooja Pande
+				<VStack textAlign="left" spacing="40px">
+					<Text color="#E9C0A6" textAlign="left" w="100%">
+						Most children grow up to have limited horizons.
+						Traditional schooling and after-school tutoring only
+						takes them through a rigid &quot;curriculum&quot;. Even
+						hobby classes and extra-curricular activities centre
+						around the same few themes like art, music or chess. So,
+						most children are never exposed to our natural
+						world&apos;s incredible richness, to breakthrough
+						scientific progress, to life-changing skills and habits,
+						and to deeply satisfying creative endeavours.
 					</Text>
-					<Text size="md">Founder, Nudge</Text>
+					<Text color="#E9C0A6" textAlign="left" w="100%">
+						Nudge will change this.
+					</Text>
 				</VStack>
 			</VStack>
-			<Box
-				w={{ base: "100%", xl: "524px" }}
-				h={{ base: "auto", xl: "auto" }}
-				position="relative"
-			>
-				<Image
-					src="./home/message.png"
-					alt="child reading a map"
-					w={{ base: "100%", xl: "524px" }}
-					h={{ base: "auto", xl: "auto" }}
-					data-aos="fade-up"
-					data-aos-easing="ease-in-out"
-					data-aos-duration={1000}
-					data-aos-delay={200}
-				/>
-				<Image
-					src="./home/message-founder.png"
-					alt="excerpt of message from the founder"
-					w="180px"
-					h="76px"
-					position="absolute"
-					bottom={{ base: "-10px", xl: "0px" }}
-					left={{ base: "20px", xl: "-20px" }}
-					data-aos="fade-up"
-					data-aos-easing="ease-in-out"
-					data-aos-duration={1000}
-					data-aos-delay={500}
-				/>
-			</Box>
-		</Stack>
+		</VStack>
 	);
 }
 

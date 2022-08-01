@@ -5,6 +5,7 @@ import {
 	CTASection,
 	GrowthProductsSection,
 	HeroSection,
+	HowItWorksSection,
 	MissionSection,
 	ParentingServicesSection,
 } from "../components/home";
@@ -13,11 +14,12 @@ export default function Home({}) {
 	return (
 		<VStack spacing="48px" w="100%" pb="12">
 			<HeroSection />
-			<MissionSection />
+			<HowItWorksSection />
 			<ActivitiesSection />
-			<ActivitiesAtHomeSection />
-			<GrowthProductsSection />
-			<ParentingServicesSection />
+			{/* <ActivitiesAtHomeSection /> */}
+			<MissionSection />
+			{/* <GrowthProductsSection />
+			<ParentingServicesSection /> */}
 			<CTASection />
 		</VStack>
 	);
