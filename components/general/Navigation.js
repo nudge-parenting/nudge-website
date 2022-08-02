@@ -27,6 +27,7 @@ const DesktopNav = ({ path }) => {
 	const hostPage = path.includes("host");
 	return (
 		<Box
+			id="navbar"
 			position="sticky"
 			top="0"
 			left="0"
@@ -38,6 +39,7 @@ const DesktopNav = ({ path }) => {
 			height="16"
 			alignItems="center"
 			justifyContent="center"
+			transition="all 0.5s ease-in-out"
 		>
 			<HStack
 				px={{
