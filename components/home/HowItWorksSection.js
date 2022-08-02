@@ -7,7 +7,14 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react";
-import { Ri24HoursFill } from "react-icons/ri";
+import {
+	Ri24HoursFill,
+	RiApps2Line,
+	RiClipboardLine,
+	RiHome7Line,
+	RiMapPinUserFill,
+	RiUserFollowLine,
+} from "react-icons/ri";
 
 function HowItWorksSection() {
 	return (
@@ -41,18 +48,22 @@ function HowItWorksSection() {
 				}}
 			>
 				<HowCard
+					icon={RiHome7Line}
 					heading="Find your Nudge Host"
 					description="You use the Nudge app to find your nearest Nudge Host - a trained person running a home-based Nudge Hub (centre)"
 				/>
 				<HowCard
+					icon={RiApps2Line}
 					heading="Track upcoming activities"
 					description="You keep a track of upcoming activities relevant for your child, which last from 2 to 4 hours and are very varied - from radio-building to gratitude journaling to human evolution to even 3D printing!"
 				/>
 				<HowCard
+					icon={RiClipboardLine}
 					heading="Sign-up and pay"
 					description="You sign up and pay for upcoming activities that you want your child to join. Activities are scheduled on weekends or post-school on weekdays."
 				/>
 				<HowCard
+					icon={RiUserFollowLine}
 					heading="Child joins the experience"
 					description="Your child joins the activity at the Nudge Hub with a small group of other children. Apart from the Host, a Nudge Expert will also be virtually present to guide the group."
 				/>
