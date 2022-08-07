@@ -137,7 +137,9 @@ function EarningPotentialSection() {
 					description="As a Nudge Host you can earn"
 					number={"₹" + numStudents * numActivities * 200 * 4}
 					suffix="/month"
-					description2="that's ₹12,000 a week"
+					description2={`that's ₹${
+						numStudents * numActivities * 200
+					} a week`}
 				/>
 			</Stack>
 			<Image
