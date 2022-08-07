@@ -20,10 +20,12 @@ function HowItWorksSection() {
 	return (
 		<VStack bg="#F9F9F9" w="100%" py="96px" spacing="48px">
 			<VStack
-				w={{
-					base: "100%",
-					xl: "460px",
-				}}
+				// w={{
+				// 	base: "100%",
+				// 	xl: "460px",
+				// }}
+				width={{ base: "calc(100% - 64px)", xl: "460px" }}
+				mx={{ base: "32px", xl: "auto" }}
 				spacing="16px"
 				textAlign="center"
 			>
@@ -42,10 +44,12 @@ function HowItWorksSection() {
 				rows={{ base: 4, xl: 2 }}
 				columns={{ base: 1, xl: 2 }}
 				spacing={{ base: "32px", xl: "40px" }}
-				w={{
-					base: "100%",
-					xl: "760px",
-				}}
+				// w={{
+				// 	base: "100%",
+				// 	xl: "760px",
+				// }}
+				width={{ base: "calc(100% - 64px)", xl: "760px" }}
+				mx={{ base: "32px", xl: "auto" }}
 			>
 				<HowCard
 					icon={RiHome7Line}
