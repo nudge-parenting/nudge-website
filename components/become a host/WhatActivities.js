@@ -30,6 +30,7 @@ import creativeSkillsActivityImage1 from "../../public/become a host/activities/
 import creativeSkillsActivityImage2 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage02.png";
 import creativeSkillsActivityImage3 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage03.png";
 import creativeSkillsActivityImage4 from "../../public/become a host/activities/creative skills/creativeSkillsActivityImage04.png";
+import { useRouter } from "next/router";
 
 const stemActivityImages = [
 	stemActivityImage1,
@@ -60,6 +61,7 @@ const creativeSkillsActivityImages = [
 ];
 
 function WhatActivitiesSection() {
+	const router = useRouter();
 	return (
 		<VStack
 			w="100%"
@@ -94,7 +96,13 @@ function WhatActivitiesSection() {
 						a better reader, and so much more.
 					</Text>
 				</VStack>
-				<Button>apply now</Button>
+				<Button
+					onClick={() => {
+						router.push("/apply-host");
+					}}
+				>
+					apply now
+				</Button>
 			</VStack>
 			<ActivityTabs />
 		</VStack>

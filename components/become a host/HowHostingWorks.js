@@ -59,10 +59,12 @@ function ImagesAndFeatures() {
 				rows={{ base: 6, xl: 2 }}
 				columns={{ base: 1, xl: 3 }}
 				spacing={{ base: "32px", xl: "40px" }}
-				w={{
-					base: "100%",
-					xl: "1160px",
-				}}
+				// w={{
+				// 	base: "100%",
+				// 	xl: "1160px",
+				// }}
+				width={{ base: "calc(100% - 64px)", xl: "1160px" }}
+				mx={{ base: "32px", xl: "auto" }}
 			>
 				<FeatureCard
 					title="Hub Setup"

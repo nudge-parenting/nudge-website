@@ -7,6 +7,7 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { MdHeadsetMic } from "react-icons/md";
 import {
@@ -20,6 +21,7 @@ import {
 import { Button } from "../general";
 
 function PerksSection() {
+	const router = useRouter();
 	return (
 		<VStack
 			w="100%"
@@ -49,7 +51,13 @@ function PerksSection() {
 					Host, you will be able to tap into this immense demand.
 				</Text>
 				<Center pt="16px">
-					<Button>apply now</Button>
+					<Button
+						onClick={() => {
+							router.push("/apply-host");
+						}}
+					>
+						apply now
+					</Button>
 				</Center>
 			</VStack>
 			<PerksGrid />
