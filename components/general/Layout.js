@@ -1,6 +1,6 @@
 import Icon from "@chakra-ui/icon";
 import { Image } from "@chakra-ui/image";
-import { Box, HStack, Spacer, Square } from "@chakra-ui/layout";
+import { Box, HStack, Spacer, Square, Text } from "@chakra-ui/layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCycle } from "framer-motion";
@@ -86,87 +86,111 @@ const GoToTopButton = () => {
 };
 const Footer = () => {
 	return (
-		<HStack
-			px={{
-				base: "8",
-				md: "90",
-				lg: "250",
-				xl: "280",
-			}}
-			py="3"
-			bg="white"
-			maxW="100vw"
-			zIndex="10"
-			my="5"
-			justifyContent="space-between"
-		>
-			<Link href="/" passHref>
-				<Box w={["32"]}>
-					<Image
-						src="./nudge-typo-logo.png"
-						// boxSize={["10", "12"]}
+		<>
+			<HStack
+				px={{
+					base: "8",
+					md: "90",
+					lg: "250",
+					xl: "280",
+				}}
+				pt="3"
+				bg="white"
+				maxW="100vw"
+				zIndex="10"
+				mt="5"
+				justifyContent="space-between"
+			>
+				<Link href="/" passHref>
+					<Box w={["32"]}>
+						<Image
+							src="./nudge-typo-logo.png"
+							// boxSize={["10", "12"]}
+							_hover={{
+								cursor: "pointer",
+							}}
+							alt=""
+						/>
+					</Box>
+				</Link>
+				<HStack spacing="16px">
+					<Icon
+						as={RiTwitterFill}
+						w={6}
+						h={6}
+						color="gray.500"
 						_hover={{
 							cursor: "pointer",
 						}}
-						alt=""
+						onClick={() => {
+							window.open("https://twitter.com/nudgeverse");
+						}}
 					/>
-				</Box>
-			</Link>
-			<HStack spacing="16px">
-				<Icon
-					as={RiTwitterFill}
-					w={6}
-					h={6}
-					color="gray.500"
-					_hover={{
-						cursor: "pointer",
-					}}
-					onClick={() => {
-						window.open("https://twitter.com/nudgeverse");
-					}}
-				/>
-				<Icon
-					as={RiInstagramFill}
-					w={6}
-					h={6}
-					color="gray.500"
-					_hover={{
-						cursor: "pointer",
-					}}
-					onClick={() => {
-						window.open(
-							"https://www.instagram.com/nudgeverse/?hl=en"
-						);
-					}}
-				/>
-				<Icon
-					as={RiLinkedinBoxFill}
-					w={6}
-					h={6}
-					color="gray.500"
-					_hover={{
-						cursor: "pointer",
-					}}
-					onClick={() => {
-						window.open(
-							"https://www.linkedin.com/company/nudgeparenting"
-						);
-					}}
-				/>
-				<Icon
-					as={RiMailFill}
-					w={6}
-					h={6}
-					color="gray.500"
-					_hover={{
-						cursor: "pointer",
-					}}
-					onClick={() => {
-						window.open("mailto:hi@nudgeverse.com");
-					}}
-				/>
+					<Icon
+						as={RiInstagramFill}
+						w={6}
+						h={6}
+						color="gray.500"
+						_hover={{
+							cursor: "pointer",
+						}}
+						onClick={() => {
+							window.open(
+								"https://www.instagram.com/nudgeverse/?hl=en"
+							);
+						}}
+					/>
+					<Icon
+						as={RiLinkedinBoxFill}
+						w={6}
+						h={6}
+						color="gray.500"
+						_hover={{
+							cursor: "pointer",
+						}}
+						onClick={() => {
+							window.open(
+								"https://www.linkedin.com/company/nudgeparenting"
+							);
+						}}
+					/>
+					<Icon
+						as={RiMailFill}
+						w={6}
+						h={6}
+						color="gray.500"
+						_hover={{
+							cursor: "pointer",
+						}}
+						onClick={() => {
+							window.open("mailto:hi@nudgeverse.com");
+						}}
+					/>
+				</HStack>
 			</HStack>
-		</HStack>
+			<HStack
+				px={{
+					base: "8",
+					md: "90",
+					lg: "250",
+					xl: "280",
+				}}
+				pb="3"
+				bg="white"
+				maxW="100vw"
+				zIndex="10"
+				mt="0"
+				mb="5"
+				justifyContent="space-between"
+				alignItems="center"
+				w="100%"
+			>
+				<Text color="gray.400" fontSize="xs" w="100%">
+					(Nudge) NudgeVerse is an initiative by Khurma Technocom
+					(OPC) Pvt Ltd.
+				</Text>
+			</HStack>
+		</>
 	);
 };
 
