@@ -15,6 +15,7 @@ import {
 } from "react-icons/ri";
 import Header from "./Header";
 import Navbar from "./Navigation.js";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
 	const [isOpen, toggleOpen] = useCycle(false, true);
@@ -85,6 +86,9 @@ const GoToTopButton = () => {
 	);
 };
 const Footer = () => {
+
+	const router = useRouter()
+
 	return (
 		<>
 			<HStack
@@ -175,12 +179,10 @@ const Footer = () => {
 					lg: "250",
 					xl: "280",
 				}}
-				pb="3"
 				bg="white"
 				maxW="100vw"
 				zIndex="10"
 				mt="0"
-				mb="5"
 				justifyContent="space-between"
 				alignItems="center"
 				w="100%"
@@ -188,6 +190,38 @@ const Footer = () => {
 				<Text color="gray.400" fontSize="xs" w="100%">
 					(Nudge) NudgeVerse is an initiative by Khurma Technocom
 					(OPC) Pvt Ltd.
+				</Text>
+			</HStack>
+			<HStack
+				px={{
+					base: "8",
+					md: "90",
+					lg: "250",
+					xl: "280",
+				}}
+				pb="3"
+				bg="white"
+				maxW="100vw"
+				zIndex="10"
+				mt="0"
+				mb="5"
+				alignItems="center"
+				w="100%"
+			>
+				<Text onClick={() => {
+					router.push("/privacy-policy");
+				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+					Privacy Policy
+				</Text>
+				<Text onClick={() => {
+					router.push("/terms-and-conditions");
+				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+					Terms {`&`} Conditions
+				</Text>
+				<Text onClick={() => {
+					router.push("/cancellation-and-refund-policy");
+				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+					Cancellation/Refund Policy
 				</Text>
 			</HStack>
 		</>
