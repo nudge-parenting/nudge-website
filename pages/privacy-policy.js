@@ -24,11 +24,6 @@ function Component() {
                 <body>
                     <strong>Privacy Policy</strong>{" "}
                     <p>
-                        HMR Hostels Ltd. Pvt. built the HMR Hostels app as a
-                        Free app. This SERVICE is provided by HMR Hostels Ltd.
-                        Pvt. at no cost and is intended for use as is.
-                    </p>{" "}
-                    <p>
                         This page is used to inform visitors regarding our
                         policies with the collection, use, and disclosure of
                         Personal Information if anyone decided to use our
@@ -45,7 +40,7 @@ function Component() {
                     <p>
                         The terms used in this Privacy Policy have the same
                         meanings as in our Terms and Conditions, which are
-                        accessible at HMR Hostels unless otherwise defined in
+                        accessible at NudgeVerse unless otherwise defined in
                         this Privacy Policy.
                     </p>{" "}
                     <p>
@@ -209,7 +204,7 @@ function Component() {
                     <p>
                         If you have any questions or suggestions about our
                         Privacy Policy, do not hesitate to contact us at
-                        hi@hmrhostels.com.
+                        hi@nudgeverse.com.
                     </p>{" "}
                     <p>
                         This privacy policy page was created at{" "}

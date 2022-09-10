@@ -24,8 +24,7 @@ function Component() {
                 <body cz-shortcut-listen="true">
                     <h1>Return and Refund Policy</h1>
                     <p>Last updated: March 21, 2022</p>
-                    <p>Thank you for shopping at hmrhostel.com.</p>
-                    <p>If, for any reason, You are not completely satisfied with a purchase We invite You to review our policy on refunds and returns. This Return and Refund Policy has been created with the help of the <a href="https://www.privacypolicies.com/return-refund-policy-generator/" target="_blank">Return and Refund Policy Generator</a>.</p>
+                    <p>Thank you for shopping at nudgeverse.com.</p>
                     <p>The following terms are applicable for any products that You purchased with Us.</p>
                     <h1>Interpretation and Definitions</h1>
                     <h2>Interpretation</h2>
@@ -34,7 +33,7 @@ function Component() {
                     <p>For the purposes of this Return and Refund Policy:</p>
                     <ul>
                         <li>
-                            <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to hmrhostel.com.</p>
+                            <p><strong>Company</strong> (referred to as either `&quot;`the Company`&quot;`, `&quot;`We`&quot;`, `&quot;`Us`&quot;` or `&quot;`Our`&quot;` in this Agreement) refers to nudgeverse.com.</p>
                         </li>
                         <li>
                             <p><strong>Goods</strong> refer to the items offered for sale on the Service.</p>
@@ -46,7 +45,7 @@ function Component() {
                             <p><strong>Service</strong> refers to the Website.</p>
                         </li>
                         <li>
-                            <p><strong>Website</strong> refers to hmrhostel.com, accessible from <a href="https://hmrhostels.com" rel="external nofollow noopener" target="_blank">https://hmrhostels.com</a></p>
+                            <p><strong>Website</strong> refers to nudgeverse.com, accessible from <a href="https://nudgeverse.com" rel="external nofollow noopener noreferrer" target="_blank">https://nudgeverse.com</a></p>
                         </li>
                         <li>
                             <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
@@ -57,7 +56,7 @@ function Component() {
                     <p>The deadline for cancelling an Order is 7 days from the date on which You received the Goods or on which a third party you have appointed, who is not the carrier, takes possession of the product delivered.</p>
                     <p>In order to exercise Your right of cancellation, You must inform Us of your decision by means of a clear statement. You can inform us of your decision by:</p>
                     <ul>
-                        <li>By email: hi@hmrhostels.com</li>
+                        <li>By email: hi@nudgeverse.com</li>
                     </ul>
                     <p>We will reimburse You no later than 14 days from the day on which We receive the returned Goods. We will use the same means of payment as You used for the Order, and You will not incur any fees for such reimbursement.</p>
                     <h1>Conditions for Returns</h1>
@@ -81,12 +80,12 @@ function Component() {
                         Greater Noida, Uttar Pradesh- 201310</p>
                     <p>We cannot be held responsible for Goods damaged or lost in return shipment. Therefore, We recommend an insured and trackable mail service. We are unable to issue a refund without actual receipt of the Goods or proof of received return delivery.</p>
                     <h1>Gifts</h1>
-                    <p>If the Goods were marked as a gift when purchased and then shipped directly to you, You'll receive a gift credit for the value of your return. Once the returned product is received, a gift certificate will be mailed to You.</p>
-                    <p>If the Goods weren't marked as a gift when purchased, or the gift giver had the Order shipped to themselves to give it to You later, We will send the refund to the gift giver.</p>
+                    <p>If the Goods were marked as a gift when purchased and then shipped directly to you, You`&apos;`ll receive a gift credit for the value of your return. Once the returned product is received, a gift certificate will be mailed to You.</p>
+                    <p>If the Goods weren`&apos;`t marked as a gift when purchased, or the gift giver had the Order shipped to themselves to give it to You later, We will send the refund to the gift giver.</p>
                     <h2>Contact Us</h2>
                     <p>If you have any questions about our Returns and Refunds Policy, please contact us:</p>
                     <ul>
-                        <li>By email: hi@hmrhostels.com</li>
+                        <li>By email: hi@nudgeverse.com</li>
                     </ul>
                 </body>
             </Box>
