@@ -89,7 +89,7 @@ const instances = {
 			/>
 		),
 		activityPrice: 2000,
-		activityDate: "Sunday, 15th October",
+		activityDate: "Sunday, 16th October",
 		activityDuration: "3 hours",
 		activityTakeHomeItems: [
 			"1x High Quality Speed Cube",

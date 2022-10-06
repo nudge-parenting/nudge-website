@@ -86,7 +86,9 @@ function Template({
 								<Text size="xl" color="black">
 									Activity Led by {activityExpert}
 								</Text>
-								<Text size="lg">Hosted by {activityHost}</Text>
+								<Text size="lg">
+									Facilitated by {activityHost}
+								</Text>
 							</VStack>
 							<HStack spacing="-10px">
 								{expertImage()}
