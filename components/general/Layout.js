@@ -86,8 +86,7 @@ const GoToTopButton = () => {
 	);
 };
 const Footer = () => {
-
-	const router = useRouter()
+	const router = useRouter();
 
 	return (
 		<>
@@ -208,19 +207,37 @@ const Footer = () => {
 				alignItems="center"
 				w="100%"
 			>
-				<Text onClick={() => {
-					router.push("/privacy-policy");
-				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+				<Text
+					onClick={() => {
+						router.push("/privacy-policy");
+					}}
+					color="gray.400"
+					fontSize="xs"
+					fontWeight="bold"
+					textDecoration="underline"
+				>
 					Privacy Policy
 				</Text>
-				<Text onClick={() => {
-					router.push("/terms-and-conditions");
-				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+				<Text
+					onClick={() => {
+						router.push("/terms-and-conditions");
+					}}
+					color="gray.400"
+					fontSize="xs"
+					fontWeight="bold"
+					textDecoration="underline"
+				>
 					Terms {`&`} Conditions
 				</Text>
-				<Text onClick={() => {
-					router.push("/cancellation-and-refund-policy");
-				}} color="gray.400" fontSize="xs" fontWeight="bold" textDecoration="underline">
+				<Text
+					onClick={() => {
+						router.push("/cancellation-and-refund-policy");
+					}}
+					color="gray.400"
+					fontSize="xs"
+					fontWeight="bold"
+					textDecoration="underline"
+				>
 					Cancellation/Refund Policy
 				</Text>
 			</HStack>

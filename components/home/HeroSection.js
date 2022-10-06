@@ -128,7 +128,7 @@ function HeroText() {
 					</Text>
 				</MotionBox>
 			</VStack>
-			<Wrap spacing="12px" justify="center" spacingY>
+			<Wrap spacing="12px" justify="center">
 				<WrapItem>
 					<ActivityPill text="STEM 🔬" />
 				</WrapItem>
