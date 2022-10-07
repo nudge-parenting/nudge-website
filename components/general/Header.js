@@ -23,15 +23,15 @@ function Header() {
 				/>
 				<meta
 					name="title"
-					content="NudgeVerse - There's genius in your child. Nudge it free."
+					content="NudgeVerse - Broaden your child's horizons."
 				/>
 				<meta
 					name="description"
-					content="There's genius in your child. Nudge it free.. with high-quality classes & groups, at-home activities, growth products, and parenting guidance that you will find nowhere else"
+					content="Broaden your child's horizons.. with high-quality Nudge activities at a physical centre near you"
 				/>
 				<meta
 					name="keywords"
-					content="parenting, classes, online, offline, groups, activities, growth, nudge, free, genius, nudgeverse, verse, nudge verse, nudge parenting"
+					content="activities, nudge activities, parenting, classes, online, offline, groups, activities, growth, nudge, free, genius, nudgeverse, verse, nudge verse, nudge parenting"
 				/>
 				<meta name="robots" content="index, follow" />
 
@@ -40,11 +40,11 @@ function Header() {
 				<meta property="og:url" content="https://www.nudgeverse.com/" />
 				<meta
 					property="og:title"
-					content="NudgeVerse - There's genius in your child. Nudge it free."
+					content="NudgeVerse - Broaden your child's horizons."
 				/>
 				<meta
 					property="og:description"
-					content="There's genius in your child. Nudge it free.. with high-quality classes & groups, at-home activities, growth products, and parenting guidance that you will find nowhere else"
+					content="Broaden your child's horizons.. with high-quality Nudge activities at a physical centre near you"
 				/>
 				<meta
 					property="og:image"
@@ -52,17 +52,14 @@ function Header() {
 				/>
 				{/* <!-- TWITTER --> */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta
-					property="twitter:url"
-					content="https://nudgeparenting.com"
-				/>
+				<meta property="twitter:url" content="https://nudgeverse.com" />
 				<meta
 					property="twitter:title"
-					content="NudgeVerse - There's genius in your child. Nudge it free."
+					content="NudgeVerse - Broaden your child's horizons."
 				/>
 				<meta
 					property="twitter:description"
-					content="There's genius in your child. Nudge it free.. with high-quality classes & groups, at-home activities, growth products, and parenting guidance that you will find nowhere else"
+					content="Broaden your child's horizons.. with high-quality Nudge activities at a physical centre near you"
 				/>
 				<meta
 					property="twitter:image"
