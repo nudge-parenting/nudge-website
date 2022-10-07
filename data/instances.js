@@ -2,7 +2,7 @@ import { Avatar, Text } from "@chakra-ui/react";
 import {
 	microscopeImage,
 	rubiksCubeActivityImage,
-} from "../../public/learning experiences";
+} from "../public/learning experiences";
 
 const instances = {
 	// RBK001: {

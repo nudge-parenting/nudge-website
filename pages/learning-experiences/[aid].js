@@ -1,7 +1,7 @@
 import { Spinner, Text, VStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ActivityTemplate } from "../../components/learning experiences";
-import instances from "./instances";
+import instances from "../../data/instances";
 
 function ActivityPage() {
 	const router = useRouter();
