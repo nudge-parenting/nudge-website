@@ -33,7 +33,7 @@ function BacCTA() {
 					<Text>
 						Being a Nudge Host is a flexible, easy and meaningful
 						work-from-home opportunity. And our activities are
-						awesome fun - so your hub will become the most popular
+						awesome fun - so your camp will become the most popular
 						learning destination for children in your neighbourhood.
 					</Text>
 				</VStack>

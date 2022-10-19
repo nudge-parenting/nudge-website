@@ -38,8 +38,8 @@ function HowHostingWorks() {
 					</Heading>
 					<Text>
 						It&apos;s simple. If you are selected as a Nudge Host,
-						your house becomes a Nudge Hub, where neighbourhood
-						children can now come to join different Nudge
+						you get to book a community space, where neighbourhood
+						children can now come to attend different Nudge
 						Activities.
 					</Text>
 				</VStack>
@@ -67,29 +67,29 @@ function ImagesAndFeatures() {
 				mx={{ base: "32px", xl: "auto" }}
 			>
 				<FeatureCard
-					title="Hub Setup"
-					desc="You will need a laptop + good internet + some space for seating a group of children. Nudge will help you with a projector, camera, mic and other accessories."
+					title="Camp Setup"
+					desc="You will need to book a community space with enough space for 12-20 children. Nudge will do the rest. We will get our own projector, whiteboards, and furniture if required."
 					icon={RiHomeWifiLine}
 				/>
 				<FeatureCard
 					title="Running an Activity"
-					desc="A Nudge Expert will lead the activity virtually (online). Children will see and speak with the expert using the projector + camera + mic. You as the host will be the on-ground facilitator, managing and encouraging the group, and helping out if a child gets stuck."
+					desc="A Nudge Expert will lead the activity in-person. You as the host will be the on-ground facilitator, managing and encouraging the group, and helping out if a child gets stuck."
 					icon={FaChalkboardTeacher}
 				/>
-				<FeatureCard
+				{/* <FeatureCard
 					title="Host Training"
 					desc="For each activity, you will get a basic training on how to facilitate it. But don't worry - the activity will actually be led by the expert, so you only need basic familiarity with it."
 					icon={MdVideoCameraFront}
-				/>
+				/> */}
 
 				<FeatureCard
 					title="Activity Scheduling"
-					desc="Nudge will auto-schedule activities at your hub. All you have to do is specify your available time-slots on weekday evenings and weekends."
+					desc="Nudge will auto-schedule activities at your camp. All you have to do is specify your available time-slots when children can attend an activity."
 					icon={AiOutlineSchedule}
 				/>
 				<FeatureCard
 					title="Parent Booking"
-					desc="Parents will be able to see all upcoming activities of your hub using the Nudge App, as well as book and pay for any activity."
+					desc="Parents will be able to see all upcoming activities of your camp using the Nudge Activities App, as well as book and pay for any activity."
 					icon={RiTicket2Line}
 				/>
 			</SimpleGrid>

@@ -14,8 +14,13 @@ import { useState } from "react";
 import { RiAddFill, RiSubtractFill } from "react-icons/ri";
 
 function EarningPotentialSection() {
-	const [numStudents, setNumStudents] = useState(6);
-	const [numActivities, setNumActivities] = useState(10);
+	const [numStudents, setNumStudents] = useState(12);
+	const [numActivities, setNumActivities] = useState(4);
+	const numStudentsMax = 20; // per activity
+	const numStudentsMin = 8; // per activity
+	const numActivitiesMax = 6; // per week
+	const numActivitiesMin = 2; // per week
+	const hostSharePerActivity = 2500 / 8;
 	return (
 		<VStack
 			w="100%"
@@ -62,7 +67,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiSubtractFill}
 							onClick={() =>
-								numStudents == 2
+								numStudents == numStudentsMin
 									? null
 									: setNumStudents(numStudents - 1)
 							}
@@ -76,7 +81,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiAddFill}
 							onClick={() =>
-								numStudents == 8
+								numStudents == numStudentsMax
 									? null
 									: setNumStudents(numStudents + 1)
 							}
@@ -86,7 +91,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiSubtractFill}
 							onClick={() =>
-								numActivities == 1
+								numActivities == numActivitiesMin
 									? null
 									: setNumActivities(numActivities - 1)
 							}
@@ -100,7 +105,7 @@ function EarningPotentialSection() {
 						<IconButton
 							icon={RiAddFill}
 							onClick={() =>
-								numActivities == 20
+								numActivities == numActivitiesMax
 									? null
 									: setNumActivities(numActivities + 1)
 							}
@@ -120,14 +125,14 @@ function EarningPotentialSection() {
 				}}
 			>
 				<BigNumberCard
-					description="Assuming you can take"
+					description="Assuming you can host"
 					number={numActivities * 4}
 					suffix="sessions/month"
 					description2={`that's ${numActivities} sessions a week`}
 				/>
 				<BigNumberCard
 					description={`With ${numStudents} students per session, you earn`}
-					number={"₹" + numStudents * 200}
+					number={"₹" + numStudents * hostSharePerActivity}
 					suffix="/session"
 					description2="Payout for hosting one session"
 				/>
@@ -135,10 +140,13 @@ function EarningPotentialSection() {
 				<BigNumberCard
 					isHighlight
 					description="As a Nudge Host you can earn"
-					number={"₹" + numStudents * numActivities * 200 * 4}
+					number={
+						"₹" +
+						numStudents * numActivities * hostSharePerActivity * 4
+					}
 					suffix="/month"
 					description2={`that's ₹${
-						numStudents * numActivities * 200
+						numStudents * numActivities * hostSharePerActivity
 					} a week`}
 				/>
 			</Stack>
@@ -162,7 +170,7 @@ function IconButton({ icon = RiAddFill, onClick }) {
 			}}
 			onClick={onClick}
 			_active={{
-				backgroundColor: "orange.200",
+				backgroundColor: "orange.hostSharePerActivity",
 				transform: "scale(0.98)",
 			}}
 		>

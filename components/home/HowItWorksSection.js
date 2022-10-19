@@ -54,7 +54,7 @@ function HowItWorksSection() {
 				<HowCard
 					icon={RiHome7Line}
 					heading="Find your Nudge Host"
-					description="You use the Nudge app to find your nearest Nudge Host - a trained person running a home-based Nudge Hub (centre)"
+					description="You use the Nudge app to find your nearest Nudge Camp - a trained person will run exciting activities here (centre)"
 				/>
 				<HowCard
 					icon={RiApps2Line}
@@ -69,7 +69,7 @@ function HowItWorksSection() {
 				<HowCard
 					icon={RiUserFollowLine}
 					heading="Child joins the experience"
-					description="Your child joins the activity at the Nudge Hub with a small group of other children. Apart from the Host, a Nudge Expert will also be virtually present to guide the group."
+					description="Your child joins the activity at the Nudge Camp with a small group of other children. Along with the Host, a Nudge Expert will be present in-person to guide the group."
 				/>
 			</SimpleGrid>
 		</VStack>
