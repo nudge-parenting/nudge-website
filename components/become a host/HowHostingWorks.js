@@ -84,7 +84,7 @@ function ImagesAndFeatures() {
 
 				<FeatureCard
 					title="Activity Scheduling"
-					desc="Nudge will auto-schedule activities at your camp. All you have to do is specify your available time-slots when children can attend an activity."
+					desc="Nudge will auto-schedule activities at your camp. All you have to do is specify the time-slots where the community space in your neighbourhood is available and children can attend an activity."
 					icon={AiOutlineSchedule}
 				/>
 				<FeatureCard
