@@ -159,7 +159,7 @@ function HeroText() {
 					<Text>
 						Host engaging offline activities for neighbourhood
 						children, and earn a full-time income working part-time
-						from home!
+						near your home!
 					</Text>
 				</MotionBox>
 			</VStack>
