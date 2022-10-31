@@ -20,7 +20,7 @@ function EarningPotentialSection() {
 	const numStudentsMin = 8; // per activity
 	const numActivitiesMax = 6; // per week
 	const numActivitiesMin = 2; // per week
-	const hostSharePerActivity = 2500 / 8;
+	const hostSharePerActivity = 2000 / 10;
 	return (
 		<VStack
 			w="100%"
@@ -147,7 +147,7 @@ function EarningPotentialSection() {
 					suffix="/month"
 					description2={`that's ₹${
 						numStudents * numActivities * hostSharePerActivity
-					} a week`}
+					} per weekend`}
 				/>
 			</Stack>
 			<Image
