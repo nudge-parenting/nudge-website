@@ -68,12 +68,12 @@ function ImagesAndFeatures() {
 			>
 				<FeatureCard
 					title="Camp Setup"
-					desc="You will need to book a community space with enough space for 12-20 children. Nudge will do the rest. We will get our own projector, whiteboards, and furniture if required."
+					desc="You will need to book a community space big enough for 12-20 children. Nudge will pay for the booking and do the rest. We will get our own projector, whiteboards, and furniture if required."
 					icon={RiHomeWifiLine}
 				/>
 				<FeatureCard
 					title="Running an Activity"
-					desc="A Nudge Expert will lead the activity in-person. You as the host will be the on-ground facilitator, managing and encouraging the group, and helping out if a child gets stuck."
+					desc="A Nudge Expert will lead the activity in-person. You as the host will be the on-ground facilitator, managing and encouraging the group."
 					icon={FaChalkboardTeacher}
 				/>
 				{/* <FeatureCard
