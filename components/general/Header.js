@@ -1,17 +1,18 @@
 import Head from "next/head";
 
 function Header() {
-	const injectGA = () => {
-		if (typeof window == "undefined") {
-			return;
-		}
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-		gtag("config", "G-LQNKJMXG1S");
-	};
+	// const injectGA = () => {
+	// 	if (typeof window == "undefined") {
+	// 		return;
+	// 	}
+	// 	window.dataLayer = window.dataLayer || [];
+	// 	function gtag() {
+	// 		dataLayer.push(arguments);
+	// 	}
+	// 	gtag("js", new Date());
+	// 	gtag("config", "G-LQNKJMXG1S");
+	// };
+	// initialise react ga
 	return (
 		<>
 			<Head>
@@ -66,11 +67,11 @@ function Header() {
 					content="https://www.nudgeverse.com/meta-image.png"
 				/>
 
-				<script
+				{/* <script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-LQNKJMXG1S"
 				/>
-				<script>{injectGA()}</script>
+				<script>{injectGA()}</script> */}
 			</Head>
 		</>
 	);

@@ -9,7 +9,8 @@ import {
 	MissionSection,
 	ParentingServicesSection,
 } from "../components/home";
-
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-LQNKJMXG1S");
 export default function Home({}) {
 	return (
 		<VStack spacing="48px" w="100%" pb="12">
