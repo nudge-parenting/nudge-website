@@ -67,10 +67,11 @@ const DesktopNav = ({ path }) => {
 					<Button
 						onClick={() => {
 							router.push("/apply-host");
-							ReactGA.event({
+							ReactGA.event("sign_up", {
 								category: "CTA",
 								action: "Clicked on Apply to Host",
 								label: "Apply to Host",
+								method: "Host Application",
 							});
 						}}
 						size="md"
@@ -82,11 +83,6 @@ const DesktopNav = ({ path }) => {
 						<Button
 							onClick={() => {
 								router.push("/become-a-host");
-								ReactGA.event({
-									category: "CTA",
-									action: "Clicked on Become a Host",
-									label: "Become a Host",
-								});
 							}}
 							variant="secondary"
 							size="md"
@@ -96,10 +92,11 @@ const DesktopNav = ({ path }) => {
 						<Button
 							onClick={() => {
 								router.push("/join-the-waitlist");
-								ReactGA.event({
+								ReactGA.event("sign_up", {
 									category: "CTA",
 									action: "Clicked on Join the Waitlist",
 									label: "Join the Waitlist",
+									method: "Parent Waitlist",
 								});
 							}}
 							size="md"
