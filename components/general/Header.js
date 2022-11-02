@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 function Header() {
 	// const injectGA = () => {
 	// 	if (typeof window == "undefined") {
@@ -12,7 +11,7 @@ function Header() {
 	// 	gtag("js", new Date());
 	// 	gtag("config", "G-LQNKJMXG1S");
 	// };
-	// initialise react ga
+
 	return (
 		<>
 			<Head>
