@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import ReactGA from "react-ga4";
 import Button from "./Button";
 import MenuToggle from "./MenuToggle";
 
@@ -66,6 +67,11 @@ const DesktopNav = ({ path }) => {
 					<Button
 						onClick={() => {
 							router.push("/apply-host");
+							ReactGA.event({
+								category: "CTA",
+								action: "Clicked on Apply to Host",
+								label: "Apply to Host",
+							});
 						}}
 						size="md"
 					>
@@ -76,6 +82,11 @@ const DesktopNav = ({ path }) => {
 						<Button
 							onClick={() => {
 								router.push("/become-a-host");
+								ReactGA.event({
+									category: "CTA",
+									action: "Clicked on Become a Host",
+									label: "Become a Host",
+								});
 							}}
 							variant="secondary"
 							size="md"
@@ -85,6 +96,11 @@ const DesktopNav = ({ path }) => {
 						<Button
 							onClick={() => {
 								router.push("/join-the-waitlist");
+								ReactGA.event({
+									category: "CTA",
+									action: "Clicked on Join the Waitlist",
+									label: "Join the Waitlist",
+								});
 							}}
 							size="md"
 						>
