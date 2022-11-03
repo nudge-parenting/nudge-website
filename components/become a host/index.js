@@ -5,3 +5,4 @@ export { default as WhatActivitiesSection } from "./WhatActivities";
 export { default as EarningPotentialSection } from "./EarningPotential";
 export { default as PerksSection } from "./PerksSection";
 export { default as HowSection } from "./HowSection";
+export { default as FAQSection } from "./FAQ";

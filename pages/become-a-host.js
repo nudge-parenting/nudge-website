@@ -7,6 +7,7 @@ import {
 	PerksSection,
 	WhatActivitiesSection,
 	HowHostingWorks,
+	FAQSection,
 } from "../components/become a host";
 function BecomeACoach() {
 	return (
@@ -19,6 +20,7 @@ function BecomeACoach() {
 
 			<PerksSection />
 			<HowSection />
+			<FAQSection />
 		</VStack>
 	);
 }
